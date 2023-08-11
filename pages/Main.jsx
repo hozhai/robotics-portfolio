@@ -6,12 +6,11 @@ import { Fade } from "react-awesome-reveal";
 
 export default function Main() {
   const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
     await loadSlim(engine);
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    await console.log('Loaded');
   }, []);
 
   return (
@@ -51,7 +50,7 @@ export default function Main() {
               value: "#212121",
             },
           },
-          fpsLimit: 144,
+          fpsLimit: 120,
           interactivity: {
             events: {
               onClick: {
@@ -62,15 +61,15 @@ export default function Main() {
                 enable: true,
                 mode: "repulse",
               },
-              resize: true,
+              resize: false,
             },
             modes: {
               push: {
                 quantity: 1,
               },
               repulse: {
-                distance: 200,
-                duration: 0.4,
+                distance: 150,
+                duration: 0.9,
               },
             },
           },
@@ -106,7 +105,7 @@ export default function Main() {
               value: 0.5,
             },
             shape: {
-              type: "circle",
+              type: "triangle",
             },
             size: {
               value: { min: 1, max: 5 },
