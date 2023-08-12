@@ -3,6 +3,9 @@
 [] >2 Photos
 [] A quote
 
-[] Careers and hobbies
+[] Careers
 [] Pronouns
 [] etc idk
+
+RFG
+random facts generator
