@@ -1,5 +1,5 @@
-[] Name
-[] Biography
+[X] Name
+[X] Biography
 [] >2 Photos
 [] A quote
 
