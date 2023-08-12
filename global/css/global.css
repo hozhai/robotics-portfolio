@@ -42,11 +42,6 @@ main h1.main--title {
   left: calc(50% - 250px);
   top: 35vh;
   text-align: center;
-  overflow-wrap: break-word;
-}
-
-h1.main--title .Typewriter {
-  word-wrap: break-word;
 }
 
 main h2 {
@@ -69,7 +64,7 @@ main h2 {
 
 .biography--title h2 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.25rem;
 }
 
 .biography--body {
@@ -84,4 +79,59 @@ main h2 {
   margin: 35px;
   font-size: 1.5rem;
   text-align: justify;
+}
+
+/*                 RFG                 */
+
+.rfg {
+  background-color: #191919;
+  text-align: center;
+}
+
+.rfg--title h2 {
+  padding-top: 50px;
+  font-size: 3.25rem;
+}
+
+.rfg--fact {
+  color: #faf9f6;
+  font-size: 2rem;
+}
+
+.rfg--fact a {
+  color: #008020;
+}
+
+.rfg--fact a:active {
+  color: #095a00;
+}
+
+.rfg--btn-container {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.rfg--btn {
+  background-color: #008020;
+  background-size: cover;
+  font-size: 2.5rem;
+  width: 300px;
+  font-family: "Ubuntu Mono";
+  color: rgb(8, 8, 8);
+  cursor: pointer;
+  transition: all 0.5s;
+  border-bottom: 10px solid rgb(0, 43, 0);
+}
+
+.rfg--btn:hover {
+  background-color: #095a00;
+  color: white;
+}
+
+.rfg--btn:active {
+  transform: translateY(10px);
+  border-bottom: 0px solid rgb(0, 43, 0);
+  color: #ff9a00;
 }
