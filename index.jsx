@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import LoadScreen from "./components/Loading";
 
-import Main from "./pages/Main.jsx";
+import Home from "./pages/Home";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <LoadScreen />
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </React.StrictMode>
