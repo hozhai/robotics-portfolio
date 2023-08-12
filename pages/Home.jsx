@@ -1,21 +1,26 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
-import Particles from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim";
-import { Zoom } from "react-awesome-reveal";
+import { Zoom, Slide, Fade } from "react-awesome-reveal";
+import Lottie from "lottie-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import { nanoid } from "nanoid";
+
+import ParticlesBg from "../components/ParticlesBg";
+import scrolldownanim from "../assets/anim/scroll-down.json";
+
+import biographyData from "../data/biographyData";
 
 export default function Home() {
   useEffect(() => {
     document.title = "Home ﹤﹥ Zhai";
   }, []);
 
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log("Loaded");
-  }, []);
+  const biographyArray = biographyData.map((obj) => (
+    <div className="biography--block" key={nanoid()}>
+      <ReactMarkdown children={obj.content} remarkPlugins={[remarkGfm]} />
+    </div>
+  ));
 
   return (
     <>
@@ -44,85 +49,60 @@ export default function Home() {
             </h2>
           </Zoom>
         </h1>
-        <Particles
-          id="main--bg"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={{
-            style: {
-              position: "relative",
-              height: "95vh",
-            },
-            background: {
-              color: {
-                value: "#212121",
-              },
-            },
-            fpsLimit: 120,
-            interactivity: {
-              events: {
-                onClick: {
-                  enable: false,
-                  mode: "push",
-                },
-                onHover: {
-                  enable: true,
-                  mode: "repulse",
-                },
-                resize: false,
-              },
-              modes: {
-                push: {
-                  quantity: 1,
-                },
-                repulse: {
-                  distance: 150,
-                  duration: 0.9,
-                },
-              },
-            },
-            particles: {
-              color: {
-                value: "#739541",
-              },
-              links: {
-                color: "#ffffff",
-                distance: 150,
-                enable: true,
-                opacity: 0.5,
-                width: 1,
-              },
-              move: {
-                direction: "none",
-                enable: true,
-                outModes: {
-                  default: "bounce",
-                },
-                random: false,
-                speed: 6,
-                straight: false,
-              },
-              number: {
-                density: {
-                  enable: true,
-                  area: 800,
-                },
-                value: 80,
-              },
-              opacity: {
-                value: 0.5,
-              },
-              shape: {
-                type: "triangle",
-              },
-              size: {
-                value: { min: 1, max: 5 },
-              },
-            },
-            detectRetina: true,
-          }}
-        />
+        <div className="main--sdanim">
+          <Zoom delay={3000}>
+            <Lottie
+              animationData={scrolldownanim}
+              loop={true}
+              style={{ height: "150px", width: "150px" }}
+            />
+          </Zoom>
+        </div>
+        <ParticlesBg />
       </main>
+      <section className="biography">
+        <div className="title biography--title">
+          <Slide delay={100}>
+            <h2>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .pauseFor(500)
+                    .typeString("Who the hell am I?")
+                    .pauseFor(1000)
+                    .deleteChars(8)
+                    .typeString("ck am I?")
+                    .pauseFor(1000)
+                    .deleteChars(10)
+                    .typeString("devils am I?")
+                    .pauseFor(1000)
+                    .deleteChars(16)
+                    .typeString("on Earth am I?")
+                    .pauseFor(1000)
+                    .deleteChars(14)
+                    .typeString("in the world am I?")
+                    .pauseFor(1000)
+                    .deleteChars(15)
+                    .typeString("tarnation am I?")
+                    .pauseFor(1000)
+                    .deleteChars(18)
+                    .typeString("the fu-")
+                    .pauseFor(50)
+                    .deleteAll()
+                    .start();
+                }}
+                options={{
+                  cursor: "_",
+                  loop: true,
+                }}
+              />
+            </h2>
+          </Slide>
+        </div>
+        <Fade delay={200} triggerOnce={true}>
+          <div className="text biography--body">{biographyArray}</div>
+        </Fade>
+      </section>
     </>
   );
 }
