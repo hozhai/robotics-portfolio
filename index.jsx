@@ -4,14 +4,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 
-function App() {
+import Footer from "./components/Footer";
 
+function App() {
   return (
     <React.StrictMode>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </React.StrictMode>
   );

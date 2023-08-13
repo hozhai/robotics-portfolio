@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
-import { Zoom, Slide, Fade, JackInTheBox, Bounce } from "react-awesome-reveal";
+import {
+  Zoom,
+  Slide,
+  Fade,
+  JackInTheBox,
+  Bounce,
+  Roll,
+} from "react-awesome-reveal";
 import Lottie from "lottie-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -18,9 +25,9 @@ export default function Home() {
   const [fact, setFact] = useState("Loading...");
 
   useEffect(() => {
-    document.title = "Home <Zhai />";
+    document.title = "<Home /> | Zhai";
     setProgress(100);
-    generateFact()
+    generateFact();
   }, []);
 
   const biographyArray = biographyData.map((obj) => (
@@ -40,6 +47,7 @@ export default function Home() {
         color="#61c192"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
+        style={{ height: "5px" }}
       />
       <main>
         <h1 className="title main--title">
@@ -84,7 +92,6 @@ export default function Home() {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .pauseFor(500)
                     .typeString("Who the hell am I?")
                     .pauseFor(1000)
                     .deleteChars(8)
@@ -104,8 +111,7 @@ export default function Home() {
                     .pauseFor(1000)
                     .deleteChars(18)
                     .typeString("the fu-")
-                    .pauseFor(50)
-                    .deleteAll()
+                    .pauseFor(1000)
                     .start();
                 }}
                 options={{
@@ -127,7 +133,6 @@ export default function Home() {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
-                    .pauseFor(500)
                     .typeString("The RFG")
                     .pauseFor(1000)
                     .deleteAll()
@@ -144,7 +149,9 @@ export default function Home() {
           </JackInTheBox>
         </div>
         <div className="rfg--fact text">
-          <ReactMarkdown children={`"${fact}"`} remarkPlugins={[remarkGfm]} />
+          <Fade delay={700} triggerOnce={true}>
+            <ReactMarkdown children={`"${fact}"`} remarkPlugins={[remarkGfm]} />
+          </Fade>
         </div>
         <div className="rfg--btn-container">
           <Bounce delay={300} triggerOnce={true}>
@@ -153,6 +160,83 @@ export default function Home() {
             </div>
           </Bounce>
         </div>
+      </section>
+      <section className="blogs">
+        <div className="blogs--title title">
+          <Roll delay={400} triggerOnce={true}>
+            <h2>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Latest Blogs")
+                    .pauseFor(1000)
+                    .deleteChars(5)
+                    .typeString("Posts")
+                    .pauseFor(1000)
+                    .deleteChars(5)
+                    .typeString("Uploads")
+                    .pauseFor(1000)
+                    .deleteChars(7)
+                    .typeString("News")
+                    .pauseFor(1000)
+                    .deleteChars(4)
+                    .typeString("Journals")
+                    .pauseFor(1000)
+                    .start();
+                }}
+                options={{
+                  cursor: "_",
+                  loop: true,
+                }}
+              />
+            </h2>
+          </Roll>
+        </div>
+        <Zoom delay={600} triggerOnce={true}>
+          <div className="blogs--container">
+            <div className="blog--box">
+              <div className="blog--img">
+                <img
+                  src="https://place-hold.it/304x171"
+                  width={304}
+                  height={171}
+                />
+              </div>
+              <div className="blog--content">
+                <div className="blog--name title">This is a blog post!</div>
+                <div className="blog--description text">
+                  Yippee! Yahoo! Yippetyyappity! Doopity dahpitty your soul is
+                  now my property.
+                </div>
+              </div>
+            </div>
+            <div className="blog--box">
+              <div className="blog--img">
+                <img
+                  src="https://place-hold.it/304x171"
+                  width={304}
+                  height={171}
+                />
+              </div>
+              <div className="blog--content">
+                <div className="blog--name title">This is a blog post!</div>
+                <div className="blog--description text">
+                  Yippee! Yahoo! Yippety yappity! Doopity dahpitty your soul is
+                  now my property.
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="blogs--btn"
+              onClick={() =>
+                alert("Not Implemented Yet ;( \nI'm working on it though.")
+              }
+            >
+              &gt; View More
+            </div>
+          </div>
+        </Zoom>
       </section>
     </>
   );

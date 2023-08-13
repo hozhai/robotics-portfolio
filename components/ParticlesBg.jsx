@@ -36,7 +36,7 @@ export default function ParticlesBg() {
               enable: true,
               mode: "repulse",
             },
-            resize: false,
+            resize: true,
           },
           modes: {
             push: {

@@ -6,6 +6,7 @@ body {
   max-height: 100%;
   max-width: 100%;
   background-color: #212121;
+  overflow-x: hidden;
 }
 
 .loading-screen {
@@ -115,14 +116,14 @@ main h2 {
 
 .rfg--btn {
   background-color: #008020;
-  background-size: cover;
   font-size: 2.5rem;
   width: 300px;
   font-family: "Ubuntu Mono";
   color: rgb(8, 8, 8);
+  user-select: none;
   cursor: pointer;
-  transition: all 0.5s;
   border-bottom: 10px solid rgb(0, 43, 0);
+  transition: all .15s ease-in-out;
 }
 
 .rfg--btn:hover {
@@ -132,6 +133,126 @@ main h2 {
 
 .rfg--btn:active {
   transform: translateY(10px);
-  border-bottom: 0px solid rgb(0, 43, 0);
+  border-bottom: 10px solid #191919;
   color: #ff9a00;
+}
+
+/*                 Blogs                 */
+
+.blogs--title h2 {
+  font-size: 3.25rem;
+  text-align: center;
+}
+
+.blogs--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.blog--box {
+  background-color: #121212;
+  width: 60%;
+  height: 171px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  cursor: pointer;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+
+.blog--box:hover {
+  filter: brightness(110%);
+}
+
+.blog--box:active {
+  filter: brightness(130%);
+}
+
+.blog--box::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: #212121;
+}
+
+.blog--box::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 0%;
+  height: 7px;
+  background: linear-gradient(
+    90deg,
+    rgb(78, 221, 142) 0%,
+    rgb(0, 180, 57) 100%
+  );
+  transition: all 0.25s ease-in-out;
+}
+
+.blog--box:hover::after {
+  width: 100%;
+}
+
+.blog--content {
+  padding: 15px;
+}
+
+.blog--name {
+  font-size: 2.25rem;
+  position: relative;
+}
+
+.blog--description {
+  font-size: 1.2rem;
+}
+
+.blogs--btn {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #008020;
+  font-size: 2.5rem;
+  width: 300px;
+  font-family: "Ubuntu Mono";
+  color: rgb(8, 8, 8);
+  user-select: none;
+  cursor: pointer;
+  border-bottom: 10px solid rgb(0, 43, 0);
+  transition: all .15s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.blogs--btn:hover {
+  background-color: #095a00;
+  color: white;
+}
+
+.blogs--btn:active {
+  transform: translateY(10px);
+  border-bottom: 10px solid #212121;
+  color: #ff9a00;
+}
+
+/*                 Footer                 */
+
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #0c0c0c;
+}
+
+footer div {
+  font-size: 1.25rem;
 }
