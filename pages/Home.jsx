@@ -205,8 +205,10 @@ export default function Home() {
               <div className="blog--content">
                 <div className="blog--name title">This is a blog post!</div>
                 <div className="blog--description text">
-                  Yippee! Yahoo! Yippetyyappity! Doopity dahpitty your soul is
-                  now my property.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
+                  unde distinctio ex quaerat odit laborum tempore fugit ea a rem
+                  itaque at eaque voluptatum blanditiis facilis pariatur, neque
+                  aliquam. Quasi?
                 </div>
               </div>
             </div>
@@ -221,8 +223,10 @@ export default function Home() {
               <div className="blog--content">
                 <div className="blog--name title">This is a blog post!</div>
                 <div className="blog--description text">
-                  Yippee! Yahoo! Yippety yappity! Doopity dahpitty your soul is
-                  now my property.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Numquam doloribus repellendus, corrupti praesentium dolore
+                  corporis autem sequi et commodi, excepturi doloremque, harum
+                  itaque saepe vero eius deserunt cumque! Quod, porro!
                 </div>
               </div>
             </div>
