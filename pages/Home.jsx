@@ -111,7 +111,6 @@ export default function Home() {
                     .pauseFor(1000)
                     .deleteChars(18)
                     .typeString("the fu-")
-                    .pauseFor(1000)
                     .start();
                 }}
                 options={{
