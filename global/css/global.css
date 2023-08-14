@@ -68,6 +68,10 @@ main h2 {
   font-size: 3.25rem;
 }
 
+.biography--bu-title {
+  display: none;
+}
+
 .biography--body {
   display: flex;
   justify-content: space-evenly;

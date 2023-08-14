@@ -89,6 +89,7 @@ export default function Home() {
         <div className="title biography--title">
           <Slide delay={100} triggerOnce={true}>
             <h2>
+              <span className="biography--bu-title">Who am I?<span className="biography--fake-cursor">_</span></span>
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
