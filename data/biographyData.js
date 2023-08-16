@@ -11,7 +11,7 @@ const data = [
     content: "![bioimg](../assets/img/bio-1.png)"
   },
   {
-    content: "![bioimg](https://place-hold.it/1280x720)"
+    content: "![bioimg](../assets/img/bio-2.png)"
   }
 ];
 
