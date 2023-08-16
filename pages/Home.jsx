@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import {
   Zoom,
@@ -89,7 +90,9 @@ export default function Home() {
         <div className="title biography--title">
           <Slide delay={100} triggerOnce={true}>
             <h2>
-              <span className="biography--bu-title">Who am I?<span className="biography--fake-cursor">_</span></span>
+              <span className="biography--bu-title">
+                Who am I?<span className="biography--fake-cursor">_</span>
+              </span>
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
@@ -230,16 +233,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div
-              className="blogs--btn"
-              onClick={() =>
-                alert("Not Implemented Yet ;( \nI'm working on it though.")
-              }
-            >
-              &gt; View More
-            </div>
-          </div>
+              <Link to="/blogs" className="blogs--btn">
+              &gt; View More</Link>
+              </div>
         </Zoom>
       </section>
     </>
