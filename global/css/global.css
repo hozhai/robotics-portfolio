@@ -121,7 +121,7 @@ img[alt="bioimg"] {
   aspect-ratio: 16/9;
   width: 100%;
   border-radius: 25px;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 img[alt="bioimg"]:hover {
