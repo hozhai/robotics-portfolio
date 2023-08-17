@@ -8,10 +8,10 @@ const data = [
       "Some of my hobbies are web design, programming, robotics, singing, photographing (especially sunsets), and acrobatics (kind of). I also used to swim, play basketball, football (or soccer), a bit of baseball. I've only lived in 2 countries which are China and Chile, but I've also travelled to the US during vacation times (I also hate travelling by the way). I've also got a generator that randomly gets a fun fact about me below! :)",
   },
   {
-    content: "![bioimg](../assets/img/bio-1.png)"
+    content: "![bioimg](https://i.imgur.com/lIllgsu.png)"
   },
   {
-    content: "![bioimg](../assets/img/bio-2.png)"
+    content: "![bioimg](https://i.imgur.com/slbg3J4.png)"
   }
 ];
 
