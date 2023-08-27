@@ -7,14 +7,10 @@ export default function ParticlesBg() {
     await loadSlim(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container) => {
-    await console.log("Loaded");
-  }, []);
   return (
     <Particles
       id="main--bg"
       init={particlesInit}
-      loaded={particlesLoaded}
       options={{
         style: {
           position: "relative",

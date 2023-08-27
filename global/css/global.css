@@ -2,11 +2,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  max-height: 100%;
-  max-width: 100%;
+  min-height: 100%;
+  min-width: 100%;
   background-color: #212121;
   overflow-x: hidden;
 }
@@ -49,6 +53,10 @@ a:hover {
   box-shadow: 0px 0px 0px 3px rgba(65,117,5,1),
   0px 0px 0px 6px rgba(126,211,33,1),
   0px 0px 0px 9px rgba(184,233,134,1);
+}
+
+.scroll--btn:active {
+  transform: scale(80%);
 }
 
 /*                 Footer                 */
@@ -98,6 +106,24 @@ main h2 {
   z-index: 1;
   left: calc(50% - 75px);
   top: 80vh;
+}
+
+.main--socials {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  bottom: 5px;
+  left: 5px;
+}
+
+.main--socials-btn {
+  margin: 10px;
+  opacity: .5;
+  transition: all .15s ease-in-out;
+}
+
+.main--socials-btn:hover {
+  opacity: .85;
 }
 
 /*                 Biography                   */

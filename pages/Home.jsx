@@ -21,6 +21,12 @@ import scrolldownanim from "../assets/anim/scroll-down.json";
 import biographyData from "../data/biographyData";
 import factsData from "../data/factsData";
 
+import { ReactComponent as BlogsBtn } from "../assets/svg/blogs.svg";
+import { ReactComponent as GithubBtn } from "../assets/svg/github.svg";
+import { ReactComponent as InstagramBtn } from "../assets/svg/instagram.svg";
+import { ReactComponent as MailBtn } from "../assets/svg/mail.svg";
+import { ReactComponent as YouTubeBtn } from "../assets/svg/youtube.svg";
+
 export default function Home() {
   const [progress, setProgress] = useState(0);
   const [fact, setFact] = useState("Loading...");
@@ -38,7 +44,7 @@ export default function Home() {
   ));
 
   function generateFact() {
-    let randomNum = Math.floor(Math.random() * (factsData.length - 1));
+    let randomNum = Math.floor(Math.random() * factsData.length);
     setFact(factsData[randomNum]);
   }
 
@@ -83,6 +89,23 @@ export default function Home() {
               style={{ height: "150px", width: "150px" }}
             />
           </Zoom>
+        </div>
+        <div className="main--socials">
+          <a href="https://github.com/Zhai90" className="main--socials-btn">
+            <GithubBtn />
+          </a>
+          <a href="https://www.youtube.com/c/ZhaiGD" className="main--socials-btn">
+            <YouTubeBtn />
+          </a>
+          <a href="https://www.instagram.com/_zhai07/" className="main--socials-btn">
+            <InstagramBtn />
+          </a>
+          <a href="mailto:zhaihongmeng@gmail.com" className="main--socials-btn">
+            <MailBtn />
+          </a>
+          <Link to="/blogs" className="main--socials-btn">
+            <BlogsBtn />
+          </Link>
         </div>
         <ParticlesBg />
       </main>
@@ -233,9 +256,10 @@ export default function Home() {
                 </div>
               </div>
             </div>
-              <Link to="/blogs" className="blogs--btn">
-              &gt; View More</Link>
-              </div>
+            <Link to="/blogs" className="blogs--btn">
+              &gt; View More
+            </Link>
+          </div>
         </Zoom>
       </section>
     </>

@@ -77,3 +77,9 @@
 @media screen and (min-width: 240em) {
   /** 3840px **/
 }
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto; /* only because im nice */
+  }
+}

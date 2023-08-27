@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ScrollBtn() {
+  const [displayScroll, setDisplayScroll] = useState(false);
+
+  window.onscroll = () => {
+    if (window.scrollY >= 300) {
+      setDisplayScroll(true);
+    } else {
+      setDisplayScroll(false);
+    }
+  };
+
   return (
-    <div className="scroll--btn">
+    <div
+      className="scroll--btn"
+      onClick={() => {
+        window.scrollTo(0, 0);
+      }}
+      style={{
+        opacity: displayScroll ? 1 : 0,
+        pointerEvents: displayScroll ? "auto" : "none",
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
