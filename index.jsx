@@ -6,11 +6,22 @@ import Home from "./pages/Home";
 import Blogs from "./pages/Blogs";
 
 import Footer from "./components/Footer";
+import ScrollBtn from "./components/ScrollBtn";
 
 function App() {
+  const [displayScroll, setDisplayScroll] = useState(false)
+  useEffect(() => {
+    // if (window.scrollY >= 200) {
+    //   setDisplayScroll(true)
+    // } else {
+    //   setDisplayScroll(false)
+    // }
+    window.scrollY
+  }, [window.scrollY])
   return (
     <React.StrictMode>
       <BrowserRouter>
+        <ScrollBtn style={{ display: displayScroll ? "block" : "none" }}/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blogs" element={<Blogs />} />
