@@ -40,7 +40,7 @@ const data = [
   "I sometimes play Roblox.",
   "My favourite Roblox game is Arcane Odyssey.",
   "The first programming language I learned was Luau (Roblox Lua).",
-  "This is my Macbook background: www.imgur.com/R543kHJ.",
+  "This is my [Macbook background](www.imgur.com/R543kHJ).",
   "I'm good at being bad.",
   "This website was coded with React.JS.",
   "This website's size is X", // FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN

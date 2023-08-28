@@ -12,45 +12,20 @@ random facts generator
 
 blogs will be an array
 of objects with the properties
+
 id
 title (markdown)
-category
+category (num)
 description (markdown)
 thumbnail
 author (markdown)
 content (markdown)
 
-blogs = [
-{
-id: num,
-title: str,
-category: num,
-description: str,
-thumbnail: url,
-author: str,
-content: str
-},
-{
-id: num,
-title: str,
-category: num,
-description: str,
-thumbnail: url,
-author: str,
-content: str
-}
-]
+categories
+robotics = 1
+coding = 2
+web dev = 3
+reactjs = 4
+discord.js = 5
 
 
-
-article one
-
-{
-id: 1,
-title: "Electricity and Circuits. How do they work?",
-category: "Robotics",
-description: str,
-thumbnail: url,
-author: str,
-content: str
-}
