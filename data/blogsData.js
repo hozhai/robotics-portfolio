@@ -17,15 +17,6 @@ const data = [
     thumbnail: "",
     content: "# Hello!!!!\n**bye!!**",
   },
-  {
-    id: 3,
-    title: `Test Post 3`,
-    category: [3, 4, 5],
-    createdAt: 1693326792,
-    description: `lorem ipsum`,
-    thumbnail: "",
-    content: "",
-  },
 ];
 
 export default data;
