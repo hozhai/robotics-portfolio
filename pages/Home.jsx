@@ -20,6 +20,7 @@ import scrolldownanim from "../assets/anim/scroll-down.json";
 
 import biographyData from "../data/biographyData";
 import factsData from "../data/factsData";
+import blogsData from "../data/blogsData";
 
 import { ReactComponent as BlogsBtn } from "../assets/svg/blogs.svg";
 import { ReactComponent as GithubBtn } from "../assets/svg/github.svg";
@@ -30,6 +31,7 @@ import { ReactComponent as YouTubeBtn } from "../assets/svg/youtube.svg";
 export default function Home() {
   const [progress, setProgress] = useState(0);
   const [fact, setFact] = useState("Loading...");
+  const [blogsArr, setBlogsArr] = useState(blogsData);
 
   useEffect(() => {
     document.title = "<Home /> | Zhai";
@@ -42,6 +44,35 @@ export default function Home() {
       <ReactMarkdown children={obj.content} remarkPlugins={[remarkGfm]} />
     </div>
   ));
+
+  const blogsPrev = blogsArr
+    .sort((a, b) => b.createdAt - a.createdAt)
+    .slice(0, 2) // including [0] not including [2]
+    .map((obj) => (
+      <Link to={`/blogs/${obj.id}`} className="blog--box" key={obj.id}>
+        <div className="blog--img">
+          <img
+            src={
+              obj.thumbnail ||
+              "https://place-hold.it/304x171/191919/faf9f6/000&text=Not Found"
+            }
+            width={304}
+            height={171}
+          />
+        </div>
+        <div className="blog--content">
+          <div className="blog--name title">
+            {obj.title || "404 | Not Found"}
+          </div>
+          <div className="blog--description text">
+            {obj.description ||
+              "This post might not exist anymore, or an error has occurred."}
+          </div>
+        </div>
+      </Link>
+    ));
+
+  console.log(blogsPrev);
 
   function generateFact() {
     let randomNum = Math.floor(Math.random() * factsData.length);
@@ -94,10 +125,16 @@ export default function Home() {
           <a href="https://github.com/Zhai90" className="main--socials-btn">
             <GithubBtn />
           </a>
-          <a href="https://www.youtube.com/c/ZhaiGD" className="main--socials-btn">
+          <a
+            href="https://www.youtube.com/c/ZhaiGD"
+            className="main--socials-btn"
+          >
             <YouTubeBtn />
           </a>
-          <a href="https://www.instagram.com/_zhai07/" className="main--socials-btn">
+          <a
+            href="https://www.instagram.com/_zhai07/"
+            className="main--socials-btn"
+          >
             <InstagramBtn />
           </a>
           <a href="mailto:zhaihongmeng@gmail.com" className="main--socials-btn">
@@ -114,7 +151,7 @@ export default function Home() {
           <Slide delay={100} triggerOnce={true}>
             <h2>
               <span className="biography--bu-title">
-                Who am I?<span className="biography--fake-cursor">_</span>
+                Who am I?<span className="fake-cursor">_</span>
               </span>
               <Typewriter
                 onInit={(typewriter) => {
@@ -220,42 +257,7 @@ export default function Home() {
         </div>
         <Zoom delay={600} triggerOnce={true}>
           <div className="blogs--container">
-            <div className="blog--box">
-              <div className="blog--img">
-                <img
-                  src="https://place-hold.it/304x171"
-                  width={304}
-                  height={171}
-                />
-              </div>
-              <div className="blog--content">
-                <div className="blog--name title">This is a blog post!</div>
-                <div className="blog--description text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-                  unde distinctio ex quaerat odit laborum tempore fugit ea a rem
-                  itaque at eaque voluptatum blanditiis facilis pariatur, neque
-                  aliquam. Quasi?
-                </div>
-              </div>
-            </div>
-            <div className="blog--box">
-              <div className="blog--img">
-                <img
-                  src="https://place-hold.it/304x171"
-                  width={304}
-                  height={171}
-                />
-              </div>
-              <div className="blog--content">
-                <div className="blog--name title">This is a blog post!</div>
-                <div className="blog--description text">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Numquam doloribus repellendus, corrupti praesentium dolore
-                  corporis autem sequi et commodi, excepturi doloremque, harum
-                  itaque saepe vero eius deserunt cumque! Quod, porro!
-                </div>
-              </div>
-            </div>
+            {blogsPrev}
             <Link to="/blogs" className="blogs--btn">
               &gt; View More
             </Link>

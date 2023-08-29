@@ -1,24 +1,6 @@
 @media screen and (max-width: 47.9em) {
   /** ≥568px **/
 
-  @keyframes fake-cursor {
-    0% {
-      opacity: 0;
-    }
-    49% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    99% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
   .biography--title {
     font-size: 2.25rem;
   }
@@ -29,12 +11,6 @@
 
   .biography--bu-title {
     display: block;
-  }
-
-  .biography--fake-cursor {
-    -webkit-animation: fake-cursor 1s infinite;
-    animation: fake-cursor 1s infinite;
-    margin-left: 1px;
   }
 
   .biography--block {
