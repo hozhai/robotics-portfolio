@@ -20,7 +20,11 @@ export default function Blogs() {
         style={{ height: "5px" }}
       />
       <h3 className="path text">
-        / <Link to="/" className="link">HOME</Link> / <strong>BLOGS</strong>
+        /&nbsp;
+        <Link to="/" className="link">
+          HOME
+        </Link>
+        &nbsp;/&nbsp;<strong>BLOGS</strong>&nbsp;/
       </h3>
       <h2 className="bp--title title">
         <Typewriter

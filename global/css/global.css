@@ -38,17 +38,19 @@ a {
 .path strong {
   color: #faf9f6;
   font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .link {
   font-family: "Ubuntu Mono", sans-serif;
-  color: #faf9f6;
+  color: #c1c1c1;
   transition: all 0.1s ease-in-out;
   text-decoration: underline;
 }
 
 .link:hover {
-  color: #bdbdbd;
+  color: #fafafa;
 }
 
 .scroll--btn {
@@ -337,8 +339,10 @@ img[alt="bioimg"]:hover {
   text-decoration: none !important;
 }
 
-.blog--description {
+.blog--description p {
   font-size: 1.2rem;
+  margin-top: 0;
+  margin-left: 2px;
 }
 
 .blogs--btn {
@@ -384,4 +388,28 @@ img[alt="bioimg"]:hover {
 .post--title {
   font-size: 3.25rem;
   text-align: center;
+}
+
+.post--thumbnail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post--thumbnail {
+  border-radius: 50px;
+  width: 60%;
+  aspect-ratio: 16/9;
+}
+
+.post--content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post--content {
+  width: 60%;
+  font-size: 1.25rem;
+  margin-top: 30px;
 }

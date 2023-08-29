@@ -54,7 +54,7 @@ export default function Home() {
           <img
             src={
               obj.thumbnail ||
-              "https://place-hold.it/304x171/191919/faf9f6/000&text=Not Found"
+              "https://place-hold.it/304x171/191919/faf9f6/000&text=NotFound"
             }
             width={304}
             height={171}
@@ -64,10 +64,13 @@ export default function Home() {
           <div className="blog--name title">
             {obj.title || "404 | Not Found"}
           </div>
-          <div className="blog--description text">
-            {obj.description ||
-              "This post might not exist anymore, or an error has occurred."}
-          </div>
+          <ReactMarkdown
+            className="blog--description text"
+            children={
+              obj.description ||
+              "This post might not exist anymore, or an error has occurred."
+            }
+          />
         </div>
       </Link>
     ));

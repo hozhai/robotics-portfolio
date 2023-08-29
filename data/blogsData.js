@@ -20,11 +20,7 @@ const data = [
     createdAt: 1693326790,
     description: ``,
     thumbnail: "",
-    content: `
-      # Hi!!!!
-      **This is very __cool__!**
-      2
-    `,
+    content: "# Hello!!!!\n**bye!!**",
   },
   {
     id: 3,
