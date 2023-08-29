@@ -1,17 +1,12 @@
 const data = [
   {
     id: 1,
-    // title: "Electricity and Circuits. How do they work?",
-    title: `Test Post 1`,
+    title: "Electricity and Circuits. How do they work?",
     category: [1],
     createdAt: 1693326789,
     description: `lorem ipsum`,
     thumbnail: "../assets/blogs/thumbnails/1.jpg",
-    content: `
-      # Hi!!!!
-      **This is very __cool__!**
-      1
-    `,
+    content: "",
   },
   {
     id: 2,
@@ -29,11 +24,7 @@ const data = [
     createdAt: 1693326792,
     description: `lorem ipsum`,
     thumbnail: "",
-    content: `
-      # Hi!!!!
-      **This is very __cool__!**
-      3
-    `,
+    content: "",
   },
 ];
 
