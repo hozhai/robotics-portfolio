@@ -1,12 +1,11 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-import blogsData from "../data/blogsData";
 import ReactMarkdown from "react-markdown";
 
-export default function BlogDetail() {
+export default function BlogDetail({ data }) {
   const params = useParams();
-  const blog = blogsData.filter((obj) => obj.id == params.id)[0] || {};
+  const blog = data.filter((obj) => obj.id == params.id)[0] || {};
   console.log(blog.content);
   return (
     <>

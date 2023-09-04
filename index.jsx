@@ -9,15 +9,29 @@ import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 import BlogDetail from "./pages/BlogDetail";
 
+import data from "./data/blogsData";
+
 function App() {
+  const [blogsData, setBlogsData] = useState(data);
+
+  useEffect(() => {
+    const timeout = setInterval(() => {
+      setBlogsData(data);
+    }, 30000);
+
+    return () => {
+      clearInterval(timeout);
+    };
+  }, []);
+
   return (
     <React.StrictMode>
       <BrowserRouter>
         <ScrollBtn />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/blogs/:id" element={<BlogDetail />} />
+          <Route path="/" element={<Home data={blogsData} />} />
+          <Route path="/blogs" element={<Blogs data={blogsData} />} />
+          <Route path="/blogs/:id" element={<BlogDetail data={blogsData} />} />
         </Routes>
         <Footer />
       </BrowserRouter>

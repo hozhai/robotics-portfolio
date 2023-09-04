@@ -20,7 +20,6 @@ import scrolldownanim from "../assets/anim/scroll-down.json";
 
 import biographyData from "../data/biographyData";
 import factsData from "../data/factsData";
-import blogsData from "../data/blogsData";
 
 import { ReactComponent as BlogsBtn } from "../assets/svg/blogs.svg";
 import { ReactComponent as GithubBtn } from "../assets/svg/github.svg";
@@ -28,10 +27,9 @@ import { ReactComponent as InstagramBtn } from "../assets/svg/instagram.svg";
 import { ReactComponent as MailBtn } from "../assets/svg/mail.svg";
 import { ReactComponent as YouTubeBtn } from "../assets/svg/youtube.svg";
 
-export default function Home() {
+export default function Home({ data }) {
   const [progress, setProgress] = useState(0);
   const [fact, setFact] = useState("Loading...");
-  const [blogsArr, setBlogsArr] = useState(blogsData);
 
   useEffect(() => {
     document.title = "<Home /> | Zhai";
@@ -45,7 +43,7 @@ export default function Home() {
     </div>
   ));
 
-  const blogsPrev = blogsArr
+  const blogsPrev = data
     .sort((a, b) => b.createdAt - a.createdAt)
     .slice(0, 2) // including [0] not including [2]
     .map((obj) => (
@@ -74,8 +72,6 @@ export default function Home() {
         </div>
       </Link>
     ));
-
-  console.log(blogsPrev);
 
   function generateFact() {
     let randomNum = Math.floor(Math.random() * factsData.length);

@@ -13,6 +13,7 @@ body {
   min-width: 100%;
   background-color: #212121;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .title {
@@ -372,6 +373,14 @@ img[alt="bioimg"]:hover {
   color: #ff9a00;
 }
 
+.blog--time {
+  font-family: "Ubuntu Mono", sans-serif;
+  color: #464646;
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+}
+
 /*                                             */
 /*                 Blog Page                   */
 /*                                             */
@@ -379,6 +388,42 @@ img[alt="bioimg"]:hover {
 .bp--title {
   font-size: 3.25rem;
   text-align: center;
+}
+
+.bp--filters {
+  height: 50px;
+  width: 60%;
+  margin-left: 20%;
+  background-color: #191919;
+}
+
+.bp--blogs-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.bp--filters input[name="query"] {
+  font-size: 1.5rem;
+  font-family: "Ubuntu Mono", monospace;
+  color: #c1c1c1;
+  width: 40%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #303030;
+  padding: 0;
+  padding-left: 10px;
+  transition: all 0.25s ease-in-out;
+  caret-color: #168a0a;
+}
+
+.bp--filters input[name="query"]:hover,
+.bp--filters input[name="query"]:active,
+.bp--filters input[name="query"]:focus-visible {
+  filter: brightness(130%);
 }
 
 /*                                                    */
