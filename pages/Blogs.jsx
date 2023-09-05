@@ -52,12 +52,43 @@ export default function Blogs({ data }) {
       ...prevFilter,
       [event.target.name]: event.target.value,
     }));
-    console.log(
-      data.filter((obj) =>
-        JSON.stringify(obj).toLowerCase().includes(filter.query.toLowerCase())
-      )
+    setBlogsArr(
+      data
+        .filter((obj) =>
+          JSON.stringify(obj)
+            .toLowerCase()
+            .includes(event.target.value.toString().toLowerCase())
+        )
+        .map((obj) => (
+          <Link to={`/blogs/${obj.id}`} className="blog--box" key={obj.id}>
+            <div className="blog--img">
+              <img
+                src={
+                  obj.thumbnail ||
+                  "https://place-hold.it/304x171/191919/faf9f6/000&text=NotFound"
+                }
+                width={304}
+                height={171}
+              />
+            </div>
+            <div className="blog--content">
+              <div className="blog--name title">
+                {obj.title || "404 | Not Found"}
+              </div>
+              <ReactMarkdown
+                className="blog--description text"
+                children={
+                  obj.description ||
+                  "This post might not exist anymore, or an error has occurred."
+                }
+              />
+            </div>
+            <div className="blog--time">
+              {humanizeDuration(Date.now() - obj.createdAt, { largest: 1 })} ago
+            </div>
+          </Link>
+        ))
     );
-    setBlogsArr()
   }
 
   // let  = data
@@ -115,6 +146,12 @@ export default function Blogs({ data }) {
         />
       </div>
       <div className="bp--blogs-container">{blogsArr}</div>
+      {!blogsArr.length > 0 && (
+        <div className="bp--nores">
+          <h3 className="bp--nores-title">No Results :-(</h3>
+          <p className="bp--nores-text">Try searching for another term.</p>
+        </div>
+      )}
     </>
   );
 }
