@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -25,18 +25,20 @@ function App() {
   }, []);
 
   return (
-    <React.StrictMode>
-      <BrowserRouter>
-        <ScrollBtn />
-        <Routes>
-          <Route path="/" element={<Home data={blogsData} />} />
-          <Route path="/blogs" element={<Blogs data={blogsData} />} />
-          <Route path="/blogs/:id" element={<BlogDetail data={blogsData} />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </React.StrictMode>
+    <BrowserRouter>
+      <ScrollBtn />
+      <Routes>
+        <Route path="/" element={<Home data={blogsData} />} />
+        <Route path="/blogs" element={<Blogs data={blogsData} />} />
+        <Route path="/blogs/:id" element={<BlogDetail data={blogsData} />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
-createRoot(document.querySelector("#root")).render(<App />);
+createRoot(document.querySelector("#root")).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);

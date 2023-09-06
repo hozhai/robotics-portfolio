@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import Typewriter from "typewriter-effect";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import emoji from "remark-emoji";
 import humanizeDuration from "humanize-duration";
 
 export default function Blogs({ data }) {
@@ -33,6 +35,7 @@ export default function Blogs({ data }) {
               obj.description ||
               "This post might not exist anymore, or an error has occurred."
             }
+            remarkPlugins={[remarkGfm, emoji]}
           />
         </div>
         <div className="blog--time">
@@ -82,6 +85,7 @@ export default function Blogs({ data }) {
                   obj.description ||
                   "This post might not exist anymore, or an error has occurred."
                 }
+                remarkPlugins={[remarkGfm, emoji]}
               />
             </div>
             <div className="blog--time">

@@ -477,3 +477,7 @@ img[alt="bioimg"]:hover {
   font-size: 1.25rem;
   margin-top: 30px;
 }
+
+.post--content hr {
+  border: 1px solid #525252;
+}

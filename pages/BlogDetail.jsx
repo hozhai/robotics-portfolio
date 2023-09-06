@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import emoji from "remark-emoji";
 
 export default function BlogDetail({ data }) {
   const params = useParams();
   const blog = data.filter((obj) => obj.id == params.id)[0] || {};
-  console.log(blog.content);
+
+  useEffect(() => {
+    document.title = `<${blog.title || "404"} /> | Zhai`;
+  }, [params.id]);
+
   return (
     <>
       <h3 className="path text">
@@ -40,6 +45,7 @@ export default function BlogDetail({ data }) {
         <ReactMarkdown
           className="post--content text"
           children={blog.content || "Could not fetch blog data."}
+          remarkPlugins={[remarkGfm, emoji]}
         />
       </div>
     </>

@@ -12,8 +12,10 @@ import {
 import Lottie from "lottie-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import emoji from "remark-emoji";
 import { nanoid } from "nanoid";
 import LoadingBar from "react-top-loading-bar";
+import humanizeDuration from "humanize-duration";
 
 import ParticlesBg from "../components/ParticlesBg";
 import scrolldownanim from "../assets/anim/scroll-down.json";
@@ -39,7 +41,10 @@ export default function Home({ data }) {
 
   const biographyArray = biographyData.map((obj) => (
     <div className="biography--block" key={nanoid()}>
-      <ReactMarkdown children={obj.content} remarkPlugins={[remarkGfm]} />
+      <ReactMarkdown
+        children={obj.content}
+        remarkPlugins={[remarkGfm, emoji]}
+      />
     </div>
   ));
 
@@ -68,7 +73,12 @@ export default function Home({ data }) {
               obj.description ||
               "This post might not exist anymore, or an error has occurred."
             }
+            remarkPlugins={[remarkGfm, emoji]}
           />
+        </div>
+        <div className="blog--time">
+          {humanizeDuration(Date.now() - obj.createdAt, { largest: 1 })} ago |
+          ID: {obj.id}
         </div>
       </Link>
     ));
@@ -212,7 +222,10 @@ export default function Home({ data }) {
         </div>
         <div className="rfg--fact text">
           <Fade delay={700} triggerOnce={true}>
-            <ReactMarkdown children={`"${fact}"`} remarkPlugins={[remarkGfm]} />
+            <ReactMarkdown
+              children={`"${fact}"`}
+              remarkPlugins={[remarkGfm, emoji]}
+            />
           </Fade>
         </div>
         <div className="rfg--btn-container">
