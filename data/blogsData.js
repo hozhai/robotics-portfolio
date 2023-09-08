@@ -3,9 +3,9 @@ const data = [
     id: 1,
     title: "Circuits & Currents",
     category: [1],
-    createdAt: 1693326789,
+    createdAt: 1694184888000,
     description:
-      "A small dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements, electrical schematics, etc.",
+      "A small dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements and their symbols, electrical schematics, prefixes, resistors etc.",
     thumbnail: "../assets/blogs/thumbnails/1.jpg",
     content: `
 ## Firstly, what is a circuit?

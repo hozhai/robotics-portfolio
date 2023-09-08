@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import emoji from "remark-emoji";
+import humanizeDuration from "humanize-duration";
 
 export default function BlogDetail({ data }) {
   const params = useParams();

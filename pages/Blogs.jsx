@@ -90,7 +90,7 @@ export default function Blogs({ data }) {
             </div>
             <div className="blog--time">
               {humanizeDuration(Date.now() - obj.createdAt, { largest: 1 })} ago
-              | ID: {obj.id}
+              | ID: {obj.id || "0"}
             </div>
           </Link>
         ))
