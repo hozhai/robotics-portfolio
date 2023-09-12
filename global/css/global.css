@@ -63,7 +63,7 @@ a {
   background-color: #080808;
   z-index: 999;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.4s ease-in-out;
   opacity: 0.5;
 }
 
@@ -288,7 +288,6 @@ img[alt="bioimg"]:hover {
   align-items: flex-start;
   margin-bottom: 30px;
   cursor: pointer;
-  border-top-right-radius: 25px;
   position: relative;
   transition: all 0.15s ease-in-out;
 }
@@ -474,10 +473,15 @@ img[alt="bioimg"]:hover {
 
 .post--content {
   width: 60%;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
   margin-top: 30px;
 }
 
 .post--content hr {
   border: 1px solid #525252;
+}
+
+.post--content img {
+  width: 50%;
+  margin-left: 25%
 }

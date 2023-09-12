@@ -25,14 +25,13 @@ export default function BlogDetail({ data }) {
           BLOGS
         </Link>
         &nbsp;/&nbsp;
-        <strong>{`${blog.title || "Not Found"}  (${
-          blog.id || "Error"
-        })`}</strong>
+        <strong>{blog.title || "Not Found"}</strong>
       </h3>
       <h2 className="title post--title">
         {blog.title || "404 Not Found"}
         <span className="fake-cursor">_</span>
       </h2>
+
       <div className="post--thumbnail-container">
         <img
           className="post--thumbnail"
