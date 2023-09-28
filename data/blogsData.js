@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    title: "Circuits & Currents",
+    title: "Electricity & Circuits",
     category: [1],
     createdAt: 1694184888000,
     description:
@@ -14,14 +14,48 @@ A circuit is a *complete* and *closed* loop that allows the current (electricity
 ## So... how do we represent them?
 Via :sparkles: *electrical schematics* :sparkles: (or circuit diagram, or wiring diagram, etc.) It usually looks something like this:
 
-![A simple electrical circuit represented by a schematic.](https://i.imgur.com/mkb3mn1.png)
+![A simple electrical circuit represented by a schematic.](https://i.imgur.com/DqihydP.png)
 
 Of course, usually it won't be green, I just made it green for good contrast which allows you to actually see it.
 
 Anyway, this schematic shows you a 9V in-series circuit (we'll learn what that means soon) with it's positive side connected to the longer leg of a green LED (light-emitting diode), and it's negative side connected to a 220Ω resistor (so that our LED doesn't overload and burn) which then passes through a momentary switch (a button, if you will) which finally gets attached to the other leg of the LED (if your LED doesn't turn on when pushing the button, try switching the order of the legs).
 
 ## Alright then, what's a "in series" circuit?
+
+It is a circuit where the same electricity flows through all the components, basically a circle. Basically the schematic shown above.
+
+### How about a parallel one?
+
+The components are placed in different wires than the one connected to the battery, making the current split between all of the extra wires, like this:
+
+![A parallel circuit.](https://i.imgur.com/KTc7ePc.png)
+
+## Good to know. Also what are those weird wiggly things?
+
+They are resistors! I know what you're thinking, *"I know what those look like and they don't wiggle like that!" (or maybe you don't know what those look like, anyway)*, but what if I told you that is indeed a resistor? Those are called schematic symbols, and are graphical representations of components. Just like how an electrical schematic is a graphical representation of a whole circuit, a schematic symbol is a graphical representation of a single component.
+
+![Basic circuit components with their schematic symbols.](https://i.imgur.com/BH6M2Q6.png)
     `,
+    /* 
+      NOTES
+      ---
+     Bear in mind that there are different variantions of a schematic symbol to represent a single component. 
+
+      1 amp is 6.24 * 10^18 electrons flowing through a certain point per second
+      so 2 amps = 1.248 * 10^19
+      1 amp = 1 coulomb
+
+      voltage is a difference in electrical potential energy, per unit of change, between two points.
+      1 volt = 1 joule per coulomb
+      voltage is always relative
+    */
+
+    /* 
+      SOURCES
+      ---
+      https://www.youtube.com/watch?v=8gvJzrjwjds&list=PLzqS33DOPhJkRn6e9_OTdQwRojO8qlusI&ab_channel=Afrotechmods
+      https://www.youtube.com/watch?v=TBt-kxYfync&list=PLzqS33DOPhJkRn6e9_OTdQwRojO8qlusI&index=3
+    */
   },
 ];
 

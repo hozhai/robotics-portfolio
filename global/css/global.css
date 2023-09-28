@@ -475,6 +475,7 @@ img[alt="bioimg"]:hover {
   width: 60%;
   font-size: 1.45rem;
   margin-top: 30px;
+  text-align: justify;
 }
 
 .post--content hr {
@@ -482,6 +483,6 @@ img[alt="bioimg"]:hover {
 }
 
 .post--content img {
-  width: 50%;
-  margin-left: 25%
+  width: 55%;
+  margin-left: 22.5%
 }
