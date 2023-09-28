@@ -18,7 +18,7 @@ Via :sparkles: *electrical schematics* :sparkles: (or circuit diagram, or wiring
 
 Of course, usually it won't be green, I just made it green for good contrast which allows you to actually see it.
 
-Anyway, this schematic shows you a 9V in-series circuit (we'll learn what that means soon) with it's positive side connected to the longer leg of a green LED (light-emitting diode), and it's negative side connected to a 220Ω resistor (so that our LED doesn't overload and burn) which then passes through a momentary switch (a button, if you will) which finally gets attached to the other leg of the LED (if your LED doesn't turn on when pushing the button, try switching the order of the legs).
+Anyway, this schematic shows you a 9V in-series circuit (we'll learn what that means soon) with it's positive side connected to the longer leg of a green LED (light-emitting diode), and it's negative side connected to a 220Ω resistor (so that our LED doesn't overload and burn) which then passes through a button (a momentary switch, if you will) which finally gets attached to the other leg of the LED (if your LED doesn't turn on when pushing the button, try switching the order of the legs).
 
 ## Alright then, what's a "in series" circuit?
 
@@ -34,7 +34,29 @@ The components are placed in different wires than the one connected to the batte
 
 They are resistors! I know what you're thinking, *"I know what those look like and they don't wiggle like that!" (or maybe you don't know what those look like, anyway)*, but what if I told you that is indeed a resistor? Those are called schematic symbols, and are graphical representations of components. Just like how an electrical schematic is a graphical representation of a whole circuit, a schematic symbol is a graphical representation of a single component.
 
-![Basic circuit components with their schematic symbols.](https://i.imgur.com/BH6M2Q6.png)
+![Basic circuit components with their schematic symbols.](https://i.imgur.com/BH6M2Q6.png) 
+
+*(Bear in mind that there are different variantions of a schematic symbol to represent a single component.)*
+
+Some of those components are pretty self-explanatory. You got the wire, who does what a wire does, a battery does what a battery does, however I'll explain what the rest of those do.
+
+* Resistor
+
+  Adds electrical resistance to the circuit which reduces the outputting Ampere. We'll go into more detail about this later on.
+
+* Potentiometer
+
+  It's like a resistor, but cooler because you can spin it which changes the resistance. You can make cool things with this. We'll touch this much further detail later on along with the resistor.
+
+* LED
+
+  It stands for Light-emitting Diode, and it does what it says (it emits light 🤯). The longer leg is where the positive charge should be attached to, and the shorter one where the negative charge should be attached to.
+
+* Switch
+
+  I left this for last because this is the most "complicated" out of these 6 and there are a lot of misconceptions about it. There are a lot of types of switches, but for now we'll focus on the pushbutton (momentary switch) which is probably the ones you would use when messing with circuits or in your robotics class. This is how it looks:
+
+
     `,
     /* 
       NOTES
