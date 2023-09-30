@@ -29,15 +29,32 @@ import { ReactComponent as InstagramBtn } from "../assets/svg/instagram.svg";
 import { ReactComponent as MailBtn } from "../assets/svg/mail.svg";
 import { ReactComponent as YouTubeBtn } from "../assets/svg/youtube.svg";
 
+import { ReactComponent as PerformanceIcon } from "../assets/svg/performance.svg";
+import { ReactComponent as FancyIcon } from "../assets/svg/fancy.svg";
+
 export default function Home({ data }) {
   const [progress, setProgress] = useState(0);
   const [fact, setFact] = useState("Loading...");
+  const [bgState, setBgState] = useState(
+    localStorage.getItem("bgState") || true
+  );
+
+  const _true = new RegExp("true");
 
   useEffect(() => {
     document.title = "<Home /> | Zhai";
     setProgress(100);
     generateFact();
+    if (!localStorage.getItem("bgState")) {
+      localStorage.setItem("bgState", true);
+    } else {
+      setBgState(_true.test(localStorage.getItem("bgState")));
+    }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("bgState", bgState);
+  }, [bgState]);
 
   const biographyArray = biographyData.map((obj) => (
     <div className="biography--block" key={nanoid()}>
@@ -153,7 +170,24 @@ export default function Home({ data }) {
             <BlogsBtn />
           </Link>
         </div>
-        <ParticlesBg />
+        <div
+          className="main--bg-switch"
+          onClick={() => setBgState((prevState) => !prevState)}
+        >
+          {bgState ? <PerformanceIcon /> : <FancyIcon />}
+        </div>
+        {bgState ? (
+          <ParticlesBg />
+        ) : (
+          <div
+            className="main--bg-backup"
+            style={{
+              backgroundColor: "#191919",
+              width: "100%",
+              height: "100vh",
+            }}
+          ></div>
+        )}
       </main>
       <section className="biography">
         <div className="title biography--title">

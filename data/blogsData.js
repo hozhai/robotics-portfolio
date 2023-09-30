@@ -50,11 +50,15 @@ Some of those components are pretty self-explanatory. You got the wire, who does
 
 * LED
 
-  It stands for Light-emitting Diode, and it does what it says (it emits light 🤯). The longer leg is where the positive charge should be attached to, and the shorter one where the negative charge should be attached to.
+  It stands for light-emitting Diode, and it does what it says (it emits light 🤯). The longer leg is where the positive charge should be attached to, and the shorter one where the negative charge should be attached to.
 
 * Switch
 
-  I left this for last because this is the most "complicated" out of these 6 and there are a lot of misconceptions about it. There are a lot of types of switches, but for now we'll focus on the pushbutton (momentary switch) which is probably the ones you would use when messing with circuits or in your robotics class. This is how it looks:
+  I left this for last because this is the most "complicated" out of these 6 and there are a lot of misconceptions about it. There are a lot of types of switches, but for now we'll focus on the pushbutton (momentary switch) which is probably the ones you would use when messing with circuits or in your robotics class. This is how it looks inside:
+
+  ![The illustration of the inside of a pushbutton.](https://i.imgur.com/rjqysKF.png)
+
+  When not pressed down, the current passes straight through to the same leg on the other side. However, when it is pressed down, there will be a "bridge" which allows the current to also pass down to the second leg.
 
 
     `,

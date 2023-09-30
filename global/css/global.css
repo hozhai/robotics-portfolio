@@ -169,6 +169,22 @@ main h2 {
   opacity: 0.85;
 }
 
+.main--bg-switch {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  z-index: 1;
+  opacity: 0.5;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.main--bg-switch:hover {
+  opacity: 0.85;
+}
+
 /*                 Biography                   */
 
 .biography {
@@ -439,7 +455,7 @@ img[alt="bioimg"]:hover {
 }
 
 .bp--nores .bp--nores-text {
-  color:#c1c1c1;
+  color: #c1c1c1;
   font-family: "Ubuntu Mono", sans-serif;
   font-size: 1.5rem;
 }
@@ -484,5 +500,5 @@ img[alt="bioimg"]:hover {
 
 .post--content img {
   width: 55%;
-  margin-left: 22.5%
+  margin-left: 22.5%;
 }
