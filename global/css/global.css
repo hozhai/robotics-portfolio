@@ -489,9 +489,26 @@ img[alt="bioimg"]:hover {
 
 .post--content {
   width: 60%;
+  line-height: 30px;
   font-size: 1.45rem;
   margin-top: 30px;
   text-align: justify;
+}
+
+.post--content h1,
+.post--content h2 {
+  position: relative;
+}
+
+.post--content h1::after,
+.post--content h2::after {
+  content: "";
+  position: absolute;
+  background-color: #525252;
+  height: 2px;
+  width: 100%;
+  bottom: -15px;
+  left: 0;
 }
 
 .post--content hr {

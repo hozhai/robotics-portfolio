@@ -1,20 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import emoji from "remark-emoji";
-import humanizeDuration from "humanize-duration";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
+import "../global/css/katex.min.css";
+import LoadingBar from "react-top-loading-bar";
 
 export default function BlogDetail({ data }) {
+  const [progress, setProgress] = useState(0);
+  // const [readProgress, setReadProgress] = useState(0);
   const params = useParams();
   const blog = data.filter((obj) => obj.id == params.id)[0] || {};
 
+  function progressFunc() {
+    let w =
+      ((document.body.scrollTop || document.documentElement.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight -
+          100)) *
+      100;
+ 
+    // setReadProgress(w);
+  }
+
   useEffect(() => {
     document.title = `<${blog.title || "404"} /> | Zhai`;
+    setProgress(100);
+    // document.addEventListener("scroll", progressFunc);
+    // setReadProgress(0)
+
+    // return () => {
+    //   document.removeEventListener("scroll", progressFunc);
+    // };
   }, [params.id]);
 
   return (
     <>
+      <LoadingBar
+        color="#61c192"
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+        style={{ height: "5px" }}
+      />
+      <LoadingBar
+        color="#55a67b"
+        progress={readProgress}
+        style={{ height: "7.5px", transition: "all 0s" }}
+      />
       <h3 className="path text">
         /&nbsp;
         <Link to="/" className="link">
@@ -45,7 +79,8 @@ export default function BlogDetail({ data }) {
         <ReactMarkdown
           className="post--content text"
           children={blog.content || "Could not fetch blog data."}
-          remarkPlugins={[remarkGfm, emoji]}
+          remarkPlugins={[remarkGfm, emoji, remarkMath]}
+          rehypePlugins={[rehypeKatex]}
         />
       </div>
     </>

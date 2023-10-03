@@ -60,6 +60,14 @@ Some of those components are pretty self-explanatory. You got the wire, who does
 
   When not pressed down, the current passes straight through to the same leg on the other side. However, when it is pressed down, there will be a "bridge" which allows the current to also pass down to the second leg.
 
+# Nice! We're done with the basics! What now?
+
+Prefixes! They're really important so we should get them out of the way. If you've paid attention during physics or maths class, you should breeze through this. 
+
+## So, what are those?
+
+You know the units of measurements? Like meters, decibels, watts, amperes, volts, etc.? They have a letter before them that means how much the value should be multiplied or divided by. Some prefixes are mili, centi, deci, kilo, mega, giga, tera, etc.. For example, a kilometer (Km) is 1000 times a meter, and a meter would be $\\frac 1 {1000}$ of a meter.
+
 
     `,
     /* 
