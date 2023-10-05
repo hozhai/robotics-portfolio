@@ -66,7 +66,21 @@ Prefixes! They're really important so we should get them out of the way. If you'
 
 ## So, what are those?
 
-You know the units of measurements? Like meters, decibels, watts, amperes, volts, etc.? They have a letter before them that means how much the value should be multiplied or divided by. Some prefixes are mili, centi, deci, kilo, mega, giga, tera, etc.. For example, a kilometer (Km) is 1000 times a meter, and a meter would be $\\frac 1 {1000}$ of a meter.
+You know the units of measurements? Like meters, decibels, watts, amperes, volts, etc.? They have a letter before them that means how much the value should be multiplied or divided by. Some prefixes are mili, centi, deci, kilo, mega, giga, tera, etc.. For example, a kilometer (Km) is 1000 times a meter, and a meter would be $\\frac 1 {1000}$ of a kilometer. 
+
+Here is a handy cheatsheet:
+
+| Prefix    | 1 Base Unit equals: |
+|-----------|:-------------------:|
+| Tera (T)  |    0.000000000001   |
+| Giga (G)  |      .000000001     |
+| Mega (M)  |       .000001       |
+| Kilo (k)  |         .001        |
+| Base Unit |          1          |
+| Mili (m)  |         1000        |
+| Micro (µ) |       1000000       |
+| Nano (n)  |       10000000      |
+| Pico (p)  |     100000000000    |
 
 
     `,

@@ -489,8 +489,8 @@ img[alt="bioimg"]:hover {
 
 .post--content {
   width: 60%;
-  line-height: 30px;
-  font-size: 1.45rem;
+  line-height: 35px;
+  font-size: 1.5rem;
   margin-top: 30px;
   text-align: justify;
 }
@@ -518,4 +518,18 @@ img[alt="bioimg"]:hover {
 .post--content img {
   width: 55%;
   margin-left: 22.5%;
+}
+
+.post--content table {
+  border: 4px solid rgba(126, 211, 33, 1);
+  border-radius: 10px;
+  font-size: 1.35rem;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.post--content td {
+
+  border-bottom: 2px solid rgb(55, 55, 55);
+  border-top: 2px solid rgb(55, 55, 55);
 }

@@ -10,7 +10,7 @@ import LoadingBar from "react-top-loading-bar";
 
 export default function BlogDetail({ data }) {
   const [progress, setProgress] = useState(0);
-  // const [readProgress, setReadProgress] = useState(0);
+  const [readProgress, setReadProgress] = useState(0);
   const params = useParams();
   const blog = data.filter((obj) => obj.id == params.id)[0] || {};
 
@@ -22,18 +22,18 @@ export default function BlogDetail({ data }) {
           100)) *
       100;
  
-    // setReadProgress(w);
+    setReadProgress(w);
   }
 
   useEffect(() => {
     document.title = `<${blog.title || "404"} /> | Zhai`;
     setProgress(100);
-    // document.addEventListener("scroll", progressFunc);
-    // setReadProgress(0)
+    document.addEventListener("scroll", progressFunc);
+    setReadProgress(0)
 
-    // return () => {
-    //   document.removeEventListener("scroll", progressFunc);
-    // };
+    return () => {
+      document.removeEventListener("scroll", progressFunc);
+    };
   }, [params.id]);
 
   return (
