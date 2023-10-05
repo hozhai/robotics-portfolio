@@ -111,7 +111,7 @@ export default function Home({ data }) {
         color="#61c192"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
-        style={{ height: "5px" }}
+        style={{ height: "7.5px" }}
       />
       <main>
         <h1 className="title main--title">

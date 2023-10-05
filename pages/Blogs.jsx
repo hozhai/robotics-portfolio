@@ -107,7 +107,7 @@ export default function Blogs({ data }) {
         color="#61c192"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
-        style={{ height: "5px" }}
+        style={{ height: "7.5px" }}
       />
       <h3 className="path text">
         /&nbsp;
@@ -148,6 +148,7 @@ export default function Blogs({ data }) {
           placeholder="Search..."
           name="query"
           onChange={updateFilter}
+          value={filter.query}
           autoComplete="off"
         />
       </div>

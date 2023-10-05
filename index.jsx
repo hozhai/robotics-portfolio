@@ -31,6 +31,7 @@ function App() {
         <Route path="/" element={<Home data={blogsData} />} />
         <Route path="/blogs" element={<Blogs data={blogsData} />} />
         <Route path="/blogs/:id" element={<BlogDetail data={blogsData} />} />
+        <Route path="*" element={<div>404</div>} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -7,10 +7,11 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import "../global/css/katex.min.css";
 import LoadingBar from "react-top-loading-bar";
+import ReadingBar from "../components/ReadingBar";
 
 export default function BlogDetail({ data }) {
   const [progress, setProgress] = useState(0);
-  const [readProgress, setReadProgress] = useState(0);
+  const [readProgress, setReadProgress] = useState(0)
   const params = useParams();
   const blog = data.filter((obj) => obj.id == params.id)[0] || {};
 
@@ -18,18 +19,16 @@ export default function BlogDetail({ data }) {
     let w =
       ((document.body.scrollTop || document.documentElement.scrollTop) /
         (document.documentElement.scrollHeight -
-          document.documentElement.clientHeight -
-          100)) *
+          document.documentElement.clientHeight)) *
       100;
- 
-    setReadProgress(w);
+
+      setReadProgress(w)
   }
 
   useEffect(() => {
     document.title = `<${blog.title || "404"} /> | Zhai`;
     setProgress(100);
     document.addEventListener("scroll", progressFunc);
-    setReadProgress(0)
 
     return () => {
       document.removeEventListener("scroll", progressFunc);
@@ -42,13 +41,9 @@ export default function BlogDetail({ data }) {
         color="#61c192"
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
-        style={{ height: "5px" }}
+        style={{ height: "7.5px" }}
       />
-      <LoadingBar
-        color="#55a67b"
-        progress={readProgress}
-        style={{ height: "7.5px", transition: "all 0s" }}
-      />
+      <ReadingBar width={readProgress}/>
       <h3 className="path text">
         /&nbsp;
         <Link to="/" className="link">
