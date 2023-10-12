@@ -136,7 +136,23 @@ So to calculate the resistance we would have to:
 
 $221 \\bullet 10^2 \\pm5\\%$
 
-Which is 22100Ω Ohms of resistance. We can also apply our knowledge with prefixes to make this number prettier. Do you remember how? If not, here's the answer: 22.1kΩ (22.1 *thousand* Ohms).
+Which is 22100Ω Ohms of resistance. We can also apply our knowledge with prefixes to make this number prettier. Do you remember how? If not, here's the answer: 22.1kΩ (22.1 *kilo/thousand* Ohms).
+
+## But how do resistors impact the current?
+
+Amperes, or the electrical current is *inversely proportional* to the resistance, which means that higher the resistance, lower the amount of energy that will pass through. Here is a nice visual representation of how that'd look.
+
+![A visual representation on how resistance affects the current.](https://i.imgur.com/jwAbkVB.png)
+
+The bottom one is receiving the least resistance, which means that the LED gets the most amount of electrical current out of the rest. The top one is receiving the most resistance, which means that the LED gets the last amount of electrical current. More resistance = less current.
+
+### That's so cool! How about potentiometers?
+
+Potentiometers are like resistors but they can be changed or varied, hence the reason some people refer to it as a variable resistor. They have a range, usually from around 0Ω to 10kΩ, even though it can have slight imperfections. Something cool about potentiometers is that they have 3 legs, 1 more than a resistor! This is how you would connect it:
+
+![Illustration of a potentiometer.](https://i.imgur.com/FmcFs8G.png)
+
+The insides are a little bit more complicated, but what you need to know is that you connect either inputs onto the breadboard and the output will be from the middle pin. The amount of resistance will be regulated by the little circle on top which you can twist to change the resistors. Once you see one you'll know exactly how to use it.
 
 
     `,
