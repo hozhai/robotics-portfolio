@@ -5,13 +5,14 @@ import remarkGfm from "remark-gfm";
 import emoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
+import RehypeVideo from "rehype-video";
 import "../global/css/katex.min.css";
 import LoadingBar from "react-top-loading-bar";
 import ReadingBar from "../components/ReadingBar";
 
 export default function BlogDetail({ data }) {
   const [progress, setProgress] = useState(0);
-  const [readProgress, setReadProgress] = useState(0)
+  const [readProgress, setReadProgress] = useState(0);
   const params = useParams();
   const blog = data.filter((obj) => obj.id == params.id)[0] || {};
 
@@ -22,7 +23,7 @@ export default function BlogDetail({ data }) {
           document.documentElement.clientHeight)) *
       100;
 
-      setReadProgress(w)
+    setReadProgress(w);
   }
 
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function BlogDetail({ data }) {
         onLoaderFinished={() => setProgress(0)}
         style={{ height: "7.5px" }}
       />
-      <ReadingBar width={readProgress}/>
+      <ReadingBar width={readProgress} />
       <h3 className="path text">
         /&nbsp;
         <Link to="/" className="link">
@@ -75,7 +76,7 @@ export default function BlogDetail({ data }) {
           className="post--content text"
           children={blog.content || "Could not fetch blog data."}
           remarkPlugins={[remarkGfm, emoji, remarkMath]}
-          rehypePlugins={[rehypeKatex]}
+          rehypePlugins={[rehypeKatex, RehypeVideo]}
         />
       </div>
     </>
