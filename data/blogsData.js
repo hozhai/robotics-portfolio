@@ -6,7 +6,7 @@ const data = [
     createdAt: 1694184888000,
     description:
       "A dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements and their symbols, electrical schematics, prefixes, resistance, and a lot more.",
-    thumbnail: "../assets/blogs/thumbnails/1.jpg",
+    thumbnail: "https://i.imgur.com/rKr81sz.jpeg",
     content: `
 # Firstly, what is a circuit?
 A circuit is a *complete* and *closed* loop that allows the current (electricity) to pass through. It is **always** composed of components (such as batteries, LEDs, resistors, etc.) and conductive lines (such as breadboards, alligator clip wires, jumper wires, etc.) Also, yes, this is what they ask you at school. If you're researching as a student, this definition **will** work for you, as anything else here.
@@ -59,6 +59,14 @@ Some of those components are pretty self-explanatory. You got the wire, who does
   ![The illustration of the inside of a pushbutton.](https://i.imgur.com/rjqysKF.png)
 
   When not pressed down, the current passes straight through to the same leg on the other side. However, when it is pressed down, there will be a "bridge" which allows the current to also pass down to the second leg.
+
+* RGB LED
+
+  Even though this is not in the image, we'll touch on this a big while later.
+
+* DC Motor
+
+  Same as RGB LED.
 
 # Nice! We're done with the basics! What now?
 
@@ -154,12 +162,24 @@ Potentiometers are like resistors but they can be changed or varied, hence the r
 
 The insides are a little bit more complicated, but what you need to know is that you connect either inputs onto the breadboard and the output will be from the middle pin. The amount of resistance will be regulated by the little circle on top which you can twist to change the resistors. Once you see one you'll know exactly how to use it.
 
+# How does electricity actually flow?
+
+If you take a guess, you'll maybe think the electricity flows from positive to negative, and that's partially correct. There's something called the *conventional flow of electricity* which is the standard, and it goes from positive to negative. 
+
+If you're a chemistry nerd, you might've thought that it's from negative to positive, which is actually correct. The electrons jump from atom to atom, creating current. 
+
+But then, why do we still believe that it goes from positive to negative instead of the other way around? Well, long, long ago, people didn't have the sufficient technology to know that the electricity flow was from negative to positive, and just like some of you did, they guessed that it was positive to negative, and all the electricity related formulas and laws were developed around the fact that the electricity flowed from positive to negative.
+
+And now, that people discovered the truth, since all of the previous formulas and stuff still work, of course we are all too lazy to redo all of the laws and theorems and all those nerdy stuff to acommodate the actual flow of electricity.
+
+So now we just call the positive to negative flow the *conventional flow of electricity*.
+
 
     `,
     /* 
       NOTES
       ---
-     Bear in mind that there are different variantions of a schematic symbol to represent a single component. 
+      Bear in mind that there are different variantions of a schematic symbol to represent a single component. 
 
       1 amp is 6.24 * 10^18 electrons flowing through a certain point per second
       so 2 amps = 1.248 * 10^19
@@ -168,6 +188,14 @@ The insides are a little bit more complicated, but what you need to know is that
       voltage is a difference in electrical potential energy, per unit of change, between two points.
       1 volt = 1 joule per coulomb
       voltage is always relative
+    */
+
+    /*
+      FINAL REFLECTION FOR GLOVE PRACTICAL
+      ---
+      1. I didn't really know how wires worked. I knew that atoms had positive and negative charge but I didn't know how that charge could be transferred since those were electrons. Now I know that the copper atoms can have their electrons jump between each of them.
+      2. I have been able to use my understading of electronics in the glove practical project and all the projects prior to that one.
+      3. I am still curious about how more complicated components like transistors and piezo buzzers work.
     */
 
     /* 
