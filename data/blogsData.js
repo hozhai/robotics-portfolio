@@ -24,7 +24,7 @@ Anyway, this schematic shows you a 9V in-series circuit (we'll learn what that m
 
 It is a circuit where the same electricity flows through all the components, basically a circle. Similar to the schematic shown above.
 
-### How about a parallel one?
+## How about a parallel one?
 
 The components are placed in different wires than the one connected to the battery, making the current split between all of the extra wires, like this:
 
@@ -60,17 +60,17 @@ Some of those components are pretty self-explanatory. You got the wire, who does
 
   When not pressed down, the current passes straight through to the same leg on the other side. However, when it is pressed down, there will be a "bridge" that allows the current to also pass down to the second leg.
 
-* DC Motor
+* DC motor
 
   Even though this is not in the image, we'll touch on this a while later.
 
 * RGB LED
 
-  Same as DC Motor.
+  Same as DC motor.
 
 # Nice! We're done with the basics! What now?
 
-Prefixes! They're really important so we should get them out of the way. If you've paid attention during physics or maths class, you should breeze through this. 
+Prefixes! They're really important so we should get them out of the way. If you've paid attention during physics or chemistry class, you should breeze through this. 
 
 ## So, what are those?
 
@@ -154,7 +154,7 @@ Amperes, or the electrical current is *inversely proportional* to the resistance
 
 The bottom one receives the least resistance, which means that the LED gets the most amount of electrical current out of the rest. The top one receives the most resistance, which means that the LED gets the least amount of electrical current. More resistance = less current.
 
-### That's so cool! How about potentiometers?
+## That's so cool! How about potentiometers?
 
 Potentiometers are like resistors but they can be changed or varied, hence the reason some people refer to it as a variable resistor. They have a range, usually from around 0Ω to 10kΩ, even though they can have slight imperfections. Something cool about potentiometers is that they have 3 legs, 1 more than a resistor! This is how you would connect it:
 
@@ -164,7 +164,7 @@ The insides are a little bit more complicated, but what you need to know is that
 
 ## That's so useful! What could we use this on?
 
-Remember when we talked about DC Motors and RGB LEDs and how we'd on touch them later on? Well right now is later so let's check out what an RGB LED and how potentiometers could be used with them!
+Remember when we talked about DC motors and RGB LEDs and how we'd on touch them later on? Well right now is later so let's check out what an RGB LED and how potentiometers could be used with them!
 
 RGB LED stands for *red green blue light-emitting diode*. Yeah I know, what a mouthful. If you've ever had or seen a gaming PC, you might already have a good idea on what the RGB part of the LED means. It means that it is capable of producing exactly 16,777,216 colors! 
 
@@ -188,7 +188,7 @@ It's an electrical schematic showing a common anode RGB LED with each color conn
 
 If you don't have the materials, or if you can't get it to work, here's a video of me showcasing how I did it along with a friend:
 
-
+{@embed:https://youtu.be/QCWAgekj71g}
 
 # How does electricity flow?
 
@@ -202,17 +202,115 @@ And now, that people discovered the truth, since all of the previous formulas an
 
 So now we just call the positive to negative flow the *conventional flow of electricity*.
 
-## That's so useful! What could we use this on?
+## Okay... That is interesting.
 
-Remember when we talked about DC Motors and RGB LEDs and how we'd on touch them later on? Well right now is later so let's check them out!
+Yep! And do you remember how some components like the LED and the RGB LED require you to have a specific charge on a specific leg? Well, some components are *polarized* and some aren't. 
 
-* DC Motor
+What does polarized mean? It basically means that something has *poles*, in this case there are 2 poles, which are positive and negative, so some components have to only have a specific charge as an input. But some components can also be polarized but still have the order of the charges switched. You will soon see what that means.
 
-  DC stands for "direct current", which means that the voltage is always constant. And a motor... stands for motor! 🤯. You've probably messed with these before, they are little cubes with a stick sticking out of it which spins if you connect it to electricity.
+Oh, and side note. Some components are polarized, which means that there are others that aren't polarized, like resistors and pushbuttons.
 
+Oh, and some examples of *polarized* components are batteries, LEDs, and DC motors. 
 
+### *Speaking of which...*
 
+Remember when we talked about DC motors and how we'd on touch them later on? Well right now is later so let's check it out!
 
+DC stands for "direct current", which means that the voltage is always constant. And a motor... stands for motor! 🤯. You've probably messed with these before, they are little cubes with a stick sticking out of it which spins if you connect it to electricity. 
+
+Oh yeah, and this is how it looks like in schematics:
+
+![An electrical schematic where a DC motor is used.](https://i.imgur.com/YAcNxbA.png)
+
+When you have the first input as positive and the second as negative, the shaft (stick) will spin clockwise. And when you have it the other way around (first as negative, second as postive) it'll spin counter-clockwise. But why?
+
+Well, in order to understand that, we have to look into the insides of a DC motor. It is rather complicated so I recommend you to watch [this really good video](https://www.youtube.com/watch?v=GQatiB-JHdI) and [this other really good video](https://www.youtube.com/watch?v=LAtPHANEfQo).
+
+In short, there are a bunch of copper wires inside that switch charge every time they change charges (hence why swapping the order of the inputs also change the direction it spins) causing them to be attracted to a lot of different things in a short period of time causing them to spin a lot.
+
+# Alright. What's next?
+
+Let's revise something we've talked about for a little bit. There are 3 properties of electricity, which are current (or intensity), voltage, and resistance. You probably have a general idea on what the 3 all mean, but let's make sure we turn that general idea into an in-depth idea.
+
+## Let's start with current.
+
+The most common unit of measurement for current is Ampere, shortened "amps" or simply a capital "A", named after the French physicist *André-Marie Ampère*. 
+
+By definition, it is the amount of electrons flowing at a given point, which in general terms means the amount of electricity that is flowing at a certain part in the circuit. Think of this as the amount of water flowing in a pipe.
+
+To put it into perspective, your average 9V battery has a capacity of around 500mAh (milliamps per hour) which basically means it will output 500 milliamps for one hour before running out. Rewinding to when we talked about prefixes, can you turn 500 milliamps into a number? (it's 0.5).
+
+FOr those who want to know, 1A is $6.24 \\bullet 10^{18}$ electrons flowing through a certain point per second, which is equivalent to 1 Coulomb, an unit of measurement for electrical charge. Therefore, 1A == 1C.
+
+## How about voltage?
+
+The only unit of measurement for voltage you'll need is called volts, or simply a capital "V", named after another physicist but from Italy called *Alessandro Volta*.
+
+It is the difference in electrical potential energy, per unit of change, between 2 points. It is pretty complicated, so [this video](https://www.youtube.com/watch?v=TBt-kxYfync) might be useful for you if you're more of a visual learner.
+
+But if not, simply imagine voltage as the amount of force that is pushing the electrons through a wire, or the amount of water pressure in a pipe. The higher the voltage, also the higher the current, which means they're directly proportional. Voltage is always relative.
+
+Also for those who want to know, 1V is 1 Joule (unit of measurement for energy) per Coulomb.
+
+## Resistance?
+
+This one is probably the one you know most about. In case you haven't figured it out yet, the unit of measurement for it is Ohm (or Ω), and, *you guessed it*, also named after another physicist who this time is from Germany and is called *Georg Simon Ohm*.
+
+Resistance is the amount of electrical opposition to current flow in a circuit. It basically means that it reduces the amount of current the higher the resistance, or how much the pipe gets smaller. This is called the *Ohm's Law*.
+
+If you were to have a big pipe with water flowing through, then suddenly introduced a part where the pipe is of a way smaller diamateter, that would be a resistor. 
+
+## And... what *exactly* is the Ohm's Law?
+
+It is a formula used to calculate the relation between all the 3 properties we've just talked about; current, voltage, and resistance.
+
+![The Ohm's law's formula.](https://i.imgur.com/pynvOjM.png)
+
+Now, there's something very fun we can do with this. Let's have this hypothetical scenario.
+
+![A schematic where the resistance from the resistor is missing.](https://i.imgur.com/t1vxrVx.png)
+
+With the Ohm's Law's formula in mind, can you think of a way to calculate the missing resistance from the circuit? Here's a table that will help you with it.
+
+|  **Color**  | **Voltage Drop** |
+|:-----------:|:----------------:|
+|    White    |       3-5V       |
+| Ultraviolet |     3.1-4.4V     |
+|    Violet   |     2.8-4.0V     |
+|     Blue    |     2.5-3.7V     |
+|    Green    |     1.9-4.0V     |
+|    Yellow   |     2.1-2.2V     |
+|    Orange   |     2.0-2.1V     |
+|     Red     |     1.6-2.0V     |
+|   Infrared  |      < 1.9V      |
+
+If you're still confused, that's good because I'm supposed to explain before you understand it.
+
+Anyway, in the circuit, we have 2 green LEDs and a blue LED. Looking at the table, we take the lowest value for the corresponding color. So for green, it'd be 1.9V, and 2.5V for blue. We then take those numbers and add them together. 
+
+Since we have 2 greens and 1 blue, the equation would be 1.9 + 1.9 + 2.5, which gives us a total of 6.3V. That means that we have occupied 6.3V out of the 9V we have. LEDs aren't the only components that use up voltage, any component that makes any type of sound, heat, light, etc. will have a voltage drop.
+
+Now, we then substract total - used, which would be 9V - 6.3V, which equals 2.7V. We know have the voltage! So far, we have 1/3 of the Ohm's Law's formula. 
+
+![The Ohm's law's formula.](https://i.imgur.com/vbB4sf9.png)
+
+Since we're solving for the resistance, let's make this equation fit our objective better.
+
+![An equation solving for R.](https://i.imgur.com/C0hbYFx.png)
+
+We're almost there, we're just missing the current (intensity). Now, how do we get that?
+
+### TBD
+
+## I got it! Also, what is that weird switch symbol?
+
+If you mean this:
+
+![A slideswitch represented in a schematic.](https://i.imgur.com/s6GzoWX.png)
+
+That is a slide switch! There's a little button which you slide from left to right. Just like the potentiometer, it has 3 legs where the middle one is required for it to work. 
+
+When you slide it to the left, the first leg will output the charge from the middle leg, and same when you slide it to the right except that it's the third leg that has the output now, and it looks exactly like the switch that toys have to turn on.
     `,
     /* 
       NOTES

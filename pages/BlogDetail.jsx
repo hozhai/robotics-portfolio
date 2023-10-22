@@ -5,7 +5,7 @@ import remarkGfm from "remark-gfm";
 import emoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
-import RehypeVideo from "rehype-video";
+import rehypeEmbed from "@hongvanpc10/rehype-embed";
 import "../global/css/katex.min.css";
 import LoadingBar from "react-top-loading-bar";
 import ReadingBar from "../components/ReadingBar";
@@ -76,7 +76,7 @@ export default function BlogDetail({ data }) {
           className="post--content text"
           children={blog.content || "Could not fetch blog data."}
           remarkPlugins={[remarkGfm, emoji, remarkMath]}
-          rehypePlugins={[rehypeKatex, RehypeVideo]}
+          rehypePlugins={[rehypeKatex, rehypeEmbed]}
         />
       </div>
     </>

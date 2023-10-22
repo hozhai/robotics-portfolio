@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
+    "@hongvanpc10/rehype-embed": "^1.0.21",
     "humanize-duration": "^3.29.0",
     "lottie-react": "^2.4.0",
     "nanoid": "^4.0.2",
@@ -22,7 +23,6 @@
     "react-top-loading-bar": "^2.3.1",
     "react-tsparticles": "^2.12.1",
     "rehype-katex": "^7.0.0",
-    "rehype-video": "^2.0.0",
     "remark-emoji": "^4.0.0",
     "remark-gfm": "^3.0.1",
     "remark-math": "^6.0.0",
