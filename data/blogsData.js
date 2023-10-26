@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    title: "Electricity & Circuits",
+    title: "Current & Circuits",
     category: [1],
     createdAt: 1694184888000,
     description:
@@ -204,6 +204,32 @@ So now we just call the positive to negative flow the *conventional flow of elec
       https://www.youtube.com/watch?v=8gvJzrjwjds&list=PLzqS33DOPhJkRn6e9_OTdQwRojO8qlusI&ab_channel=Afrotechmods
       https://www.youtube.com/watch?v=TBt-kxYfync&list=PLzqS33DOPhJkRn6e9_OTdQwRojO8qlusI&index=3
     */
+  },
+  {
+    id: 2,
+    title: "Coding in Arduino",
+    category: [2],
+    createdAt: 1698167661000,
+    description: "It's Arduino time! 🤖",
+    thumbnail: "https://i.imgur.com/T7M5B8x.jpg",
+    content: `
+# Header
+## Heading 2
+### Heading 3
+
+~~~cpp showLineNumbers
+#include <iostream>
+#include <string>
+
+int main() 
+{
+  string helloWorld = "Hello World!";
+  std::cout << helloWorld << std::endl;
+
+  return 0;
+}
+~~~
+`,
   },
 ];
 

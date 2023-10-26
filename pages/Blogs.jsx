@@ -114,7 +114,7 @@ export default function Blogs({ data }) {
         <Link to="/" className="link">
           HOME
         </Link>
-        &nbsp;/&nbsp;<strong>BLOGS</strong>&nbsp;/
+        &nbsp;/&nbsp;BLOGS&nbsp;/
       </h3>
       <h2 className="bp--title title">
         <Typewriter
