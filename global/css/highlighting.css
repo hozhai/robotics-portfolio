@@ -47,7 +47,7 @@
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: 1rem;
-  overflow-x: auto;
+  overflow-x: hidden;
   color: #abb2bf;
   background: none;
   font-family: "Fira Code", monospace;

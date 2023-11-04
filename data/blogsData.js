@@ -349,22 +349,77 @@ When you slide it to the left, the first leg will output the charge from the mid
     description: "It's Arduino time! 🤖",
     thumbnail: "https://i.imgur.com/T7M5B8x.jpg",
     content: `
-# Header
-## Heading 2
-### Heading 3
+# What the hell is an Arduino?
+
+I know that right after learning about basic circuitry, this might be a bit overwhelming, but trust me, it won't be very soon. An Arduino is a little computer that has little holes that can be input and outputs, referred as pins. You can connect those pins into a breadboard to make a basic circuit. You can also connect the Arduino itself to your computer using a USB 2.0 Type B connector to upload code to it.
+
+## Okay... How?
+
+You can download the [Arduino IDE here](https://www.arduino.cc/en/software), which has all the tools that you need to code an Arduino. It is available for Windows, MacOS & Linux. 
+
+If you're built different, you can use the [Arduino extension for VS Code](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino) so that you can enjoy all the features of VS Code but also be able to use it to code an Arduino. I recommend you to do this ONLY if you know what you're doing, since it might not work if you have something not setup correctly.
+
+After you have the IDE of your choice & an Arduino plugged in, select your board type (I'll be using an Arduino Uno) and the port (look for the one that says something about USB, unless you're not using USB). You are able to do so in the Arduino IDE by going on the top left corner and looking for the select menu, and on the status bar in VS Code.
+
+## Now what?
+
+Before you actually do anything with that, let's first dive into a little bit of theory. Arduino files end in a .ino extension, and they're usually called sketch.ino. The language used for coding is a fork (variation) of the popular C++, which means it'll have C++ syntax and functionalities. If you already have experience with coding such as Javascript, Python, any language in the C family (C, C#, C++, *duh*) you'll breeze through this. C++ syntax looks something like this:
 
 ~~~cpp showLineNumbers
+#include <iostream> // import input-output stream library
+#include <string> // import string data type
+
+int main() // main function that returns an integer (number)
+{
+  string helloWorld = "Hello World!"; // initialize a string variable called helloWorld with a value
+  std::cout << helloWorld << std::endl; // output the variable helloWorld and end line.
+
+  return 0; // 0 means succesfully ran the program, -1 means failed to run the program.
+}
+~~~
+
+However since Arduino doesn't actually use raw C++, we will mostly see something like this:
+
+~~~cpp showLineNumbers
+// don't need to import anything
+
+void setup() { // main function that runs ONCE, doesn't return anything
+  pinMode(6, OUTPUT); // set the pin #6 mode to output
+  pinMode(5, OUTPUT); // same with pin #6
+}
+
+void loop() { // function that will loop once the last iteration has finished running
+  delay(1000); // stop running code for 1000 milliseconds
+  if (digitalRead(6) == HIGH) { // if pin #6 is not actually outputting anything though
+    digitalWrite(6, LOW); // turn off pin #6
+    digitalWrite(5, HIGH); // make pin #5 actually output something
+  } else { // viceversa
+    digitalWrite(6, HIGH);
+    digitalWrite(5, LOW);
+  }
+}
+~~~
+
+Notice how when there's a "{", there is always a "}" with it, same with "(" and ")", and how after every function we add a semicolon.
+
+If you're wondering what a function is, it's basically a reusable piece of code that has it's own "environment" and can be executed or invoked. Looks something like this:
+
+~~~cpp showLineNumbers
+// this is vanilla C++ btw
 #include <iostream>
 #include <string>
 
-int main() 
-{
-  string helloWorld = "Hello World!";
-  std::cout << helloWorld << std::endl;
-
-  return 0;
+string greetTheUser(string message) {
+  std::cout << message << endl; // semicolon here as well
 }
+
+int main() {
+  greetTheUser("Hello, what's up?"); // semicolon here
+}
+
+// just put semicolons every time you finish a line unless the line ends in a curly brace "{" or "}".
 ~~~
+
 `,
   },
 ];
