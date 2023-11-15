@@ -409,8 +409,8 @@ If you're wondering what a function is, it's basically a reusable piece of code 
 #include <iostream>
 #include <string>
 
-string greetTheUser(string message) {
-  std::cout << message << endl; // semicolon here as well
+void greetTheUser(string message) {
+  std::cout << message << std::endl; // semicolon here as well
 }
 
 int main() {
@@ -420,8 +420,18 @@ int main() {
 // just put semicolons every time you finish a line unless the line ends in a curly brace "{" or "}".
 ~~~
 
+# What can I do with this knowledge?
+
+Let's try making our little Arduino play some music. We'll use piezo buzzers which will function like speakers, and obviously an Arduino. Let's check out how a piezo buzzer works before we dive into everything else. 
+
+In simple terms, it has 2 layers, one of which is made out of piezoelectric ceramic. When alternating voltage is applied to the ceramic layer, it vibrates rapidly, forming sound waves. The speed at which it vibrates is the frequency.
+
+This is unimportant, but if you want a little bit of a physics lesson, here you go; the sound waves produced is considered a type called a *longitudinal mechanical* wave. *Longitudinal* meaning it sort of pushes particles forward, creating a chain reaction, and *mechanical* meaning it needs some sort of medium to travel through, like air or water. All waves have 3 properties; amplitude (how intense), frequency (how many waves) and distance (how long is the wave). Since we're speaking about sound, these 3 properties can also be called volume, tone, and duration respectively.
+
+In the case of using an Arduino, we can control that frequency/tone along with the duration using code! You can also control the volume using a potentiometer if you want.
 `,
   },
 ];
 
 export default data;
+
