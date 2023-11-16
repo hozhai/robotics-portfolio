@@ -311,6 +311,14 @@ If you mean this:
 That is a slide switch! There's a little button which you slide from left to right. Just like the potentiometer, it has 3 legs where the middle one is required for it to work. 
 
 When you slide it to the left, the first leg will output the charge from the middle leg, and same when you slide it to the right except that it's the third leg that has the output now, and it looks exactly like the switch that toys have to turn on.
+
+# Cooooool... now what?
+
+Soldering! You get some wires, solders, a soldering station, and do cool things! Here is a little funny video I put up together of me finding a cool schematic to build, actually building it, and then making it into the soldered version!
+
+(Make sure to turn on volume if you want to understand the comedy) (I am so bad at making jokes)
+
+{@embed:https://youtu.be/J0XeoG621JE}
     `,
     /* 
       NOTES
