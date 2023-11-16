@@ -102,7 +102,7 @@ export default function Blogs({ data }) {
   //   ;
 
   return (
-    <>
+    <div>
       <LoadingBar
         color="#61c192"
         progress={progress}
@@ -159,6 +159,6 @@ export default function Blogs({ data }) {
           <p className="bp--nores-text">Try searching for another term.</p>
         </div>
       )}
-    </>
+    </div>
   );
 }

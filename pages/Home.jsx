@@ -106,7 +106,7 @@ export default function Home({ data }) {
   }
 
   return (
-    <>
+    <div>
       <LoadingBar
         color="#61c192"
         progress={progress}
@@ -310,6 +310,6 @@ export default function Home({ data }) {
           </div>
         </Zoom>
       </section>
-    </>
+      </div>
   );
 }

@@ -39,7 +39,7 @@ export default function BlogDetail({ data }) {
   }, [params.id]);
 
   return (
-    <>
+    <div>
       <LoadingBar
         color="#61c192"
         progress={progress}
@@ -81,6 +81,6 @@ export default function BlogDetail({ data }) {
           rehypePlugins={[rehypeKatex, rehypePrism, rehypeEmbed]}
         />
       </div>
-    </>
+    </div>
   );
 }
