@@ -1,11 +1,10 @@
-const data = [
+export const data = [
   {
     id: 1,
     title: "Current & Circuits",
     category: [1],
     createdAt: 1694184888000,
-    description:
-      "A dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements and their symbols, electrical schematics, prefixes, resistance, and a lot more.",
+    description: "A dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements and their symbols, electrical schematics, prefixes, resistance, and a lot more.",
     thumbnail: "https://i.imgur.com/rKr81sz.jpeg",
     content: `
 # Firstly, what is a circuit?
@@ -319,21 +318,45 @@ Soldering! You get some wires, solders, a soldering station, and do cool things!
 (Make sure to turn on volume if you want to understand the comedy) (I am so bad at making jokes)
 
 {@embed:https://youtu.be/J0XeoG621JE}
+
+If you actually want to learn how to solder instead of watching a goofy guy online, [here](https://www.youtube.com/watch?v=Qps9woUGkvI) and [here](https://www.youtube.com/watch?v=ZwU9SqO0udU) are videos that might actually help.
+
+And now onto our big project! This is a project I also did and what it does is combine all of our knowledge into one big thing.
+
+Firstly, see if you can make a schematic of [this](https://drive.google.com/file/d/1y_8tcj6D8rY385ERvEEO97JFpH5u_Zgv/view) (I couldn't turn this into a YouTube video because it kept turning it into a Short format which doesn't work in my website).
+
+Next, after drawing the schematic using an [editor](https://www.circuit-diagram.org/), calculate the resistor values needed for the LEDs to not burn but also not starve from electricity.
+
+After that, turn it into a real deal by getting any glove (you don't even need one if you don't have one) and using copper tape along with a breadboard with the circuit.
+
+Try to even add extra functionalities to it! Maybe you can add functionality with another finger, maybe it makes a noise if you do something, etc...
+
+If you want to see how I did it, here are the steps.
+
+  * Step #1.
+
+  Draw the schematic. Here's the result (I planned ahead for the extra functionality so I incluided it in the schematic as well):
+
+  ![An electrical schematic.](https://i.imgur.com/RcXjCyC.png)
+
+  * Step #2 (which I already did).
+
+  Figure out the values needed for the resistors. Since the there were 3 LEDs of each type, and we used green, yellow, and red, 
+
     `,
-    /* 
+    /*
       NOTES
       ---
-      Bear in mind that there are different variants of a schematic symbol to represent a single component. 
-
+      Bear in mind that there are different variants of a schematic symbol to represent a single component.
+ 
       1 amp is 6.24 * 10^18 electrons flowing through a certain point per second
       so 2 amps = 1.248 * 10^19
       1 amp = 1 coulomb
-
+ 
       voltage is a difference in electrical potential energy, per unit of change, between two points.
       1 volt = 1 joule per coulomb
       voltage is always relative
     */
-
     /*
       FINAL REFLECTION FOR GLOVE PRACTICAL
       ---
@@ -341,8 +364,7 @@ Soldering! You get some wires, solders, a soldering station, and do cool things!
       2. I have been able to use my understanding of electronics in the glove practical project and all the projects prior to that one.
       3. I am still curious about how more complicated components like transistors and piezo buzzers work.
     */
-
-    /* 
+    /*
       SOURCES
       ---
       https://www.youtube.com/watch?v=8gvJzrjwjds&list=PLzqS33DOPhJkRn6e9_OTdQwRojO8qlusI&ab_channel=Afrotechmods
@@ -440,6 +462,3 @@ In the case of using an Arduino, we can control that frequency/tone along with t
 `,
   },
 ];
-
-export default data;
-

@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 import BlogDetail from "./pages/BlogDetail";
 
-import data from "./data/blogsData";
+import data from "./data/dataHandler";
 
 function App() {
   const [blogsData, setBlogsData] = useState(data);
