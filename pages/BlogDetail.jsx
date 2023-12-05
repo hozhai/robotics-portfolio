@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -76,10 +76,11 @@ export default function BlogDetail({ data }) {
       <div className="post--content-container">
         <ReactMarkdown
           className="post--content text"
-          children={blog.content || "Could not fetch blog data."}
           remarkPlugins={[remarkGfm, emoji, remarkMath]}
           rehypePlugins={[rehypeKatex, rehypePrism, rehypeEmbed]}
-        />
+        >
+          {blog.content || "Could not fetch blog data."}
+        </ReactMarkdown>
       </div>
     </div>
   );

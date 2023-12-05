@@ -478,6 +478,10 @@ In simple terms, it has 2 layers, one of which is made out of piezoelectric cera
 This is unimportant, but if you want a little bit of a physics lesson, here you go; the sound waves produced is considered a type called a *longitudinal mechanical* wave. *Longitudinal* meaning it sort of pushes particles forward, creating a chain reaction, and *mechanical* meaning it needs some sort of medium to travel through, like air or water. All waves have 3 properties; amplitude (how intense), frequency (how many waves) and distance (how long is the wave). Since we're speaking about sound, these 3 properties can also be called volume, tone, and duration respectively.
 
 In the case of using an Arduino, we can control that frequency/tone along with the duration using code! You can also control the volume using a potentiometer if you want.
+
+To end the explanation off, this is basically how it would sort of look like:
+
+![An oversimplified graphical representation of a piezo buzzer.](https://i.imgur.com/puGkiUk.png)
 `,
   },
 ];

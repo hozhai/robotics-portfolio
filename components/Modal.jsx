@@ -9,7 +9,9 @@ export default function Modal(props) {
       <div className="modal--content">
         <h2 className="title modal--title">Hey!</h2>
         <span className="modal--text">
-          <ReactMarkdown children={props.content} remarkPlugins={[remarkGfm]} />
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {props.content}
+          </ReactMarkdown>
         </span>
         <div className="modal--close">X</div>
       </div>

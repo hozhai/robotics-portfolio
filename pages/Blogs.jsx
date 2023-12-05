@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import LoadingBar from "react-top-loading-bar";
 import Typewriter from "typewriter-effect";
@@ -31,12 +31,11 @@ export default function Blogs({ data }) {
           </div>
           <ReactMarkdown
             className="blog--description text"
-            children={
-              obj.description ||
-              "This post might not exist anymore, or an error has occurred."
-            }
             remarkPlugins={[remarkGfm, emoji]}
-          />
+          >
+            {obj.description ||
+              "This post might not exist anymore, or an error has occurred."}
+          </ReactMarkdown>
         </div>
         <div className="blog--time">
           {humanizeDuration(Date.now() - obj.createdAt, { largest: 1 })} ago |
@@ -81,12 +80,11 @@ export default function Blogs({ data }) {
               </div>
               <ReactMarkdown
                 className="blog--description text"
-                children={
-                  obj.description ||
-                  "This post might not exist anymore, or an error has occurred."
-                }
                 remarkPlugins={[remarkGfm, emoji]}
-              />
+              >
+                {obj.description ||
+                  "This post might not exist anymore, or an error has occurred."}
+              </ReactMarkdown>
             </div>
             <div className="blog--time">
               {humanizeDuration(Date.now() - obj.createdAt, { largest: 1 })} ago

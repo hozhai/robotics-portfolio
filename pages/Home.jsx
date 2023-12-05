@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import {
@@ -58,10 +58,9 @@ export default function Home({ data }) {
 
   const biographyArray = biographyData.map((obj) => (
     <div className="biography--block" key={nanoid()}>
-      <ReactMarkdown
-        children={obj.content}
-        remarkPlugins={[remarkGfm, emoji]}
-      />
+      <ReactMarkdown remarkPlugins={[remarkGfm, emoji]}>
+        {obj.content}
+      </ReactMarkdown>
     </div>
   ));
 
@@ -86,12 +85,11 @@ export default function Home({ data }) {
           </div>
           <ReactMarkdown
             className="blog--description text"
-            children={
-              obj.description ||
-              "This post might not exist anymore, or an error has occurred."
-            }
             remarkPlugins={[remarkGfm, emoji]}
-          />
+          >
+            {obj.description ||
+              "This post might not exist anymore, or an error has occurred."}
+          </ReactMarkdown>
         </div>
         <div className="blog--time">
           {humanizeDuration(Date.now() - obj.createdAt, { largest: 1 })} ago |
@@ -257,9 +255,8 @@ export default function Home({ data }) {
         <div className="rfg--fact text">
           <Fade delay={700} triggerOnce={true}>
             <ReactMarkdown
-              children={`"${fact}"`}
               remarkPlugins={[remarkGfm, emoji]}
-            />
+            >{`"${fact}"`}</ReactMarkdown>
           </Fade>
         </div>
         <div className="rfg--btn-container">
@@ -310,6 +307,6 @@ export default function Home({ data }) {
           </div>
         </Zoom>
       </section>
-      </div>
+    </div>
   );
 }
