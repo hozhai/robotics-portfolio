@@ -110,7 +110,7 @@ export default function Blogs({ data }) {
         style={{ height: "7.5px" }}
       />
       <h3 className="path text">
-        /&nbsp;
+        ~ /&nbsp;
         <Link to="/" className="link">
           HOME
         </Link>

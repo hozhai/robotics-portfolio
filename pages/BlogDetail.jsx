@@ -6,7 +6,7 @@ import emoji from "remark-emoji";
 import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import rehypePrism from "rehype-prism-plus";
-import rehypeEmbed from "@hongvanpc10/rehype-embed"
+import rehypeEmbed from "@hongvanpc10/rehype-embed";
 import "../global/css/katex.min.css";
 import "../global/css/highlighting.css";
 import LoadingBar from "react-top-loading-bar";
@@ -48,7 +48,7 @@ export default function BlogDetail({ data }) {
       />
       <ReadingBar width={readProgress} />
       <h3 className="path text">
-        /&nbsp;
+        ~ /&nbsp;
         <Link to="/" className="link">
           HOME
         </Link>

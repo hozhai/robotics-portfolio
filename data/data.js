@@ -4,7 +4,8 @@ export const data = [
     title: "Current & Circuits",
     category: [1],
     createdAt: 1694184888000,
-    description: "A dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements and their symbols, electrical schematics, prefixes, resistance, and a lot more.",
+    description:
+      "A dive into the circuitry world! :zap:\nThis article will cover circuitry, units of measurements and their symbols, electrical schematics, prefixes, resistance, and a lot more.",
     thumbnail: "https://i.imgur.com/rKr81sz.jpeg",
     content: `
 # Firstly, what is a circuit?
@@ -341,7 +342,25 @@ If you want to see how I did it, here are the steps.
 
   * Step #2 (which I already did).
 
-  Figure out the values needed for the resistors. Since the there were 3 LEDs of each type, and we used green, yellow, and red, 
+  Figure out the values needed for the resistors. Since we've got 3 LEDs of each type, and we used green, yellow, and red, we simply take the voltage drop of each LED, multiply them by three, substract 9 by that (or your battery voltage), and then divide it for 0.05 to get the resistance needed for each row. We then round that number to the nearest actual standarized resistor value and you should get 220Ω.
+
+  * Step #3
+
+  Create a prototype of the schematic to see if it actually works. [Here's mine](https://youtube.com/shorts/W64F9--F8XM) (I can't make this an embed either).
+
+  # Step #4
+
+  Get a glove, some copper tape, some normal tape, and tape it to the glove, and turn it into an actual thing! (Without destroying it of course.)
+
+  [Here is my final project](https://youtube.com/shorts/ylzHi9kPaNQ) (It turned into a damn short again).
+
+  To conclude, I've also learnt a lot from all these projects. I never really understood how wires worked. Since I was doing really well in chemistry, I knew that atoms had positive and negative charge but I didn't know how that charge could be transferred through wires, but now I know that the copper atoms have the ability to have their electrons to jump between each of them.
+
+  I have been able to use all this knowledge to build this final project, all the projects prior to that one, and I will probably be able to carry on with this knowledge for who knows what in the future.
+
+  Even though I've seen a lot of new things, I'm still curious about how more complicated components like transistors and piezo buzzers work.
+
+  That is all. Thank you for going through all this!
 
     `,
     /*
