@@ -412,7 +412,7 @@ After you have the IDE of your choice & an Arduino plugged in, select your board
 
 ## Now what?
 
-Before you actually do anything with that, let's first dive into a little bit of theory. Arduino files end in a .ino extension, and they're usually called sketch.ino. The language used for coding is a fork (variation) of the popular C++, which means it'll have C++ syntax and functionalities. If you already have experience with coding such as Javascript, Python, any language in the C family (C, C#, C++, *duh*) you'll breeze through this. C++ syntax looks something like this:
+Before you actually do anything with that, let's first dive into a little bit of theory. Arduino files end in a .ino extension, and they're usually called sketch.ino. The language used for coding is a fork (variation) of the popular C++, which means it'll have C++ syntax and functionalities. If you already have experience with coding such as Javascript, Python, any language in the C family (C, C#, C++, *duh*) you'll breeze through this. If you want to get into much more depth,[ here's a good resource](https://www.youtube.com/watch?v=ZzaPdXTrSb8) to get you ahead of pace. Anyway, C++ syntax looks something like this:
 
 ~~~cpp showLineNumbers
 #include <iostream> // import input-output stream library
@@ -482,6 +482,76 @@ In the case of using an Arduino, we can control that frequency/tone along with t
 To end the explanation off, this is basically how it would sort of look like:
 
 ![An oversimplified graphical representation of a piezo buzzer.](https://i.imgur.com/puGkiUk.png)
+
+Try to build a simple circuit which connects a piezo buzzer to the Arduino, and see [what song this code plays](https://create.arduino.cc/editor/zhai_07/896785b2-9782-491c-9706-61cb1f7ea5bc/preview).
+
+# Any way we could make the code looks nicer?
+
+We could use variables! This is an example:
+
+~~~cpp showLineNumbers
+int redLedPin = 9;
+int yellowLedPin = 10;
+int greenLedPin = 11;
+int delayMs = 250;
+
+void setup() {
+  pinMode(redLedPin, OUTPUT);
+  pinMode(yellowLedPin, OUTPUT);
+  pinMode(greenLedPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(redLedPin, HIGH);
+  delay(delayMs);
+  digitalWrite(yellowLedPin, HIGH);
+  delay(delayMs);
+  digitalWrite(greenLedPin, HIGH);
+  delay(delayMs);
+  digitalWrite(redLedPin, LOW);
+  digitalWrite(yellowLedPin, LOW);
+  digitalWrite(greenLedPin, LOW);
+  delay(delayMs);
+}
+~~~
+
+In this case, we're using the "int" keyword to tell the program that we will save a variable with a name and a value of type integer. There are multiple types; strings, integers, booleans, floats, and all those wacky things. We'll go over some of them, but only the ones that you need to worry about. If you'd like to dive deeper into this, the [C++ 1-hour course](https://www.youtube.com/watch?v=ZzaPdXTrSb8) I linked above earlier by Code With Mosh will really come in handy for you.
+
+Here's a little cheatsheet which also works in C++ for variables!
+
+~~~cpp showLineNumbers
+int wholeNumber = 5;
+
+float decimalNumber = 5.5; // for arduino
+float decimalNumber = 5.5f; // for c++
+
+double decimalNumber = 124.4961;
+
+const double pi = 3.14; // const makes the variable unchangable
+
+// for c++
+#include <string>
+string helloWorld = "Hello World!" // make sure it has double quotes
+
+// for arduino
+char helloWorld[] = "Hello World!"
+~~~
+
+You can also use some shortcuts with math!
+
+~~~cpp showLineNumbers
+int num = 1;
+num++;
+// num++ is simply "num = num + 1", which is 2.
+// you can also do
+int num2 = 2;
+num2--;
+// num2-- is just like it's counterpart, but it's something like "num2 = num2 - 1;", which is 1.
+~~~
+
+There are a few more such as +=, -=, *= and /= but we won't use them. You can always use Google to give you some help if you're ever extra-curious about something.
+
+This is an example project which makes use of these concepts. Do you think you can try to recreate its code?
 `,
   },
 ];
