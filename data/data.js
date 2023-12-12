@@ -395,7 +395,8 @@ If you want to see how I did it, here are the steps.
     title: "Coding in Arduino",
     category: [2],
     createdAt: 1698167661000,
-    description: "It's Arduino time! 🤖",
+    description:
+      "It's Arduino time! 🤖\nBy the time you're done with this, you will now be the cool hacker friend that everyone admires! (not guaranteed).",
     thumbnail: "https://i.imgur.com/T7M5B8x.jpg",
     content: `
 # What the hell is an Arduino?
@@ -551,7 +552,35 @@ num2--;
 
 There are a few more such as +=, -=, *= and /= but we won't use them. You can always use Google to give you some help if you're ever extra-curious about something.
 
-This is an example project which makes use of these concepts. Do you think you can try to recreate its code?
+[This](https://youtube.com/shorts/ELIE93MrYls) is an example project which makes use of these concepts. Do you think you can try to recreate its code?
+
+# I just finished that. What now?
+
+Let's get started with a new cool project. Get an Arduino, a breadboard (or not, it's up to you), a button, some wires, hook up the 5V pin of the Arduino into the button, and on the other side of the button, connect it to any of the pins.
+
+Maybe you remember this command from before, but maybe not. It's digitalRead()! What it does is to read the value a pin is receiving.
+
+We will also use the Serial class! It gives us the ability to use Serial.begin(), Serial.print(), etc., which will be useful to see if certain things are working.
+
+This is how you would use both of those concepts.
+
+~~~cpp showLineNumbers
+const int pin = 5
+int isPressed;
+
+void setup() {
+  pinMode(pin, INPUT); // this is important
+  Serial.begin(9600); // starts communication with the computer at 9.6Mhz
+}
+
+void loop() {
+  isPressed = digitalRead(pin);
+  Serial.println(isPressed); 
+  // you can now see the current status of the button in your serial monitor
+}
+~~~
+
+You can always check the Arduino reference like always if you want to see what more you can do.
 `,
   },
 ];
