@@ -558,7 +558,7 @@ There are a few more such as +=, -=, *= and /= but we won't use them. You can al
 
 Let's get started with a new cool project. Get an Arduino, a breadboard (or not, it's up to you), a button, some wires, hook up the 5V pin of the Arduino into the button, and on the other side of the button, connect it to any of the pins.
 
-Maybe you remember this command from before, but maybe not. It's digitalRead()! What it does is to read the value a pin is receiving.
+Maybe you remember this command from before, but maybe not. It's digitalRead()! What it does is to read the value a pin is receiving. It returns either 1 or 0, 1 being HIGH, and 0 being LOW. Basically, either on or off.
 
 We will also use the Serial class! It gives us the ability to use Serial.begin(), Serial.print(), etc., which will be useful to see if certain things are working.
 
@@ -576,11 +576,19 @@ void setup() {
 void loop() {
   isPressed = digitalRead(pin);
   Serial.println(isPressed); 
+  if (isPressed) { // you can simply evaluate a number to see whether it's true or false. In C++, 0 will be false, and every other number will be evaluated to true.
+    Serial.println("The button is being pressed!")
+  } else {
+    Serial.println("The button is NOT being pressed!")
+  }
   // you can now see the current status of the button in your serial monitor
 }
 ~~~
 
-You can always check the Arduino reference like always if you want to see what more you can do.
+
+You can think of Serial.print() as your average console.log() from JavaScript, or your average print() from Python. Serial.println() on the other hand, simply creates a new line right after the message, so you can think of it as a normal print, but it saves you from typing \\n at the end.
+
+You can always check the [Arduino reference](https://www.arduino.cc/reference/en/) like always if you want to see what more you can do.
 `,
   },
 ];
