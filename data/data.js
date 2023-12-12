@@ -565,7 +565,7 @@ We will also use the Serial class! It gives us the ability to use Serial.begin()
 This is how you would use both of those concepts.
 
 ~~~cpp showLineNumbers
-const int pin = 5
+const int pin = 5;
 int isPressed;
 
 void setup() {
@@ -589,6 +589,33 @@ void loop() {
 You can think of Serial.print() as your average console.log() from JavaScript, or your average print() from Python. Serial.println() on the other hand, simply creates a new line right after the message, so you can think of it as a normal print, but it saves you from typing \\n at the end.
 
 You can always check the [Arduino reference](https://www.arduino.cc/reference/en/) like always if you want to see what more you can do.
+
+Anyway, we can make this even more fun by making the button actually do something! Let's try this.
+
+~~~cpp showLineNumbers
+const int buttonPin = 5;
+const int ledPin = 6;
+
+int isPressed;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(buttonPin, INPUT);
+  Serial.begin(9600); 
+}
+
+void loop() {
+  isPressed = digitalRead(ledPin);
+  Serial.println(isPressed); 
+  if (isPressed) { 
+    digitalWrite(ledPin, HIGH);
+  } else {
+    digitalWrite(ledPin, LOW);
+  }
+}
+~~~
+
+Guess what that code will do! Then try it out yourself to see if you were right. That will not only improve your code-reading skills, but also challenge you to try to figure out what components are needed, and how they should be hooked up.
 `,
   },
 ];
