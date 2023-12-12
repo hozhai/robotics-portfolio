@@ -16,5 +16,14 @@ export default function ParticlesBg() {
     });
   }, []);
 
-  return <>{init && <Particles id="main--bg" url="" />}</>;
+  return (
+    <>
+      {init && (
+        <Particles
+          id="main--bg"
+          url="https://raw.githubusercontent.com/Zhai90/robotics-portfolio/master/data/bgConfig.json"
+        />
+      )}
+    </>
+  );
 }
