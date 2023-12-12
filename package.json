@@ -12,33 +12,33 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@hongvanpc10/rehype-embed": "^1.0.21",
-    "humanize-duration": "^3.29.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.0.2",
+    "humanize-duration": "^3.31.0",
     "lottie-react": "^2.4.0",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",
-    "react-awesome-reveal": "^4.2.5",
+    "react-awesome-reveal": "^4.2.7",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
-    "react-router-dom": "^6.15.0",
+    "react-router-dom": "^6.20.1",
     "react-top-loading-bar": "^2.3.1",
-    "react-tsparticles": "^2.12.1",
     "rehype-katex": "^7.0.0",
     "rehype-prism-plus": "^1.6.3",
-    "remark-emoji": "^4.0.0",
+    "remark-emoji": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^6.0.0",
-    "tsparticles-slim": "^2.12.0",
-    "typewriter-effect": "^2.20.1",
-    "vite-plugin-svgr": "^3.2.0"
+    "typewriter-effect": "^2.21.0",
+    "vite-plugin-svgr": "^3.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react-swc": "^3.3.2",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.2",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "vite": "^4.4.5"
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "vite": "^4.5.1"
   }
 }
