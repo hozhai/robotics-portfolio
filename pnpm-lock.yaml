@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@emotion/react':
     specifier: ^11.11.1
-    version: 11.11.1(@types/react@18.2.43)(react@18.2.0)
+    version: 11.11.1(@types/react@18.2.45)(react@18.2.0)
   '@hongvanpc10/rehype-embed':
     specifier: ^1.0.21
     version: 1.0.21
@@ -37,10 +37,10 @@ dependencies:
     version: 18.2.0(react@18.2.0)
   react-markdown:
     specifier: ^8.0.7
-    version: 8.0.7(@types/react@18.2.43)(react@18.2.0)
+    version: 8.0.7(@types/react@18.2.45)(react@18.2.0)
   react-router-dom:
-    specifier: ^6.20.1
-    version: 6.20.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^6.21.0
+    version: 6.21.0(react-dom@18.2.0)(react@18.2.0)
   react-top-loading-bar:
     specifier: ^2.3.1
     version: 2.3.1(react@18.2.0)
@@ -68,8 +68,8 @@ dependencies:
 
 devDependencies:
   '@types/react':
-    specifier: ^18.2.43
-    version: 18.2.43
+    specifier: ^18.2.45
+    version: 18.2.45
   '@types/react-dom':
     specifier: ^18.2.17
     version: 18.2.17
@@ -339,7 +339,7 @@ packages:
     resolution: {integrity: sha512-W2P2c/VRW1/1tLox0mVUalvnWXxavmv/Oum2aPsRcoDJuob75FC3Y8FbpfLwUegRcxINtGUMPq0tFCvYNTBXNA==}
     dev: false
 
-  /@emotion/react@11.11.1(@types/react@18.2.43)(react@18.2.0):
+  /@emotion/react@11.11.1(@types/react@18.2.45)(react@18.2.0):
     resolution: {integrity: sha512-5mlW1DquU5HaxjLkfkGN1GA/fvVGdyHURRiX/0FHl2cfIfRxSOfmxEH5YS43edp0OldZrZ+dkBKbngxcNCdZvA==}
     peerDependencies:
       '@types/react': '*'
@@ -355,7 +355,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
       '@emotion/utils': 1.2.1
       '@emotion/weak-memoize': 0.3.1
-      '@types/react': 18.2.43
+      '@types/react': 18.2.45
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     dev: false
@@ -687,8 +687,8 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@remix-run/router@1.13.1:
-    resolution: {integrity: sha512-so+DHzZKsoOcoXrILB4rqDkMDy7NLMErRdOxvzvOKb507YINKUP4Di+shbTZDhSE/pBZ+vr7XGIpcOO0VLSA+Q==}
+  /@remix-run/router@1.14.0:
+    resolution: {integrity: sha512-WOHih+ClN7N8oHk9N4JUiMxQJmRVaOxcg8w7F/oHUXzJt920ekASLI/7cYX8XkntDWRhLZtsk6LbGrkgOAvi5A==}
     engines: {node: '>=14.0.0'}
     dev: false
 
@@ -1252,11 +1252,11 @@ packages:
   /@types/react-dom@18.2.17:
     resolution: {integrity: sha512-rvrT/M7Df5eykWFxn6MYt5Pem/Dbyc1N8Y0S9Mrkw2WFCRiqUgw9P7ul2NpwsXCSM1DVdENzdG9J5SreqfAIWg==}
     dependencies:
-      '@types/react': 18.2.43
+      '@types/react': 18.2.45
     dev: true
 
-  /@types/react@18.2.43:
-    resolution: {integrity: sha512-nvOV01ZdBdd/KW6FahSbcNplt2jCJfyWdTos61RYHV+FVv5L/g9AOX1bmbVcWcLFL8+KHQfh1zVIQrud6ihyQA==}
+  /@types/react@18.2.45:
+    resolution: {integrity: sha512-TtAxCNrlrBp8GoeEp1npd5g+d/OejJHFxS3OWmrPBMFaVQMSN0OFySozJio5BHxTuTeug00AVXVAjfDSfk+lUg==}
     dependencies:
       '@types/prop-types': 15.7.11
       '@types/scheduler': 0.16.8
@@ -1434,8 +1434,8 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001568
-      electron-to-chromium: 1.4.611
+      caniuse-lite: 1.0.30001570
+      electron-to-chromium: 1.4.612
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
     dev: false
@@ -1457,8 +1457,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /caniuse-lite@1.0.30001568:
-    resolution: {integrity: sha512-vSUkH84HontZJ88MiNrOau1EBrCqEQYgkC5gIySiDlpsm8sGVrhU7Kx4V6h0tnqaHzIHZv08HlJIwPbL4XL9+A==}
+  /caniuse-lite@1.0.30001570:
+    resolution: {integrity: sha512-+3e0ASu4sw1SWaoCtvPeyXp+5PsjigkSt8OXZbF9StH5pQWbxEjLAZE3n8Aup5udop1uRiKA7a4utUk/uoSpUw==}
     dev: false
 
   /ccount@2.0.1:
@@ -1655,8 +1655,8 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /electron-to-chromium@1.4.611:
-    resolution: {integrity: sha512-ZtRpDxrjHapOwxtv+nuth5ByB8clyn8crVynmRNGO3wG3LOp8RTcyZDqwaI6Ng6y8FCK2hVZmJoqwCskKbNMaw==}
+  /electron-to-chromium@1.4.612:
+    resolution: {integrity: sha512-dM8BMtXtlH237ecSMnYdYuCkib2QHq0kpWfUnavjdYsyr/6OsAwg5ZGUfnQ9KD1Ga4QgB2sqXlB2NT8zy2GnVg==}
     dev: false
 
   /emojilib@2.4.0:
@@ -3542,7 +3542,7 @@ packages:
       '@emotion/react': ^11.0.0
       react: '>=16.14.0'
     dependencies:
-      '@emotion/react': 11.11.1(@types/react@18.2.43)(react@18.2.0)
+      '@emotion/react': 11.11.1(@types/react@18.2.45)(react@18.2.0)
       react: 18.2.0
       react-intersection-observer: 9.5.3(react@18.2.0)
       react-is: 18.2.0
@@ -3573,7 +3573,7 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
-  /react-markdown@8.0.7(@types/react@18.2.43)(react@18.2.0):
+  /react-markdown@8.0.7(@types/react@18.2.45)(react@18.2.0):
     resolution: {integrity: sha512-bvWbzG4MtOU62XqBx3Xx+zB2raaFFsq4mYiAzfjXJMEz2sixgeAfraA3tvzULF02ZdOMUOKTBFFaZJDDrq+BJQ==}
     peerDependencies:
       '@types/react': '>=16'
@@ -3581,7 +3581,7 @@ packages:
     dependencies:
       '@types/hast': 2.3.8
       '@types/prop-types': 15.7.11
-      '@types/react': 18.2.43
+      '@types/react': 18.2.45
       '@types/unist': 2.0.10
       comma-separated-tokens: 2.0.3
       hast-util-whitespace: 2.0.1
@@ -3600,26 +3600,26 @@ packages:
       - supports-color
     dev: false
 
-  /react-router-dom@6.20.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-npzfPWcxfQN35psS7rJgi/EW0Gx6EsNjfdJSAk73U/HqMEJZ2k/8puxfwHFgDQhBGmS3+sjnGbMdMSV45axPQw==}
+  /react-router-dom@6.21.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-1dUdVj3cwc1npzJaf23gulB562ESNvxf7E4x8upNJycqyUm5BRRZ6dd3LrlzhtLaMrwOCO8R0zoiYxdaJx4LlQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.13.1
+      '@remix-run/router': 1.14.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      react-router: 6.20.1(react@18.2.0)
+      react-router: 6.21.0(react@18.2.0)
     dev: false
 
-  /react-router@6.20.1(react@18.2.0):
-    resolution: {integrity: sha512-ccvLrB4QeT5DlaxSFFYi/KR8UMQ4fcD8zBcR71Zp1kaYTC5oJKYAp1cbavzGrogwxca+ubjkd7XjFZKBW8CxPA==}
+  /react-router@6.21.0(react@18.2.0):
+    resolution: {integrity: sha512-hGZ0HXbwz3zw52pLZV3j3+ec+m/PQ9cTpBvqjFQmy2XVUWGn5MD+31oXHb6dVTxYzmAeaiUBYjkoNz66n3RGCg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
     dependencies:
-      '@remix-run/router': 1.13.1
+      '@remix-run/router': 1.14.0
       react: 18.2.0
     dev: false
 

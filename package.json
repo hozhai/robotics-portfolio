@@ -21,7 +21,7 @@
     "react-awesome-reveal": "^4.2.7",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.7",
-    "react-router-dom": "^6.20.1",
+    "react-router-dom": "^6.21.0",
     "react-top-loading-bar": "^2.3.1",
     "rehype-katex": "^7.0.0",
     "rehype-prism-plus": "^1.6.3",
@@ -32,7 +32,7 @@
     "vite-plugin-svgr": "^3.3.0"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
+    "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^8.55.0",

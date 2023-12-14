@@ -616,6 +616,42 @@ void loop() {
 ~~~
 
 Guess what that code will do! Then try it out yourself to see if you were right. That will not only improve your code-reading skills, but also challenge you to try to figure out what components are needed, and how they should be hooked up.
+
+# Can we expand on this?
+
+Yeah we can! There's another thing called analogRead, and based on that you can *maybe* guess what it does. If you don't, it's no big deal. We first have to understand the difference between "analog" and "digital" though. Digital signals can either be "on" or "off", no in between, while analog signals have values that are between "on" or "off". 
+
+In Arduino, what we can do is read an analog value going from 0 to 1023, which is the 10-bit integer limit, and we can do cool things with that. However, only pins starting with the letter "A" can do so.
+
+And of course, with each reader, there's a writer, and that also applies here. analogWrite can output an analog value that goes from 0 to 255. 
+
+There is however a catch. Only certain pins are capable of outputting analog signals (they can also output digital signals) using PWM, or pulse width modulation. Those pins are the ones which have a tilde (~) in front of the number.
+
+There is, another catch. If you want to take an analog input and want to output an analog signal which depends on the input, we have to use map(), which is very handy. It takes the maximum and minimum value of the before and after, and then scales it to fit with some percentage magic.
+
+Here's the syntax of every one of those functions.
+
+~~~cpp showLineNumbers
+// analogRead()
+const int analogPin = A1;
+int potentiometerValue = analogRead(analogPin);
+
+// map()
+const int fromMin = 0;
+const int fromMax = 1023;
+const int toMin = 0;
+const int toMax = 255;
+
+int transformedValue = map(potentiometerValue, fromMin, fromMax, toMin, toMax);
+
+// analogWrite()
+const int outputPin = 6;
+pinMode(outputPin, OUTPUT);
+analogWrite(outputPin, transformedValue);
+~~~
+
+(Just an FYI, that code won't run if you copy-paste it. It's just there you help you understand how it'd look if you were to actually use it.)
+
 `,
   },
 ];
