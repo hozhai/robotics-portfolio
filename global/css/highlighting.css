@@ -71,7 +71,7 @@ pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
   text-shadow: none;
-  background: #383e49;
+  background: #0c57e2;
 }
 
 pre[class*="language-"]::selection,
@@ -79,7 +79,7 @@ pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
   text-shadow: none;
-  background: #9aa2b1;
+  background: #0c57e2;
 }
 
 @media print {

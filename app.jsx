@@ -1,5 +1,4 @@
-import { useState, useEffect, StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -9,7 +8,7 @@ import Footer from "./components/Footer";
 import ScrollBtn from "./components/ScrollBtn";
 import BlogDetail from "./pages/BlogDetail";
 
-import data from "./data/dataHandler";
+import data from "./data/blogsData";
 
 export default function App() {
   const [blogsData, setBlogsData] = useState(data);

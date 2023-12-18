@@ -1,4 +1,4 @@
-export const data = [
+const data = [
   {
     id: 1,
     title: "Current & Circuits",
@@ -334,7 +334,7 @@ Try to even add extra functionalities to it! Maybe you can add functionality wit
 
 If you want to see how I did it, here are the steps.
 
-  * Step #1.
+  * Step #1
 
   Draw the schematic. Here's the result (I planned ahead for the extra functionality so I incluided it in the schematic as well):
 
@@ -650,8 +650,112 @@ pinMode(outputPin, OUTPUT);
 analogWrite(outputPin, transformedValue);
 ~~~
 
-(Just an FYI, that code won't run if you copy-paste it. It's just there you help you understand how it'd look if you were to actually use it.)
+(FYI; that code won't run if you copy-paste it. It's just there you help you understand how it'd look if you were to actually use it.)
 
+And just like in the previous blog (Currents & Circuits), we're gonna have a final project!
+
+[Here's a video](https://youtube.com/shorts/deGKOR_pwKk) of it (it turned into a goddamn short again. damn you youtube).
+
+Let's divide it into steps again! Since now not only do we have to deal with the way of how the circuitry itself is built, we also have to worry about how the code is built.
+
+  * Step #1
+
+  Plan out how the circuit will be. You can also code first however what I recommend to do is to worry about the circuit, then code, since code is easier to make changes to than the circuit. You can make a sketch of how the circuit will look. It doesn't have to be exact, nor does the final product need to look exactly like it.
+
+  Some this like this will do (this is what my teammate did):
+
+  ![A rough sketch of how the final thing will look.](https://i.imgur.com/pN8sCIc.png)
+
+  * Step #2
+
+  Let's get a bit more detailed now. We're going to make an electrical schematic from the sketch that you drew. You can use [this very useful site](https://www.circuit-diagram.org/) which I've recommended in the previous blog post to make your schematics. With the schematic, you now have to make the components and wiring more precise, as it will be exactly how the final project will look. You can maybe change the pins from this one to the other, but other I advise against making changes bigger than those.
+
+  This is how my schematic ended up looking like:
+
+  ![The schematic version of the rough sketch.](https://i.imgur.com/WiJsA0P.png)
+
+  * Step #3
+
+  We've done enough for the circuit. It's code time! But before the actual thing, we can write sort of a pseudocode which describes what will happen, how it will, and where it will. After me and my team finished this step, [this](https://docs.google.com/document/d/1W15y71vhtHeL0S175_yH2bTDtMs2l3FlmsTChEU4w38/edit?usp=sharing) is how it looked.
+
+Not only will we be building the circuit and coding the program, we will also make a little box for it to sit inside!
+
+But first, here are some progress pictures!
+
+![Me helping make the diagram.](https://i.imgur.com/wmD66eo.png)
+
+![Teammate helping make the code.](https://i.imgur.com/6uGwXza.png)
+
+![The circuit](https://i.imgur.com/mdlUWGJ.png)
+
+And this ended up being the final code!
+
+~~~cpp showLineNumbers
+// declare variables
+int val;
+int pot;
+int seconds;
+
+const int green = 13;
+const int yellow = 12;
+const int red = 11;
+
+void setup() {
+  Serial.begin(9600);
+  for (int i = 11; i < 14; i++) {
+    // set all the LED pins to output
+    pinMode(i, OUTPUT);
+  } 
+}
+
+void loop() {
+  val = analogRead(A5);
+  pot = map(val, 0, 1023, 300, 2000);
+  seconds = 0.166 * pot;
+
+  // turns our green on for a certain time depending on the potentiometer
+  digitalWrite(green,HIGH);
+  delay(pot);
+  digitalWrite(green, LOW);
+
+  // this covers the turning on and off of the yellow
+  digitalWrite(yellow,HIGH);
+  delay(seconds);
+
+  digitalWrite(yellow,LOW);
+  delay(seconds);
+
+  digitalWrite(yellow,HIGH);
+  delay(seconds);
+
+  digitalWrite(yellow,LOW);
+  delay(seconds);
+
+  digitalWrite(yellow,HIGH);
+  delay(seconds);
+
+  digitalWrite(yellow,LOW);
+
+  // red is same as for green
+  digitalWrite(red, HIGH);
+  delay(pot);
+  digitalWrite(red, LOW);
+}
+~~~
+
+It can definitely be optimized using a clever way however this is probably the best readable version. 
+
+I ended up making a soldered version of the circuit for it to fit in the box, so there's that.
+
+Anyway, [this is the final product](https://youtube.com/shorts/8XtqkuO6OUs) me and my bro ended up with!
+
+This was a pretty fun project that also challenged me in pretty much every way when it comes to this. It was a really nice opportunity to improve my coding, writing (this blog), soldering and circuit building skills, and I've learned many things, most of them related to the Arduino. I have never even seen an Arduino in my life before this unit and now here I am.
+
+This will most likely be the last post on this website for a very long time unless something happens and I need this again. The source code of this website is on [my Github](https://github.com/Zhai90/robotics-portfolio), so you can always see how I got here.
+
+Thank you for reading through all this!
 `,
   },
 ];
+
+export default data;

@@ -36,7 +36,7 @@ export default function BlogDetail({ data }) {
     return () => {
       document.removeEventListener("scroll", progressFunc);
     };
-  }, [params.id]);
+  }, [params.id, blog.title]);
 
   return (
     <div>
@@ -63,7 +63,6 @@ export default function BlogDetail({ data }) {
         {blog.title || "404 Not Found"}
         <span className="fake-cursor">_</span>
       </h2>
-
       <div className="post--thumbnail-container">
         <img
           className="post--thumbnail"
