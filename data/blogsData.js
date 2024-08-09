@@ -756,6 +756,20 @@ This will most likely be the last post on this website for a very long time unle
 Thank you for reading through all this!
 `,
   },
+  {
+    id: 3,
+    title: "Small Update",
+    category: [],
+    createdAt: 1723168959000,
+    description:
+      "Small update regarding the website! Also a little peek into how this website works. :)",
+    thumbnail:
+      "https://place-hold.it/1920x1080/191919/faf9f6/000&text=UnfinishedThumbnail",
+    content: `
+    {@embed:https://www.youtube.com/watch?v=R_6jeSqG4ao}
+    solution posted here tomorrow :D
+    `,
+  },
 ];
 
 export default data;
