@@ -40,13 +40,13 @@ const data = [
   "I sometimes play Roblox.",
   "My favourite Roblox game is Arcane Odyssey.",
   "The first programming language I learned was Luau (Roblox Lua).",
-  "This is my [Macbook background](www.imgur.com/R543kHJ).",
+  "This is my [Macbook background](https://www.imgur.com/R543kHJ).",
   "I'm good at being bad.",
   "This website was coded with React.JS.",
   "This website's size is X", // FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN
   "It is 6:12PM as I'm writing these facts.",
   "My name in Chinese is `翟洪蒙`.",
-  "There are 76 facts in total.", // UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN 
+  "There are 76 facts in total.", // UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN UPDATE THIS IN
   "This website is bundled by Vite.",
   "This project uses X NPM Packages.", // FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN FILL THIS IN
   "The first school I studied at is Kingston College, which isn't a college.",
@@ -75,7 +75,7 @@ const data = [
   "I am in a call with a Dutch dude as I'm writing this.",
   "2019-2022 were the darkest years for me.",
   "I'm left eye dominant.",
-  "This isn't a fact. Congrats!"
+  "This isn't a fact. Congrats!",
 ];
 
 export default data;

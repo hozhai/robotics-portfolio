@@ -3,127 +3,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-  min-width: 100%;
-  background-color: #212121;
-  overflow-x: hidden;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    min-width: 100%;
+    background-color: #212121;
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .title {
-  font-family: "Cutive Mono", monospace;
-  color: #20c20e;
+    font-family: "Cutive Mono", monospace;
+    color: #20c20e;
 }
 
 .text {
-  font-family: "Ubuntu Mono", sans-serif;
-  color: #faf9f6;
+    font-family: "Ubuntu Mono", sans-serif;
+    color: #faf9f6;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .path {
-  letter-spacing: 2.5px;
-  margin-left: 30px;
-  color: #faf9f6;
+    letter-spacing: 2.5px;
+    margin-left: 30px;
+    color: #faf9f6;
 }
 
 .path strong {
-  color: #faf9f6;
-  font-weight: 900;
-  font-style: italic;
-  text-transform: uppercase;
+    color: #faf9f6;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
 }
 
 .link {
-  font-family: "Ubuntu Mono", sans-serif;
-  color: #c1c1c1;
-  transition: all 0.1s ease-in-out;
-  text-decoration: underline;
+    font-family: "Ubuntu Mono", sans-serif;
+    color: #c1c1c1;
+    transition: all 0.1s ease-in-out;
+    text-decoration: underline;
 }
 
 .link:hover {
-  color: #fafafa;
+    color: #fafafa;
 }
 
 .scroll--btn {
-  padding: 10px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  color: #fafafa;
-  background-color: #080808;
-  z-index: 999;
-  cursor: pointer;
-  transition: all 0.4s ease-in-out;
-  opacity: 0.5;
+    padding: 10px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    color: #fafafa;
+    background-color: #080808;
+    z-index: 999;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    opacity: 0.5;
 }
 
 .scroll--btn:hover {
-  opacity: 1;
-  box-shadow: 0px 0px 0px 3px rgba(65, 117, 5, 1),
-    0px 0px 0px 6px rgba(126, 211, 33, 1),
-    0px 0px 0px 9px rgba(184, 233, 134, 1);
+    opacity: 1;
+    box-shadow:
+        0px 0px 0px 3px rgba(65, 117, 5, 1),
+        0px 0px 0px 6px rgba(126, 211, 33, 1),
+        0px 0px 0px 9px rgba(184, 233, 134, 1);
 }
 
 .scroll--btn:active {
-  transform: scale(80%);
+    transform: scale(80%);
 }
 
 .fake-cursor {
-  -webkit-animation: fake-cursor 1s infinite;
-  animation: fake-cursor 1s infinite;
-  margin-left: 1px;
+    -webkit-animation: fake-cursor 1s infinite;
+    animation: fake-cursor 1s infinite;
+    margin-left: 1px;
 }
 
 @keyframes fake-cursor {
-  0% {
-    opacity: 0;
-  }
-  49% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .readingbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 7.5px;
-  background-color: #008020;
-  z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 7.5px;
+    background-color: #008020;
+    z-index: 999;
 }
 
 /*                 Footer                 */
 
 footer {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  background-color: #0c0c0c;
+    /* position: absolute;
+    bottom: -20px;
+    left: 0; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    background-color: #0c0c0c;
 }
 
 footer div {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 /*                                             */
@@ -133,276 +139,276 @@ footer div {
 /*                   Main                   */
 
 main {
-  position: relative;
-  height: 100vh;
+    position: relative;
+    height: 97vh;
 }
 
 main h1.main--title {
-  width: 525px;
-  font-weight: 500;
-  font-size: 4.5rem;
-  z-index: 1;
-  position: absolute;
-  left: calc(50% - 250px);
-  top: 35vh;
-  text-align: center;
+    width: 525px;
+    font-weight: 500;
+    font-size: 4.5rem;
+    z-index: 1;
+    position: absolute;
+    left: calc(50% - 250px);
+    top: 35vh;
+    text-align: center;
 }
 
 main h2 {
-  font-size: 3rem;
-  color: #168a0a;
+    font-size: 3rem;
+    color: #168a0a;
 }
 
 .main--sdanim {
-  position: absolute;
-  z-index: 1;
-  left: calc(50% - 75px);
-  top: 80vh;
+    position: absolute;
+    z-index: 1;
+    left: calc(50% - 75px);
+    top: 80vh;
 }
 
 .main--socials {
-  display: flex;
-  position: absolute;
-  z-index: 1;
-  bottom: 5px;
-  left: 5px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    left: 5px;
 }
 
 .main--socials-btn {
-  margin: 10px;
-  opacity: 0.5;
-  transition: all 0.15s ease-in-out;
+    margin: 10px;
+    opacity: 0.5;
+    transition: all 0.15s ease-in-out;
 }
 
 .main--socials-btn:hover {
-  opacity: 0.85;
+    opacity: 0.85;
 }
 
 .main--bg-switch {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-  z-index: 1;
-  opacity: 0.5;
-  transition: all 0.15s ease-in-out;
-  cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    z-index: 1;
+    opacity: 0.5;
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
 }
 
 .main--bg-switch:hover {
-  opacity: 0.85;
+    opacity: 0.85;
 }
 
 /*                 Biography                   */
 
 .biography {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .biography--title h2 {
-  text-align: center;
-  font-size: 3.25rem;
+    text-align: center;
+    font-size: 3.25rem;
 }
 
 .biography--bu-title {
-  display: none;
+    display: none;
 }
 
 .biography--body {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: first baseline;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: first baseline;
+    flex-wrap: wrap;
 }
 
 .biography--block {
-  width: 40%;
-  margin: 35px;
-  font-size: 1.5rem;
-  text-align: justify;
+    width: 40%;
+    margin: 35px;
+    font-size: 1.5rem;
+    text-align: justify;
 }
 
 img[alt="bioimg"] {
-  aspect-ratio: 16/9;
-  width: 100%;
-  border-radius: 25px;
-  transition: all 0.25s ease-in-out;
+    aspect-ratio: 16/9;
+    width: 100%;
+    border-radius: 25px;
+    transition: all 0.25s ease-in-out;
 }
 
 img[alt="bioimg"]:hover {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.26);
-  filter: saturate(150%);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.26);
+    filter: saturate(150%);
 }
 
 /*                 RFG                 */
 
 .rfg {
-  background-color: #191919;
-  text-align: center;
+    background-color: #191919;
+    text-align: center;
 }
 
 .rfg--title h2 {
-  padding-top: 50px;
-  font-size: 3.25rem;
+    padding-top: 50px;
+    font-size: 3.25rem;
 }
 
 .rfg--fact {
-  color: #faf9f6;
-  font-size: 2rem;
+    color: #faf9f6;
+    font-size: 2rem;
 }
 
 .rfg--fact a {
-  color: #008020;
+    color: #008020;
 }
 
 .rfg--fact a:active {
-  color: #095a00;
+    color: #095a00;
 }
 
 .rfg--btn-container {
-  margin-top: 50px;
-  padding-bottom: 50px;
-  display: flex;
-  justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .rfg--btn {
-  background-color: #008020;
-  font-size: 2.5rem;
-  width: 300px;
-  font-family: "Ubuntu Mono";
-  color: rgb(8, 8, 8);
-  user-select: none;
-  cursor: pointer;
-  border-bottom: 10px solid rgb(0, 43, 0);
-  transition: all 0.15s ease-in-out;
+    background-color: #008020;
+    font-size: 2.5rem;
+    width: 300px;
+    font-family: "Ubuntu Mono";
+    color: rgb(8, 8, 8);
+    user-select: none;
+    cursor: pointer;
+    border-bottom: 10px solid rgb(0, 43, 0);
+    transition: all 0.15s ease-in-out;
 }
 
 .rfg--btn:hover {
-  background-color: #095a00;
-  color: white;
+    background-color: #095a00;
+    color: white;
 }
 
 .rfg--btn:active {
-  transform: translateY(10px);
-  border-bottom: 10px solid #191919;
-  color: #ff9a00;
+    transform: translateY(10px);
+    border-bottom: 10px solid #191919;
+    color: #ff9a00;
 }
 
 /*                 Blogs                 */
 
 .blogs--title h2 {
-  font-size: 3.25rem;
-  text-align: center;
+    font-size: 3.25rem;
+    text-align: center;
 }
 
 .blogs--container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
 .blog--box {
-  background-color: #121212;
-  width: 60%;
-  height: 171px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 30px;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.15s ease-in-out;
+    background-color: #121212;
+    width: 60%;
+    height: 171px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.15s ease-in-out;
 }
 
 .blog--box:hover {
-  filter: brightness(110%);
+    filter: brightness(110%);
 }
 
 .blog--box:active {
-  filter: brightness(130%);
+    filter: brightness(130%);
 }
 
 .blog--box::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #212121;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #212121;
 }
 
 .blog--box::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 5px;
-  background: linear-gradient(
-    90deg,
-    rgb(78, 221, 142) 0%,
-    rgb(0, 180, 57) 100%
-  );
-  transition: all 0.25s ease-in-out;
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(
+        90deg,
+        rgb(78, 221, 142) 0%,
+        rgb(0, 180, 57) 100%
+    );
+    transition: all 0.25s ease-in-out;
 }
 
 .blog--box:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .blog--content {
-  padding: 15px;
+    padding: 15px;
 }
 
 .blog--name {
-  font-size: 2.25rem;
-  position: relative;
-  text-decoration: none !important;
+    font-size: 2.25rem;
+    position: relative;
+    text-decoration: none !important;
 }
 
 .blog--description p {
-  font-size: 1.2rem;
-  margin-top: 0;
-  margin-left: 2px;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-left: 2px;
 }
 
 .blogs--btn {
-  margin-top: 20px;
-  text-align: center;
-  background-color: #008020;
-  font-size: 2.5rem;
-  width: 300px;
-  font-family: "Ubuntu Mono";
-  color: rgb(8, 8, 8);
-  user-select: none;
-  cursor: pointer;
-  border-bottom: 10px solid rgb(0, 43, 0);
-  transition: all 0.15s ease-in-out;
-  margin-bottom: 50px;
-  text-decoration: none;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #008020;
+    font-size: 2.5rem;
+    width: 300px;
+    font-family: "Ubuntu Mono";
+    color: rgb(8, 8, 8);
+    user-select: none;
+    cursor: pointer;
+    border-bottom: 10px solid rgb(0, 43, 0);
+    transition: all 0.15s ease-in-out;
+    margin-bottom: 50px;
+    text-decoration: none;
 }
 
 .blogs--btn:hover {
-  background-color: #095a00;
-  color: white;
+    background-color: #095a00;
+    color: white;
 }
 
 .blogs--btn:active {
-  transform: translateY(10px);
-  border-bottom: 10px solid #212121;
-  color: #ff9a00;
+    transform: translateY(10px);
+    border-bottom: 10px solid #212121;
+    color: #ff9a00;
 }
 
 .blog--time {
-  font-family: "Ubuntu Mono", sans-serif;
-  color: #464646;
-  position: absolute;
-  bottom: 4px;
-  right: 8px;
+    font-family: "Ubuntu Mono", sans-serif;
+    color: #464646;
+    position: absolute;
+    bottom: 4px;
+    right: 8px;
 }
 
 /*                                             */
@@ -410,63 +416,63 @@ img[alt="bioimg"]:hover {
 /*                                             */
 
 .bp--title {
-  font-size: 3.25rem;
-  text-align: center;
+    font-size: 3.25rem;
+    text-align: center;
 }
 
 .bp--filters {
-  height: 50px;
-  width: 60%;
-  margin-left: 20%;
-  background-color: #191919;
+    height: 50px;
+    width: 60%;
+    margin-left: 20%;
+    background-color: #191919;
 }
 
 .bp--blogs-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column wrap;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
 .bp--filters input[name="query"] {
-  font-size: 1.5rem;
-  font-family: "Ubuntu Mono", monospace;
-  color: #c1c1c1;
-  width: 100%;
-  height: 50px;
-  border: none;
-  outline: none;
-  background-color: #303030;
-  padding: 0;
-  padding-left: 10px;
-  transition: all 0.25s ease-in-out;
-  caret-color: #168a0a;
+    font-size: 1.5rem;
+    font-family: "Ubuntu Mono", monospace;
+    color: #c1c1c1;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: #303030;
+    padding: 0;
+    padding-left: 10px;
+    transition: all 0.25s ease-in-out;
+    caret-color: #168a0a;
 }
 
 .bp--filters input[name="query"]:hover,
 .bp--filters input[name="query"]:active,
 .bp--filters input[name="query"]:focus-visible {
-  filter: brightness(130%);
+    filter: brightness(130%);
 }
 
 .bp--nores {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 .bp--nores .bp--nores-title {
-  color: #20c20e;
-  font-family: "Cutive Mono", monospace;
-  font-size: 2.25rem;
+    color: #20c20e;
+    font-family: "Cutive Mono", monospace;
+    font-size: 2.25rem;
 }
 
 .bp--nores .bp--nores-text {
-  color: #c1c1c1;
-  font-family: "Ubuntu Mono", sans-serif;
-  font-size: 1.5rem;
+    color: #c1c1c1;
+    font-family: "Ubuntu Mono", sans-serif;
+    font-size: 1.5rem;
 }
 
 /*                                                    */
@@ -474,87 +480,88 @@ img[alt="bioimg"]:hover {
 /*                                                    */
 
 .post--title {
-  font-size: 3.25rem;
-  text-align: center;
+    font-size: 3.75rem;
+    font-style: italic;
+    text-align: center;
 }
 
 .post--thumbnail-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post--thumbnail {
-  border-radius: 50px;
-  width: 60%;
-  aspect-ratio: 16/9;
+    border-radius: 50px;
+    width: 60%;
+    aspect-ratio: 16/9;
 }
 
 .post--content-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .post--content {
-  width: 60%;
-  line-height: 35px;
-  font-size: 1.5rem;
-  margin-top: 30px;
-  text-align: justify;
+    width: 60%;
+    line-height: 35px;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    text-align: justify;
 }
 
 .post--content h1,
 .post--content h2 {
-  position: relative;
+    position: relative;
 }
 
 .post--content h1::after,
 .post--content h2::after {
-  content: "";
-  position: absolute;
-  background-color: #525252;
-  height: 2px;
-  width: 100%;
-  bottom: -15px;
-  left: 0;
+    content: "";
+    position: absolute;
+    background-color: #525252;
+    height: 2px;
+    width: 100%;
+    bottom: -15px;
+    left: 0;
 }
 
 .post--content hr {
-  border: 1px solid #525252;
+    border: 1px solid #525252;
 }
 
 .post--content img {
-  width: 55%;
-  margin-left: 22.5%;
+    width: 55%;
+    margin-left: 22.5%;
 }
 
 .post--content table {
-  border: 4px solid rgba(0, 0, 0, 0);
-  font-size: 1.35rem;
-  width: 60%;
-  margin-left: 20%;
-  border-collapse: collapse; 
+    border: 4px solid rgba(0, 0, 0, 0);
+    font-size: 1.35rem;
+    width: 60%;
+    margin-left: 20%;
+    border-collapse: collapse;
 }
 
 .post--content th {
-  background-color: #525252;
+    background-color: #525252;
 }
 
 .post--content tr {
-  border: 2px solid rgb(55, 55, 55);
+    border: 2px solid rgb(55, 55, 55);
 }
 
 .post--content a {
-  color: rgb(170, 255, 197);
-  text-decoration: underline;
-  transition: all .25s ease-in-out;
+    color: rgb(170, 255, 197);
+    text-decoration: underline;
+    transition: all 0.25s ease-in-out;
 }
 
 .post--content a:hover {
-  color: #86ca7f;
+    color: #86ca7f;
 }
 
 .post--content iframe {
-  border-radius: 2rem;
+    border-radius: 2rem;
 }

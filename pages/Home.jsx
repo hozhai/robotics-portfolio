@@ -36,7 +36,7 @@ export default function Home({ data }) {
   const [progress, setProgress] = useState(0);
   const [fact, setFact] = useState("Loading...");
   const [bgState, setBgState] = useState(
-    localStorage.getItem("bgState") || true
+    localStorage.getItem("bgState") || true,
   );
 
   const _true = new RegExp("true");
