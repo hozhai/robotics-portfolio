@@ -34,7 +34,7 @@ The components are placed in different wires than the one connected to the batte
 
 They are resistors! I know what you're thinking, *"I know what those look like and they don't wiggle like that!" (or maybe you don't know what those look like, anyway)*, but what if I told you that is indeed a resistor? Those are called schematic symbols and are graphical representations of components. Just like how an electrical schematic is a graphical representation of a whole circuit, a schematic symbol is a graphical representation of a single component.
 
-![Basic circuit components with their schematic symbols.](https://i.imgur.com/BH6M2Q6.png) 
+![Basic circuit components with their schematic symbols.](https://i.imgur.com/BH6M2Q6.png)
 
 *(Bear in mind that there are different variantions of a schematic symbol to represent a single component.)*
 
@@ -70,13 +70,13 @@ Some of those components are pretty self-explanatory. You got the wire, who does
 
 # Nice! We're done with the basics! What now?
 
-Prefixes! They're really important so we should get them out of the way. If you've paid attention during physics or chemistry class, you should breeze through this. 
+Prefixes! They're really important so we should get them out of the way. If you've paid attention during physics or chemistry class, you should breeze through this.
 
 ## So, what are those?
 
-Do you know the units of measurement? Like meters, decibels, watts, amperes, volts, etc.? They have a letter before them that means how much the value should be multiplied or divided by. Some prefixes are mili, centi, deci, kilo, mega, giga, tera, etc.. For example, a kilometer (km) is 1000 times a meter, and a meter would be $\\frac 1 {1000}$ of a kilometer. 
+Do you know the units of measurement? Like meters, decibels, watts, amperes, volts, etc.? They have a letter before them that means how much the value should be multiplied or divided by. Some prefixes are mili, centi, deci, kilo, mega, giga, tera, etc.. For example, a kilometer (km) is 1000 times a meter, and a meter would be $\\frac 1 {1000}$ of a kilometer.
 
-Here is a handy cheatsheet (check out what scientific notation means if you have no idea what the weird 10 with exponents means.): 
+Here is a handy cheatsheet (check out what scientific notation means if you have no idea what the weird 10 with exponents means.):
 
 | Prefix    | 1 Base Unit equals: |
 |:---------:|:-------------------:|
@@ -124,7 +124,7 @@ Here's another one for the tolerance/accuracy (the last stripe)
 |  Gold  |  $\\pm 5\\%$ |
 | Silver | $\\pm 10\\%$ |
 
-Now let's take a look at the image again: 
+Now let's take a look at the image again:
 
 ![An illustration of a resistor with a "red, red, brown, red, gold" pattern.](https://i.imgur.com/RN9LXrm.png)
 
@@ -166,7 +166,7 @@ The insides are a little bit more complicated, but what you need to know is that
 
 Remember when we talked about DC motors and RGB LEDs and how we'd on touch them later on? Well right now is later so let's check out what an RGB LED and how potentiometers could be used with them!
 
-RGB LED stands for *red green blue light-emitting diode*. Yeah I know, what a mouthful. If you've ever had or seen a gaming PC, you might already have a good idea on what the RGB part of the LED means. It means that it is capable of producing exactly 16,777,216 colors! 
+RGB LED stands for *red green blue light-emitting diode*. Yeah I know, what a mouthful. If you've ever had or seen a gaming PC, you might already have a good idea on what the RGB part of the LED means. It means that it is capable of producing exactly 16,777,216 colors!
 
 But how? You might be asking. Well, it has 4 legs, 3 of them that control the color and the last one that receives either positive or negative current, depending on whether you have a common *cathode* or common *anode* RGB LED. Overall, it looks something like this:
 
@@ -192,9 +192,9 @@ If you don't have the materials, or if you can't get it to work, here's a video 
 
 # How does electricity flow?
 
-If you take a guess, you'll maybe think the electricity flows from positive to negative, and that's partially correct. There's something called the *conventional flow of electricity* which is the standard, and it goes from positive to negative. 
+If you take a guess, you'll maybe think the electricity flows from positive to negative, and that's partially correct. There's something called the *conventional flow of electricity* which is the standard, and it goes from positive to negative.
 
-If you're a chemistry nerd, you might've thought that it's from negative to positive, which is correct. The electrons jump from atom to atom, creating current. 
+If you're a chemistry nerd, you might've thought that it's from negative to positive, which is correct. The electrons jump from atom to atom, creating current.
 
 But then, why do we still believe that it goes from positive to negative instead of the other way around? Well, long, long ago, people didn't have sufficient technology to know that the electricity flow was from negative to positive, and just like some of you did, they guessed that it was positive to negative, and all the electricity-related formulas and laws were developed around the fact that the electricity flowed from positive to negative.
 
@@ -204,19 +204,19 @@ So now we just call the positive to negative flow the *conventional flow of elec
 
 ## Okay... That is interesting.
 
-Yep! And do you remember how some components like the LED and the RGB LED require you to have a specific charge on a specific leg? Well, some components are *polarized* and some aren't. 
+Yep! And do you remember how some components like the LED and the RGB LED require you to have a specific charge on a specific leg? Well, some components are *polarized* and some aren't.
 
 What does polarized mean? It basically means that something has *poles*, in this case there are 2 poles, which are positive and negative, so some components have to only have a specific charge as an input. But some components can also be polarized but still have the order of the charges switched. You will soon see what that means.
 
 Oh, and side note. Some components are polarized, which means that there are others that aren't polarized, like resistors and pushbuttons.
 
-Oh, and some examples of *polarized* components are batteries, LEDs, and DC motors. 
+Oh, and some examples of *polarized* components are batteries, LEDs, and DC motors.
 
 ### *Speaking of which...*
 
 Remember when we talked about DC motors and how we'd on touch them later on? Well right now is later so let's check it out!
 
-DC stands for "direct current", which means that the voltage is always constant. And a motor... stands for motor! 🤯. You've probably messed with these before, they are little cubes with a stick sticking out of it which spins if you connect it to electricity. 
+DC stands for "direct current", which means that the voltage is always constant. And a motor... stands for motor! 🤯. You've probably messed with these before, they are little cubes with a stick sticking out of it which spins if you connect it to electricity.
 
 Oh yeah, and this is how it looks like in schematics:
 
@@ -234,7 +234,7 @@ Let's revise something we've talked about for a little bit. There are 3 properti
 
 ## Let's start with current.
 
-The most common unit of measurement for current is Ampere, shortened "amps" or simply a capital "A", named after the French physicist *André-Marie Ampère*. 
+The most common unit of measurement for current is Ampere, shortened "amps" or simply a capital "A", named after the French physicist *André-Marie Ampère*.
 
 By definition, it is the amount of electrons flowing at a given point, which in general terms means the amount of electricity that is flowing at a certain part in the circuit. Think of this as the amount of water flowing in a pipe.
 
@@ -258,7 +258,7 @@ This one is probably the one you know most about. In case you haven't figured it
 
 Resistance is the amount of electrical opposition to current flow in a circuit. It basically means that it reduces the amount of current the higher the resistance, or how much the pipe gets smaller. This is called the *Ohm's Law*.
 
-If you were to have a big pipe with water flowing through, then suddenly introduced a part where the pipe is of a way smaller diamateter, that would be a resistor. 
+If you were to have a big pipe with water flowing through, then suddenly introduced a part where the pipe is of a way smaller diamateter, that would be a resistor.
 
 ## And... what *exactly* is the Ohm's Law?
 
@@ -286,11 +286,11 @@ With the Ohm's Law's formula in mind, can you think of a way to calculate the mi
 
 If you're still confused, that's good because I'm supposed to explain before you understand it.
 
-Anyway, in the circuit, we have 2 green LEDs and a blue LED. Looking at the table, we take the lowest value for the corresponding color. So for green, it'd be 1.9V, and 2.5V for blue. We then take those numbers and add them together. 
+Anyway, in the circuit, we have 2 green LEDs and a blue LED. Looking at the table, we take the lowest value for the corresponding color. So for green, it'd be 1.9V, and 2.5V for blue. We then take those numbers and add them together.
 
 Since we have 2 greens and 1 blue, the equation would be 1.9 + 1.9 + 2.5, which gives us a total of 6.3V. That means that we have occupied 6.3V out of the 9V we have. LEDs aren't the only components that use up voltage, any component that makes any type of sound, heat, light, etc. will have a voltage drop.
 
-Now, we then substract total - used, which would be 9V - 6.3V, which equals 2.7V. We know have the voltage! So far, we have 1/3 of the Ohm's Law's formula. 
+Now, we then substract total - used, which would be 9V - 6.3V, which equals 2.7V. We know have the voltage! So far, we have 1/3 of the Ohm's Law's formula.
 
 ![The Ohm's law's formula.](https://i.imgur.com/vbB4sf9.png)
 
@@ -308,7 +308,7 @@ If you mean this:
 
 ![A slideswitch represented in a schematic.](https://i.imgur.com/s6GzoWX.png)
 
-That is a slide switch! There's a little button which you slide from left to right. Just like the potentiometer, it has 3 legs where the middle one is required for it to work. 
+That is a slide switch! There's a little button which you slide from left to right. Just like the potentiometer, it has 3 legs where the middle one is required for it to work.
 
 When you slide it to the left, the first leg will output the charge from the middle leg, and same when you slide it to the right except that it's the third leg that has the output now, and it looks exactly like the switch that toys have to turn on.
 
@@ -367,11 +367,11 @@ If you want to see how I did it, here are the steps.
       NOTES
       ---
       Bear in mind that there are different variants of a schematic symbol to represent a single component.
- 
+
       1 amp is 6.24 * 10^18 electrons flowing through a certain point per second
       so 2 amps = 1.248 * 10^19
       1 amp = 1 coulomb
- 
+
       voltage is a difference in electrical potential energy, per unit of change, between two points.
       1 volt = 1 joule per coulomb
       voltage is always relative
@@ -405,7 +405,7 @@ I know that right after learning about basic circuitry, this might be a bit over
 
 ## Okay... How?
 
-You can download the [Arduino IDE here](https://www.arduino.cc/en/software), which has all the tools that you need to code an Arduino. It is available for Windows, MacOS & Linux. 
+You can download the [Arduino IDE here](https://www.arduino.cc/en/software), which has all the tools that you need to code an Arduino. It is available for Windows, MacOS & Linux.
 
 If you're built different, you can use the [Arduino extension for VS Code](https://marketplace.visualstudio.com/items?itemName=vsciot-vscode.vscode-arduino) so that you can enjoy all the features of VS Code but also be able to use it to code an Arduino. I recommend you to do this ONLY if you know what you're doing, since it might not work if you have something not setup correctly.
 
@@ -472,7 +472,7 @@ int main() {
 
 # What can I do with this knowledge?
 
-Let's try making our little Arduino play some music. We'll use piezo buzzers which will function like speakers, and obviously an Arduino. Let's check out how a piezo buzzer works before we dive into everything else. 
+Let's try making our little Arduino play some music. We'll use piezo buzzers which will function like speakers, and obviously an Arduino. Let's check out how a piezo buzzer works before we dive into everything else.
 
 In simple terms, it has 2 layers, one of which is made out of piezoelectric ceramic. When alternating voltage is applied to the ceramic layer, it vibrates rapidly, forming sound waves. The speed at which it vibrates is the frequency.
 
@@ -575,7 +575,7 @@ void setup() {
 
 void loop() {
   isPressed = digitalRead(pin);
-  Serial.println(isPressed); 
+  Serial.println(isPressed);
   if (isPressed) { // you can simply evaluate a number to see whether it's true or false. In C++, 0 will be false, and every other number will be evaluated to true.
     Serial.println("The button is being pressed!")
   } else {
@@ -601,13 +601,13 @@ int isPressed;
 void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(buttonPin, INPUT);
-  Serial.begin(9600); 
+  Serial.begin(9600);
 }
 
 void loop() {
   isPressed = digitalRead(ledPin);
-  Serial.println(isPressed); 
-  if (isPressed) { 
+  Serial.println(isPressed);
+  if (isPressed) {
     digitalWrite(ledPin, HIGH);
   } else {
     digitalWrite(ledPin, LOW);
@@ -619,11 +619,11 @@ Guess what that code will do! Then try it out yourself to see if you were right.
 
 # Can we expand on this?
 
-Yeah we can! There's another thing called analogRead, and based on that you can *maybe* guess what it does. If you don't, it's no big deal. We first have to understand the difference between "analog" and "digital" though. Digital signals can either be "on" or "off", no in between, while analog signals have values that are between "on" or "off". 
+Yeah we can! There's another thing called analogRead, and based on that you can *maybe* guess what it does. If you don't, it's no big deal. We first have to understand the difference between "analog" and "digital" though. Digital signals can either be "on" or "off", no in between, while analog signals have values that are between "on" or "off".
 
 In Arduino, what we can do is read an analog value going from 0 to 1023, which is the 10-bit integer limit, and we can do cool things with that. However, only pins starting with the letter "A" can do so.
 
-And of course, with each reader, there's a writer, and that also applies here. analogWrite can output an analog value that goes from 0 to 255. 
+And of course, with each reader, there's a writer, and that also applies here. analogWrite can output an analog value that goes from 0 to 255.
 
 There is however a catch. Only certain pins are capable of outputting analog signals (they can also output digital signals) using PWM, or pulse width modulation. Those pins are the ones which have a tilde (~) in front of the number.
 
@@ -705,7 +705,7 @@ void setup() {
   for (int i = 11; i < 14; i++) {
     // set all the LED pins to output
     pinMode(i, OUTPUT);
-  } 
+  }
 }
 
 void loop() {
@@ -743,7 +743,7 @@ void loop() {
 }
 ~~~
 
-It can definitely be optimized using a clever way however this is probably the best readable version. 
+It can definitely be optimized using a clever way however this is probably the best readable version.
 
 I ended up making a soldered version of the circuit for it to fit in the box, so there's that.
 
@@ -758,19 +758,61 @@ Thank you for reading through all this!
   },
   {
     id: 3,
-    title: "Small Update",
-    category: [],
+    title: "The Future",
+    category: [2],
     createdAt: 1723168959000,
-    description:
-      "Small update regarding the website! Also a little peek into how this website works. :)",
+    description: "What's waiting in the future? Let's find out.",
     thumbnail:
-      "https://place-hold.it/1920x1080/191919/faf9f6/000&text=UnfinishedThumbnail",
+      "https://i.imgur.com/CY2dtxr.png",
     content: `
-    hi hi hi
+# Small Update
 
-    {@embed:https://youtu.be/R_6jeSqG4ao}
+{@embed:https://youtu.be/R_6jeSqG4ao}
 
-    solution posted here tomorrow :D
+Oh, and here's the solution for Resolve not launching correctly:
+
+~~~sh showLineNumbers
+# in your .zshrc or .bashrc
+# remember, this was tested on archlinux, so it might not work on macos or other distros
+export LD_PRELOAD=/usr/lib64/libglib-2.0.so:/usr/lib64/libgdk_pixbuf-2.0.so.0:/usr/lib64/libgio-2.0.so:/usr/lib64/libgmodule-2.0.so
+~~~
+
+then open Davinci Resolve with
+~~~sh
+/opt/resolve/bin/resolve
+~~~
+
+# Shenanigans aside, hi!
+
+Hey, it's been a while (practically 8 months now), and a bunch of things have changed. First things first, the site has been updated with new information, which is cool!
+
+Second things second, I've sort of started taking coding to a more serious level, with my end goal to participate in the IOI (International Olympiad of Informatics) through either USACO (USA Computing Olympiads) or OCI (Olimpiada Chilena de Informatica).
+
+To achieve this goal, I've decided to start utilizing the time during the coding class at my school to instead study more advanced topics. Thanks Mr. Scott for helping me achieve my dream!
+
+My first step towards this plan is to complete the CS50x course from Harvard to fill in on any concepts that I might've overlooked when self-teaching myself coding.
+
+So far, I've gone through Week 0 and Week 1's lectures, sections, shorts, and problem sets. Here are the scores I've gotten on my submissions!
+
+![Scores I've gotten with check50 which make sures the code passes the tests and style50, making sure it follows style conventions](https://i.imgur.com/g6O0uU4.png)
+
+check50 makes sure your code passes the predetermined test cases your code is designed to go through, and style50 makes sure your code follows the style conventions. So far, I've studied from Scratch, a visual programming language, to C, one of the first languages to ever language, ever.
+
+Scratch looks nice and colorful, like this:
+
+![Scratch code](https://i.imgur.com/xN6f4P4.png)
+
+C looks more cryptic, yet familiar (if you've read my [Coding In Arduino blog post](https://zhai-r.netlify.app/blogs/2)), like this:
+
+~~~c showLineNumbers
+#include <stdio.h>
+
+int main(void) {
+    printf("hello, world!");
+}
+~~~
+
+I will keep documenting my journey!
     `,
   },
 ];

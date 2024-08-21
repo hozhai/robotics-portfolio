@@ -1,6 +1,7 @@
 /*                 Global                 */
 
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap");
 
 html {
     scroll-behavior: smooth;
@@ -23,7 +24,7 @@ body {
 }
 
 .text {
-    font-family: "Ubuntu Mono", sans-serif;
+    font-family: "Ubuntu Mono", "Noto Sans SC", sans-serif;
     color: #faf9f6;
 }
 
@@ -140,7 +141,7 @@ footer div {
 
 main {
     position: relative;
-    height: 97vh;
+    height: 100vh;
 }
 
 main h1.main--title {
