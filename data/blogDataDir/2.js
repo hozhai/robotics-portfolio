@@ -1,11 +1,11 @@
 const data = {
     id: 2,
-    title: "Coding in Arduino",
+    title: 'Coding in Arduino',
     category: [2],
     createdAt: 1698167661000,
     description:
         "It's Arduino time! 🤖\nBy the time you're done with this, you will now be the cool hacker friend that everyone admires! (not guaranteed).",
-    thumbnail: "https://i.imgur.com/T7M5B8x.jpg",
+    thumbnail: 'https://i.imgur.com/T7M5B8x.jpg',
     content: `
 # What the hell is an Arduino?
 
@@ -362,7 +362,7 @@ This was a pretty fun project that also challenged me in pretty much every way w
 This will most likely be the last post on this website for a very long time unless something happens and I need this again. The source code of this website is on [my Github](https://github.com/Zhai90/robotics-portfolio), so you can always see how I got here.
 
 Thank you for reading through all this!
-`,
-}
+`
+};
 
 export { data as data_two };

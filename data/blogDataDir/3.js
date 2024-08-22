@@ -1,11 +1,10 @@
 const data = {
     id: 3,
-    title: "The Future",
+    title: 'The Future',
     category: [2],
     createdAt: 1723168959000,
-    description: "What's waiting in the future? Let's find out.",
-    thumbnail:
-        "https://i.imgur.com/CY2dtxr.png",
+    description: "What's waiting in the future? ⏳ Let's find out.",
+    thumbnail: 'https://i.imgur.com/CY2dtxr.png',
     content: `
 # Small Update
 
@@ -58,6 +57,8 @@ Scratch looks nice and colorful, like this:
 
 ![Scratch code](https://i.imgur.com/xN6f4P4.png)
 
+[Here's the game](https://scratch.mit.edu/projects/1054360272/) that the code above belongs to, but be warned; it's not that good.
+
 C looks more cryptic, yet familiar (but that's if you've read my [Coding In Arduino blog post](https://zhai-r.netlify.app/blogs/2)), like this:
 
 ~~~c showLineNumbers
@@ -69,7 +70,22 @@ int main(int argc, char **argv) {
 ~~~
 
 I will keep documenting my journey!
-    `,
-}
 
+# Day 2
+
+Actually, it's more like, uhhh, day 7, but it's the 2nd day I'm writing here. In the near future, I might write a blog about either Neovim or Linux ([GNU/Linux](https://www.lignux.org)), as it's been about half a year since I've been using Linux, and for Neovim I started using it a couple months before actually diving into Linux.
+
+This is how my Arch Linux w/ KDE Plasma on Wayland looks like:
+
+![A screenshot of my desktop environment.](https://i.imgur.com/ioCIO4e.png)
+
+Quick ad, [here's](https://github.com/Zhai90/zvim) my Neovim configuration if you're interested.
+
+Anyway, back on topic, I've actually been working a lot on CS50 and also a bunch of other side projects I'll mention later.
+
+I'm now on Week 4: Memory, and it's been really cool listening to David Malan teach this course.
+
+> :warning: TODO: talk about tideman, explora & primer festival de robotica
+    `
+};
 export { data as data_three };

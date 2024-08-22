@@ -1,12 +1,12 @@
 /*                 Global                 */
 @font-face {
     font-family: 'Geist Sans';
-    src: url("/assets/fonts/GeistVF.ttf");
+    src: url('/assets/fonts/GeistVF.ttf');
 }
 
 @font-face {
     font-family: 'Geist Mono';
-    src: url("/assets/fonts/GeistMonoVF.ttf");
+    src: url('/assets/fonts/GeistMonoVF.ttf');
 }
 
 html {
@@ -25,12 +25,12 @@ body {
 }
 
 .title {
-    font-family: "Geist Mono", monospace;
+    font-family: 'Geist Mono', monospace;
     color: #20c20e;
 }
 
 .text {
-    font-family: "Geist Sans", "Noto Sans SC", sans-serif;
+    font-family: 'Geist Sans', 'Noto Sans SC', sans-serif;
     color: #faf9f6;
 }
 
@@ -52,7 +52,7 @@ a {
 }
 
 .link {
-    font-family: "Geist Sans", sans-serif;
+    font-family: 'Geist Sans', sans-serif;
     color: #c1c1c1;
     transition: all 0.1s ease-in-out;
     text-decoration: underline;
@@ -240,14 +240,14 @@ main h2 {
     text-align: justify;
 }
 
-img[alt="bioimg"] {
+img[alt='bioimg'] {
     aspect-ratio: 16/9;
     width: 100%;
     border-radius: 25px;
     transition: all 0.25s ease-in-out;
 }
 
-img[alt="bioimg"]:hover {
+img[alt='bioimg']:hover {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.26);
     filter: saturate(150%);
 }
@@ -288,7 +288,7 @@ img[alt="bioimg"]:hover {
     background-color: #008020;
     font-size: 2.5rem;
     width: 300px;
-    font-family: "Geist Mono";
+    font-family: 'Geist Mono';
     color: rgb(8, 8, 8);
     user-select: none;
     cursor: pointer;
@@ -343,7 +343,7 @@ img[alt="bioimg"]:hover {
 }
 
 .blog--box::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -353,15 +353,17 @@ img[alt="bioimg"]:hover {
 }
 
 .blog--box::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
     width: 0%;
     height: 5px;
-    background: linear-gradient(90deg,
-            rgb(78, 221, 142) 0%,
-            rgb(0, 180, 57) 100%);
+    background: linear-gradient(
+        90deg,
+        rgb(78, 221, 142) 0%,
+        rgb(0, 180, 57) 100%
+    );
     transition: all 0.25s ease-in-out;
 }
 
@@ -391,7 +393,7 @@ img[alt="bioimg"]:hover {
     background-color: #008020;
     font-size: 2.5rem;
     width: 300px;
-    font-family: "Geist Mono";
+    font-family: 'Geist Mono';
     color: rgb(8, 8, 8);
     user-select: none;
     cursor: pointer;
@@ -413,7 +415,7 @@ img[alt="bioimg"]:hover {
 }
 
 .blog--time {
-    font-family: "Geist Sans", sans-serif;
+    font-family: 'Geist Sans', sans-serif;
     color: #464646;
     position: absolute;
     bottom: 4px;
@@ -444,9 +446,9 @@ img[alt="bioimg"]:hover {
     flex-flow: column wrap;
 }
 
-.bp--filters input[name="query"] {
+.bp--filters input[name='query'] {
     font-size: 1.5rem;
-    font-family: "Geist Mono", monospace;
+    font-family: 'Geist Mono', monospace;
     color: #c1c1c1;
     width: 100%;
     height: 50px;
@@ -459,9 +461,9 @@ img[alt="bioimg"]:hover {
     caret-color: #168a0a;
 }
 
-.bp--filters input[name="query"]:hover,
-.bp--filters input[name="query"]:active,
-.bp--filters input[name="query"]:focus-visible {
+.bp--filters input[name='query']:hover,
+.bp--filters input[name='query']:active,
+.bp--filters input[name='query']:focus-visible {
     filter: brightness(130%);
 }
 
@@ -474,13 +476,13 @@ img[alt="bioimg"]:hover {
 
 .bp--nores .bp--nores-title {
     color: #20c20e;
-    font-family: "Geist Mono", monospace;
+    font-family: 'Geist Mono', monospace;
     font-size: 2.25rem;
 }
 
 .bp--nores .bp--nores-text {
     color: #c1c1c1;
-    font-family: "Geist Sans", sans-serif;
+    font-family: 'Geist Sans', sans-serif;
     font-size: 1.5rem;
 }
 
@@ -527,7 +529,7 @@ img[alt="bioimg"]:hover {
 
 .post--content h1::after,
 .post--content h2::after {
-    content: "";
+    content: '';
     position: absolute;
     background-color: #525252;
     height: 2px;
@@ -573,4 +575,15 @@ img[alt="bioimg"]:hover {
 
 .post--content iframe {
     border-radius: 2rem;
+}
+
+.post--content blockquote {
+    border-left: 2px solid gray;
+    margin: 0 5px 0 30px;
+    padding: 2px 0px 2px 10px;
+}
+
+.post--content blockquote p {
+    margin: 5px 0 5px 5px;
+    color: lightgray;
 }
