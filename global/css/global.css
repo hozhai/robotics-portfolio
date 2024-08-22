@@ -1,7 +1,13 @@
 /*                 Global                 */
+@font-face {
+    font-family: 'Geist Sans';
+    src: url("/assets/fonts/GeistVF.ttf");
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap");
+@font-face {
+    font-family: 'Geist Mono';
+    src: url("/assets/fonts/GeistMonoVF.ttf");
+}
 
 html {
     scroll-behavior: smooth;
@@ -19,12 +25,12 @@ body {
 }
 
 .title {
-    font-family: "Cutive Mono", monospace;
+    font-family: "Geist Mono", monospace;
     color: #20c20e;
 }
 
 .text {
-    font-family: "Ubuntu Mono", "Noto Sans SC", sans-serif;
+    font-family: "Geist Sans", "Noto Sans SC", sans-serif;
     color: #faf9f6;
 }
 
@@ -46,7 +52,7 @@ a {
 }
 
 .link {
-    font-family: "Ubuntu Mono", sans-serif;
+    font-family: "Geist Sans", sans-serif;
     color: #c1c1c1;
     transition: all 0.1s ease-in-out;
     text-decoration: underline;
@@ -91,15 +97,19 @@ a {
     0% {
         opacity: 0;
     }
+
     49% {
         opacity: 0;
     }
+
     50% {
         opacity: 1;
     }
+
     99% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
     }
@@ -278,7 +288,7 @@ img[alt="bioimg"]:hover {
     background-color: #008020;
     font-size: 2.5rem;
     width: 300px;
-    font-family: "Ubuntu Mono";
+    font-family: "Geist Mono";
     color: rgb(8, 8, 8);
     user-select: none;
     cursor: pointer;
@@ -349,11 +359,9 @@ img[alt="bioimg"]:hover {
     left: 0;
     width: 0%;
     height: 5px;
-    background: linear-gradient(
-        90deg,
-        rgb(78, 221, 142) 0%,
-        rgb(0, 180, 57) 100%
-    );
+    background: linear-gradient(90deg,
+            rgb(78, 221, 142) 0%,
+            rgb(0, 180, 57) 100%);
     transition: all 0.25s ease-in-out;
 }
 
@@ -383,7 +391,7 @@ img[alt="bioimg"]:hover {
     background-color: #008020;
     font-size: 2.5rem;
     width: 300px;
-    font-family: "Ubuntu Mono";
+    font-family: "Geist Mono";
     color: rgb(8, 8, 8);
     user-select: none;
     cursor: pointer;
@@ -405,7 +413,7 @@ img[alt="bioimg"]:hover {
 }
 
 .blog--time {
-    font-family: "Ubuntu Mono", sans-serif;
+    font-family: "Geist Sans", sans-serif;
     color: #464646;
     position: absolute;
     bottom: 4px;
@@ -438,7 +446,7 @@ img[alt="bioimg"]:hover {
 
 .bp--filters input[name="query"] {
     font-size: 1.5rem;
-    font-family: "Ubuntu Mono", monospace;
+    font-family: "Geist Mono", monospace;
     color: #c1c1c1;
     width: 100%;
     height: 50px;
@@ -466,13 +474,13 @@ img[alt="bioimg"]:hover {
 
 .bp--nores .bp--nores-title {
     color: #20c20e;
-    font-family: "Cutive Mono", monospace;
+    font-family: "Geist Mono", monospace;
     font-size: 2.25rem;
 }
 
 .bp--nores .bp--nores-text {
     color: #c1c1c1;
-    font-family: "Ubuntu Mono", sans-serif;
+    font-family: "Geist Sans", sans-serif;
     font-size: 1.5rem;
 }
 
