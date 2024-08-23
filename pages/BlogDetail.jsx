@@ -11,6 +11,7 @@ import '../global/css/katex.min.css';
 import '../global/css/highlighting.css';
 import LoadingBar from 'react-top-loading-bar';
 import ReadingBar from '../components/ReadingBar';
+import Footer from '../components/Footer';
 
 export default function BlogDetail({ data }) {
     const [progress, setProgress] = useState(0);
@@ -80,6 +81,8 @@ export default function BlogDetail({ data }) {
                     {blog.content || 'Could not fetch blog data.'}
                 </ReactMarkdown>
             </div>
+
+            <Footer />
         </div>
     );
 }

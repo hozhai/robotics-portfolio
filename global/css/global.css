@@ -24,6 +24,16 @@ body {
     box-sizing: border-box;
 }
 
+.parent--snapper {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+.snapped {
+    scroll-snap-align: center;
+}
+
 .title {
     font-family: 'Geist Mono', monospace;
     color: #20c20e;
@@ -152,6 +162,7 @@ footer div {
 main {
     position: relative;
     height: 100vh;
+    scroll-snap-align: center;
 }
 
 main h1.main--title {
@@ -441,9 +452,10 @@ img[alt='bioimg']:hover {
 .bp--blogs-container {
     margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-flow: column wrap;
+    min-height: 60vh;
 }
 
 .bp--filters input[name='query'] {
@@ -472,6 +484,7 @@ img[alt='bioimg']:hover {
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    min-height: 70vh;
 }
 
 .bp--nores .bp--nores-title {

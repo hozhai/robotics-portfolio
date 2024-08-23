@@ -1,17 +1,16 @@
-import { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Home from "./pages/Home";
-import Blogs from "./pages/Blogs";
+import Home from './pages/Home';
+import Blogs from './pages/Blogs';
 
-import Footer from "./components/Footer";
-import ScrollBtn from "./components/ScrollBtn";
-import BlogDetail from "./pages/BlogDetail";
+import Footer from './components/Footer';
+import ScrollBtn from './components/ScrollBtn';
+import BlogDetail from './pages/BlogDetail';
 
-import data from "./data/blogsData";
+import data from './data/blogsData';
 
 export default function App() {
-    console.log(data)
     return (
         <>
             <ScrollBtn />
@@ -19,11 +18,13 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home data={data} />} />
                     <Route path="/blogs" element={<Blogs data={data} />} />
-                    <Route path="/blogs/:id" element={<BlogDetail data={data} />} />
+                    <Route
+                        path="/blogs/:id"
+                        element={<BlogDetail data={data} />}
+                    />
                     <Route path="*" element={<div>404</div>} />
                 </Routes>
             </BrowserRouter>
-            <Footer />
         </>
     );
 }
