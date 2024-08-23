@@ -85,6 +85,10 @@ Anyway, back on topic, I've actually been working a lot on CS50 and also a bunch
 
 I'm now on Week 4: Memory, and it's been really cool listening to David Malan teach this course.
 
+I'm also working with a friend at teaching people at my school's coding club, and here's one of the things I wrote down, just in case you want to see.
+
+
+
 > :warning: TODO: talk about tideman, explora & primer festival de robotica
     `
 };

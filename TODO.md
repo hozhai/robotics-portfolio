@@ -1,13 +1,13 @@
 [X] Name
 [X] Biography
 [X] >2 Photos
-[] A quote
+[X] A quote
 
 [X] Careers
 [X] Pronouns
 [X] etc idk
 
-RFG
+[X] RFG
 random facts generator
 
 blogs will be an array
@@ -27,5 +27,8 @@ coding = 2
 web dev = 3
 reactjs = 4
 discord.js = 5
+
+next todo:
+migrate to mdx potentially because this thing rn is pain
 
 

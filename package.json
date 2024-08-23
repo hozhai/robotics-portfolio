@@ -24,10 +24,12 @@
     "react-router-dom": "^6.21.0",
     "react-top-loading-bar": "^2.3.1",
     "rehype-katex": "^7.0.0",
+    "rehype-pretty-code": "^0.13.2",
     "rehype-prism-plus": "^1.6.3",
     "remark-emoji": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-math": "^6.0.0",
+    "shiki": "^1.14.1",
     "typewriter-effect": "^2.21.0",
     "vite-plugin-svgr": "^3.3.0"
   },

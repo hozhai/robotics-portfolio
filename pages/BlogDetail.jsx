@@ -17,7 +17,6 @@ export default function BlogDetail({ data }) {
     const [readProgress, setReadProgress] = useState(0);
     const params = useParams();
     const blog = data.filter((obj) => obj.id == params.id)[0] || {};
-
     function progressFunc() {
         let w =
             ((document.body.scrollTop || document.documentElement.scrollTop) /
