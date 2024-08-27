@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 export default function Blogs({ data }) {
     const [progress, setProgress] = useState(0);
 
+    // unused code
     const [filter, setFilter] = useState({
         query: '',
         order: '',
@@ -18,38 +19,44 @@ export default function Blogs({ data }) {
     });
 
     const [blogsArr, setBlogsArr] = useState(
-        data.map((obj) => (
-            <Link to={`/blogs/${obj.id}`} className="blog--box" key={obj.id}>
-                <div className="blog--img">
-                    <img
-                        src={
-                            obj.thumbnail ||
-                            'https://place-hold.it/304x171/191919/faf9f6/000&text=NotFound'
-                        }
-                        width={304}
-                        height={171}
-                    />
-                </div>
-                <div className="blog--content">
-                    <div className="blog--name title">
-                        {obj.title || '404 | Not Found'}
+        data
+            .map((obj) => (
+                <Link
+                    to={`/blogs/${obj.id}`}
+                    className="blog--box"
+                    key={obj.id}
+                >
+                    <div className="blog--img">
+                        <img
+                            src={
+                                obj.thumbnail ||
+                                'https://place-hold.it/304x171/191919/faf9f6/000&text=NotFound'
+                            }
+                            width={304}
+                            height={171}
+                        />
                     </div>
-                    <ReactMarkdown
-                        className="blog--description text"
-                        remarkPlugins={[remarkGfm, emoji]}
-                    >
-                        {obj.description ||
-                            'This post might not exist anymore, or an error has occurred.'}
-                    </ReactMarkdown>
-                </div>
-                <div className="blog--time">
-                    {humanizeDuration(Date.now() - obj.createdAt, {
-                        largest: 1
-                    })}{' '}
-                    ago | ID: {obj.id}
-                </div>
-            </Link>
-        ))
+                    <div className="blog--content">
+                        <div className="blog--name title">
+                            {obj.title || '404 | Not Found'}
+                        </div>
+                        <ReactMarkdown
+                            className="blog--description text"
+                            remarkPlugins={[remarkGfm, emoji]}
+                        >
+                            {obj.description ||
+                                'This post might not exist anymore, or an error has occurred.'}
+                        </ReactMarkdown>
+                    </div>
+                    <div className="blog--time">
+                        {humanizeDuration(Date.now() - obj.createdAt, {
+                            largest: 1
+                        })}{' '}
+                        ago | ID: {obj.id}
+                    </div>
+                </Link>
+            ))
+            .reverse()
     );
 
     useEffect(() => {
@@ -57,6 +64,7 @@ export default function Blogs({ data }) {
         setProgress(100);
     }, []);
 
+    // what the fuck is this search implementation
     function updateFilter(event) {
         setFilter((prevFilter) => ({
             ...prevFilter,
@@ -156,7 +164,7 @@ export default function Blogs({ data }) {
             <div className="bp--filters">
                 <input
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Search... (not very useful)"
                     name="query"
                     onChange={updateFilter}
                     value={filter.query}
