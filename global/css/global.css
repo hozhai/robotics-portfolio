@@ -556,8 +556,9 @@ img[alt='bioimg']:hover {
 }
 
 .post--content img {
-    width: 55%;
-    margin-left: 22.5%;
+    width: full;
+    max-height: 50vh;
+    margin-left: auto;
 }
 
 .post--content table {

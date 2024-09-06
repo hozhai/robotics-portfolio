@@ -152,6 +152,69 @@ But then again, it was a learning process so maybe it was necessary after all.
 Going back to Markdown stuff, I was thinking of trying out using MDX for Markdown, but that would require a complete rewrite of how Markdown is rendered in the website and how YouTube videos and images and lists and all that are displayed, which would take longer than I can stand.
 
 So it's going to stay like this :)
+
+# Day 4
+
+*it's been a week and a half since day 3...*
+
+I've sort of stopped worrying about this website and have been more focused on the website for the robotics event, which is now a "junta" (get-together) instead of a festival. 
+
+I've also put the CS50 course on pause as school is starting to demand more and more attention and time from me so I'll have to push it back to when I have a lot of free time.
+
+Here are some progress screenshots of the robotics website!:
+
+Here's the first iteration:
+
+
+![boring ahh website](https://i.imgur.com/OJlZula.png)
+
+Actually, that's a lie, the first iteration looks more like this
+
+![nextjs boilerplate template](https://vercel.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1aHobcZ8H6WY48u5CMXlOe%2F560e6e93ced2d1af6d65cc6e7fbc914d%2FCleanShot_2024-01-12_at_09.png&w=3840&q=75&dpl=dpl_D4zFxLzzEyG4uVAuhYJLb6dbLjK6)
+
+But that's the template you automatically get when you set up a NextJS app, so it doesn't really count.
+
+As you can see, the first iteration that I consider is pretty barebones, it has a title, which is now outdated, has a messy one-tenth-done navigation menu, and it just looks like a 4 year old made it. Not saying that 4 year olds can't code, but even if they were able, I think that is how it would look like.
+
+In the future, once I have time and am done with other projects, I'll make an actual real production-ready blog website also functioning as a portfolio for my projects, I may make a guide on how to get started on creating applications like these!
+
+Anyway, that version is just the planning phase - I still didn't know what to actually put on the website, nor how it would look like, that's also why there's a blue box around the text - it's for seeing the boundaries/border of the text.
+
+After that, this was the website
+
+![still boring ahh website](https://i.imgur.com/Q6KKJ56.png)
+
+The blue box is gone, and now the navigation menu is a little bit better, nothing much to see here.
+
+The next one is a big upgrade from the previous iterations.
+
+![not so boring ahh website](https://i.imgur.com/rV5SLRD.png)
+
+I started using an UI library called [Aceternity](https://ui.aceternity.com/), which is where the lights and grid background come from. The avatar icon in the navigation bar comes from another UI library called [shadcn/ui](https://ui.shadcn.com/). Both are really helpful and I would 100% recommend them if you have a tight deadline but still want to create a stunning website.
+
+After this iteration, I started experimenting with different types of background that would maybe be more eye-catching. Take a look:
+
+![took me so long to make this gif](https://i.imgur.com/XcLHhDd.gif)
+
+The background now looks way cooler, however I found out that when on the website, the CPU usage on my Macbook M1 Pro would rocket up to 40%, which is absolutely nuts for a website effect, so I decided to remove it. Which was a good decision, because my battery went from 80% to 20% in an hour while I was experimenting with that background effect.
+
+It's also from Aceternity, and it works by drawing lines on the screen, and making little gradients follow the same path as the lines. I don't know why that would kill your battery, but oh well.
+
+Oh, and at this point I've also started using [framer-motion](https://www.framer.com/motion/), an animation library that makes animating times easier.
+
+Yeah, and so I removed that background, and experimented with some other stuff:
+
+![updated version](https://i.imgur.com/VIeWdwp.gif)
+
+It's back to being that grid, but it has a cool effect when you over your mouse over it. You probably can't see it very well because of the crappy gif quality, but if you really focus on it, you can see it!
+
+And that leads to this design, which is the current one:
+
+![last design](https://i.imgur.com/IIeBgyh.gif)
+
+And that's all! I'll be adding more progress as time goes on.
+
+See you next time!
     `
 };
 export { data as data_three };
