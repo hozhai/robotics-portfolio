@@ -215,6 +215,80 @@ And that leads to this design, which is the current one:
 And that's all! I'll be adding more progress as time goes on.
 
 See you next time!
+
+# Day 5?? I think??
+
+*more like month 2*
+
+Hey! It's been a while. It's dieciocho break at the time of me writing this, Thursday in fact, and I've just spent 5 days doing absolutely nothing but going out with my family and messing around with my computer.
+
+For some context, I've been messing around with this new fancy toy of mine called [NixOS](https://en.wikipedia.org/wiki/NixOS) and it's awesome! In summary, it's a Linux distribution based on the Nix package manager, which basically allows your entire system to be defined in a single configuration text file, and it's really awesome, even though it is absolutely painful to learn, and the documentation is just not there.
+
+Here's how my setup looks like so far:
+
+![A screenshot with Neovim open in front of the browser](https://i.imgur.com/3tBW1h9.png)
+
+I don't think you'll be interested in the nitty gritty of things, let alone fine details of this, so I won't go into it - but if you are, feel free to ask me!
+
+Other than messing with my computer and bricking it every minute, I've also been working on the robotics event website for the event, which from now on, I'll refer to as the *robotics* website. I'll also refer to the website you're currently on reading this as the *blogs* website.
+
+I sort of skipped over a ton of details on the last update about it, the one that showed how to website became how it is (or how it was at that point), so I'll go a bit more in depth now.
+
+When I how the website improved, it sort of looked like as if the whole thing took 5 minutes and I never struggled at all, when that's not the case.
+
+Firstly, to even get the progress screenshots, I had to go back to older versions of the "release" of the website in order to actually take the screenshots, as I had been so focused on getting the website done that I never really bothered doing the screenshots in place. I've in fact still not learned my lesson, but hopefully from now on I'll remember to go around taking screenshots during development.
+
+Luckily for me, getting those screenshots was pretty intuitive. Here's how it looks like:
+
+![Vercel's deployment tab in a project](https://i.imgur.com/bBB8eWg.png)
+
+I just click on one of those "updates" and it'll give me a link showing how the website looked at that point. The website is named [Vercel](https://vercel.com/) and it's a platform that allows you to host your website in a "serverless" way, which in simple terms means you don't really have to pay for it (oversimplification warning). It's also the company behind [NextJS](https://nextjs.org), which is the framework, or library I build my websites with nowadays. You can imagine NextJS as something like p5, but instead of just giving you commands to draw things, it provides a special type of file with a different syntax you get to write your code with.
+
+Anyway, back on the topic, I was talking about how the process of building the robotics website looked effortless and quick, when it wasn't. For example, if you go up and look at the avatar icon here
+
+![Iteration number 4](https://i.imgur.com/rV5SLRD.png)
+
+that took me a long time to get right, because when you click it, a dropdown menu actually pops down, and when you hover over it, a little tooltip appears. It looked something like this:
+
+![Avatar with the effects](https://i.imgur.com/3AkBpnh.gif)
+
+And even though that looks dead simple to make, it wasn't. I was going left and right trying to make it work, because since I was using pre-made components to achieve this, I had to find a way to make them work when they weren't exactly made to work together. That alone took me half an hour to do.
+
+The cool looking background with the lights also took me a long time. If I had to guess, I probably spent at least around 2 hours just trying to make it look good, trying out different combinations of that with other things, like just one beam of light, or maybe making the background change color a little bit, etc.
+
+From these experiences you can probably now see that things take time and mistakes to make stuff look good. Lots of time. And even more mistakes. And even more of both to not only make stuff look good, but also to be functional.
+
+Jumping over to present time, the biggest update to the robotics website is that now you can actually log in with your Google and Github accounts. Here, take a look:
+
+{@embed:https://www.youtube.com/watch?v=KxdkMQMGqeE}
+
+*I know the video quality is horrible.*
+
+You can see the accounts system in place for the website. You're supposed to be able to sign up/sign in, create your team, and be on your way to participate in the event!
+
+Very cool and fancy page transition animation aside, you can probably guess that a lot of things in the background are happening for this to work correctly, and you would be right!
+
+This took me, *counts fingers*, at least 3 seconds minimum to make, and a lot of ChatGPT and Gemini was involved - not because I couldn't code or anything - but because I kept getting this one error that had absolutely no information online on how I would go around fixing it. I ended up making it go away, so there's nothing to worry about until the unit tests come.
+
+This is made using [AuthJS](https://authjs.dev/), which does all the dirty work for me and gives me abstractions (building blocks) to manufacture my own authentication (login) system! It's awesome, and it's really fun to set up.
+
+On the way to achieving what you saw in the video, there were a crap ton of things I had to go through. Firstly, the navigation bar now looks different. It actually looks really fun now, watch:
+
+![Navigation bar, heavily modified from Aceternity's navigation menu](https://i.imgur.com/HfBJNJi.gif)
+
+You have no idea how annoying it was to get the thing to look like this. At first, the dropdown menus were unaligned, which started to bother me, a *LOT*, so it was back and forth hitting my head against my monitor trying to find out why in the world it wasn't aligning when I was already doing everything I could to fix it. At the end, I ended up going with a very "hacky" approach, which was to just set the maximum distance from the navbar to a fixed value, which may not seem like a bad solution, but something tells me that that implementation is definitely going to break something in the future.
+
+Making the sign out functionality was also something out of the scope of what I knew how to do. I ended up asking ChatGPT, who told me to create an API route that when access made a POST request to sign out. In simpler terms, when you click the button, it sends you to a part of the website which detects that you're there, signs you out, and then redirects you to the home page.
+
+There was also a lot of trying to figure out edge cases where the user for example logged in but didn't get redirected, or when the user gets stuck at the signing out page, etc.
+
+Wow, lots of backs and forths everywhere.
+
+From here on I'll take a break from working on the robotics website and focus more on both CS50 and the AP Compsci exam.
+
+I forgot to mention that, I've been interested in taking the AP Exam for computer science, and it's really convenient since it's all about topics I've already known about for, *counts fingers*, the past few years, so I just need to improve my Java skills - which is what the AP Compsci exam is going to be in - so yeah. It shouldn't even be that bad since I've worked with Java quite a bit before when making Minecraft server plugins, so yeah!
+
+I think I'll cut it off here. Thank you for reading, and I'll see you next time! Cheers!
     `
 };
 export { data as data_three };
