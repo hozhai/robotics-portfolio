@@ -289,6 +289,54 @@ From here on I'll take a break from working on the robotics website and focus mo
 I forgot to mention that, I've been interested in taking the AP Exam for computer science, and it's really convenient since it's all about topics I've already known about for, *counts fingers*, the past few years, so I just need to improve my Java skills - which is what the AP Compsci exam is going to be in - so yeah. It shouldn't even be that bad since I've worked with Java quite a bit before when making Minecraft server plugins, so yeah!
 
 I think I'll cut it off here. Thank you for reading, and I'll see you next time! Cheers!
+
+# Day 6
+
+I won't make the joke again.
+
+Anyway, it's been exactly 1 week since the last update here. I'll be honest, I've not gotten much done. I've been stressing about other things in life such as school, and also my birthday is coming up on the 29th of September, which sounds fun and all but it sort of scares me that I will be having less and less time to work on what I want to work on.
+
+I'll be turning 16, and this website will be turning one. Actually, this website already turned one a bit ago now. The website's official birthday is the 10th of August, 2023. At least that's the date of the earliest commit I made to the Github repository of this website, so I guess it would be accurate to say that it's its birthday too.
+
+I've been working on the filter problem set of week 4 of CS50, and I've finally completed it after putting off again and again because of the edge detection function. The answer is really straightforward. You can pretty much copy the algorithm you used for the blur and do the rest. Brian Yu explains it really well in the walkthrough, so if you don't understand what the page means by "kernels" or "gx and gy", you should watch the walkthrough, and you shouldn't feel guilty about it either.
+
+Now that I'm done with that, I can move onto the recover problem set, which I feel like is way easier (as long as you understand how to deal with the bytes you read from a file, that is), and also more fun, that could be just me though.
+
+# ~~Day~~ Update 7
+
+It's been 3 months since I've last written here. I've been occupied with another things in life, and haven't really remembered to update my progress here.
+
+Here's a quick rundown of the things I've done:
+  - I've decided to pretty much scrap the robotics website due to the lack of maintenance making the code harder to improve upon and extend. I'll attach a video later on.
+  - I've finished week 5 of CS50, and I'm halfway through the Speller problemset.
+  - Lastly, I've been messing around with Go and C++, alongside WebAssembly and Rust.
+
+Firstly, the decision to recode the robotics website was purely because I noticed that I was too excited to make the website look cool that it wasn't really functional. It only worked on certain screen dimensions, and it had absolutely 0 mobile support, meaning that it looked horrible. Imagine the website, and putting it between two horizontal hydraulic presses.
+
+I decided to stop working on that one and have instead made a new website applying new design choices now that I feel much more skilled in terms of web development. Here's a rough look:
+
+{@embed:https://youtu.be/pmJ6BIVdeQA}
+
+It really isn't a lot, and if you think that I'm making the same mistake of focusing too much on looks and too little on functionality, don't worry, I only spent 2 hours on that and the rest is just adding content and implementing some other functionality that won't take too long, such as the login system (which I already have the code for) and internalization (i18n) which basically means adding multiple language support.
+
+As for CS50, I haven't had a lot of time nor motivation to watch the lectures, I have however been working on and off on the pending problemsets. After I've finished these, I'll then work on week 6, which is Python. For the first problem, "inheritance", it's not complicated, so if you're working on that one and cand't figure out what's going wrong, start over and don't overthink it.
+
+In regards to Go, I wanted to learn it because it's fast, sort of like the "C of the 21st century", and pretty easy to learn. I ended up making an HTTP API server with Go following a tutorial and it was pretty fun, however, the structuring of Go projects is really confusing for me so that's the only project I ended up making with Go.
+
+After Go, I tried C++. It's similar to C (I wonder why), it's as fast as C, it's modern, has OOP, and is widely used. I did some LeetCode with C++, and it was in general really fun. I even did the Two Sum exercise making a solution that was actually O(n) by using hashmaps!
+
+LeetCode aside, I then messed around with WebAssembly to make a truly multi-purpose website with NextJS and C++ for the backend for fast calculations for certain tools. The documentation in regards to C++ in WebAssembly is a little bit confusing; using gcc or clang for WASM is weird, and so you have to use a third-party compiler called Emscripten, which doesn't have a lot of documentation online.
+
+I ended up getting it to work, having exported a WASM project that had the .wasm binary, and the Javascript wrapper files that interacted with the binary. However, the issue that made me switch over to using Rust was that the automatically generated Javascript code from emcc (Emscripten's C compiler) kept throwing an error that had little to no appearance online.
+
+As C++ and Emscripten were giving me issues, I then tried using Rust with wasm-bindgen and wasm-pack, which do seem to work but I still need to stitch it together to work with NextJS.
+
+It may seem like I've not done a lot these 3 months, and you might be right. I went to Brazil for an international STEM competition which my team ended up winning, and then participated in other national events. Other than that, I've not done a lot :)
+
+Next update I'll report back on how the WebAssembly implementation with NextJS is working, and I'll also make a guide on it so that others can finally not have to deal with StackOverflow threads from 2014 and no positively upvoted answers.
+
+Peace!
+
     `
 };
 export { data as data_three };
