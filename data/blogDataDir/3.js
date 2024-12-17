@@ -337,6 +337,275 @@ Next update I'll report back on how the WebAssembly implementation with NextJS i
 
 Peace!
 
+# Update 8
+
+Good news: I actually got it working. Not with C++ though; with Rust. I just couldn't get Emscripten to work, at all, so I resorted to using Rust. It's really simple to set up, and even Vercel has support for it (a tool you can use to get your website on the internet), so if you want to make a page with the sole purpose of giving you data back (called an API endpoint), you can do it with barely any configuration.
+
+I've also been learning Svelte, but you'll get shown that later.
+
+To get started with Rust and WebAssembly, let's create a new project. Any and all frameworks should work with no problem, unless it fundamentally changes importing files. If you are using Vite, make sure it's in a servable path. In SvelteKit, that's the $lib folder.
+
+For this example let's use React, the most widespread and popular framework (even though they keep insisting it's a *library*). Let's get started with Vite:
+
+~~~sh
+# npm, yes you do need the extra -- for npm 8+
+npm create vite@latest wasm-app -- --template react-ts
+
+# pnpm
+pnpm create vite wasm-app --template react-ts
+
+# yarn
+yarn create vite wasm-app --template react-ts
+
+# bun, if you're fancy and like everything to be bleeding-edge
+bun create vite wasm-app --template react-ts
+~~~
+
+I'll be using bun, but regardless you should be getting the same files generated.
+
+![A photo of the terminal running the command with bun](https://i.imgur.com/AqUwbaz.png)
+
+Ah, here it is!
+
+![A photo of Yazi showing the files generated](https://i.imgur.com/72yFwgN.png)
+
+
+Let's create a Cargo.toml file in the root with the following content. Don't worry, it's not as different as if you were to do
+
+~~~sh
+cargo init
+~~~
+
+in the same directory. Anyway:
+
+~~~toml
+[package]
+name = "wasm-backend"
+authors = ["Your Name Here <yournamehere@example.org>"]
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+path = "wasm/lib.rs"
+
+[dependencies]
+wasm-bindgen = "0.2.97"
+console_error_panic_hook = { version = "0.1.7", optional = true }
+
+[features]
+default = ["console_error_panic_hook"]
+~~~
+
+And if you didn't know, Cargo to Rust is like NPM to Javascript, but instead of having NPM, PNPM, Yarn, Bun, and a bunch of things coded by the weird Javascript tribe people, Rust just has Cargo, and it does everything.
+
+I bet you've noticed by now that Cargo.toml seems to serve the same purpose as package.json in an NPM project, and you'd be right.
+
+Specifying the crate-type allows us to prepare to compile the Rust code into not an .exe, or a .out or anything like that, but a .wasm, which yeah, is a WebAssembly executable file.
+
+The path is to specify where our Rust file will live in. In this case, it will be in wasm/, called lib.rs. If you're already familiar with Rust and are wondering why I didn't just put the Cargo.toml file inside wasm/, it's simply for rust-analyzer to know that we want Rust intellisense in this whole project, not just when our workspace is wasm/ so that we don't have to switch workspaces just for editing Rust files.
+
+The wasm-bindgen dependency is to allow us to access the Javascript Web API directly from Rust, such as calling functions like alert(), etc. basically allowing you to use WASM as better Javascript.
+
+console_error_panic_hook allows us to get better panic messages with WASM. "panics" in Rust just refers to runtime exceptions. It's like when you get a SyntaxError in Javascript.
+
+Anyway, let's create the files! Here's how things should end up:
+
+![Your directory should look something like this](https://i.imgur.com/oSv55sr.png)
+
+And yeah, there's an extra utils.rs file that I didn't mention! That's just for console_error_panic_hook. Wow that's a mouthful.
+
+Here's how everything in wasm/ should look:
+
+~~~rust
+// lib.rs
+
+mod utils;
+
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen]
+extern "C" {
+    fn alert(s: &str);
+}
+
+#[wasm_bindgen]
+pub fn greet() {
+    alert("Hello, world!");
+}
+~~~
+
+~~~rust
+// utils.rs
+
+pub fn set_panic_hook() {
+    // https://github.com/rustwasm/console_error_panic_hook#readme
+    #[cfg(feature = "console_error_panic_hook")]
+    console_error_panic_hook::set_once();
+}
+~~~
+
+You might or might not see red errors pop up about wasm_bindgen not being defined or something along those lines; we'll worry about those later. First, let's install wasm-pack, our Rust WASM compiler wrapper. It's a wrapper, just like Cargo, meaning that it's not compiling anything, but just getting things ready for rustc (Rust compiler) to do its job. wasm-pack sets the binary target, and sets a bunch of cryptic settings to make things work flawlessly.
+
+Here's how you might install it
+
+~~~sh
+# auto-install for *nix systems, a.k.a. Linux & MacOS
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+# homebrew for MacOS (and Linux, but who uses brew for Linux anyway)
+brew install wasm-pack
+
+# through Cargo
+cargo install wasm-pack
+
+# through npm/yarn
+npm install -g wasm-pack
+
+# through pacman/yay/paru for arch linux
+yay -S wasm-pack
+~~~
+
+[Here's their official website](https://rustwasm.github.io/wasm-pack/installer/) anyway if these end up outdated somehow.
+
+And if my link ends up outdated somehow as well, [here's their GitHub repository](https://github.com/rustwasm/wasm-pack).
+
+And if GitHub doesn't exist anymore, then I don't know what to do with ya, you probably have AI ruling over the world so just ask them. We probably don't even need WASM anymore, or websites, we just have our Neuralink chips that allows us to absorb information away.
+
+Oh, you can install Rust and Cargo through [rustup](https://rustup.rs/) by the way. I forgot to mention that. Oops :)
+
+Just run the following commands to get access to Cargo and Rust
+
+~~~sh
+rustup install nightly # this might take a while
+rustup default nightly # if this takes a while, you should get your computer checked out
+~~~
+
+Congrats!
+
+Anyway, back on topic. Run this in your wasm-app folder:
+
+~~~sh
+wasm-pack build --target web --release
+~~~
+
+And it should go like this:
+
+![Terminal running wasm-pack](https://i.imgur.com/LPHilnx.png)
+
+Congrats! You now have a .wasm binary which calls the alert() function from the Web API through Rust when it's executed!
+
+![Yazi, again.](https://i.imgur.com/1SNjbzr.png)
+
+As you can see, it comes with some Javascript files which have a lot of cryptic and smart code that runs the .wasm in the browser. There's also a package.json file, which means we can import this as a node module in our package.json in the root directory, however I find that it clutters package.json a lot and I just import it straight into my code.
+
+Let's go to our src/App.tsx file, and change it to this:
+
+~~~tsx
+import { useState, useEffect } from 'react'
+import init, { type InitOutput } from "../pkg/wasm_backend"
+
+export default function App() {
+  const [greetWasm, setGreetWasm] = useState<InitOutput | null>()
+
+  useEffect(() => {
+    // since init() is a promise, you can also use async/await notation
+    init().then(module => {
+      setGreetWasm(module)
+    })
+  }, [])
+
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <button onClick={() => wasm?.greet()}>Click me!</button>
+    </div>
+  )
+}
+~~~
+
+Now go ahead, run the website!
+
+~~~sh
+# npm
+npm run dev
+
+# pnpm, yarn, bun (just skip the 'run' part)
+bun dev
+~~~
+
+Click on the button, you'll see that it's now running the code! If you right click and click on Inspect, then to the Network tab and refresh the page, at some you'll see the .wasm file being downloaded! How cool is that? If you think it's still Javascript under the hood, check the pkg/ folder, there is no Javascript code that does alert() there.
+
+You might be thinking: *If Javascript code is so slow that we have to use WebAssembly, why do we still need so much Javascript to get WASM working? Wouldn't it be faster to just run alert() in Javascript?*
+
+And to that I say, yes, it would be faster to run alert() in Javascript, but that's not what you use WebAssembly for. You use it for machine learning, for heavy calculations, for 3D rendering, for videogames on the web, for other things that Javascript isn't that good at.
+
+WebAssembly can be up to [**11.71~ times faster** than Javascript in certain conditions](https://medium.com/@torch2424/webassembly-is-fast-a-real-world-benchmark-of-webassembly-vs-es6-d85a23f8e193), and that matters a ton when it comes to doing a lot of complex calculations as fast as possible.
+
+You wanna know some things made in WebAssembly?
+
+  - [CapCut Web Editor](https://madewithwebassembly.com/showcase/capcut/)
+  - [Figma](https://madewithwebassembly.com/showcase/figma/)
+  - [Google Earth](https://madewithwebassembly.com/showcase/google-earth/)
+  - [Lichess' Analysis Engine](https://madewithwebassembly.com/showcase/lichess/)
+  - [ONNX](https://madewithwebassembly.com/showcase/onnx/)
+  - [uBlock Origin (yes, the adblocker)](https://madewithwebassembly.com/showcase/ublock-origin/)
+
+And the [list goes on](https://madewithwebassembly.com/).
+
+## The war of the Web Frameworks
+It's not quite obvious, but in a year I've gone through React to Next.js to trying out Remix.js to Solid.js to Qwik and now settling with Svelte.
+
+A website is usually just a .html file, a skeleton with a list of elements that the browser will show to the viewer. Sometimes that website also gives you a .css file, which instead of making the skeletons go one on top of the order, makes them take shape, position, color, etc. As time went on, after the creation of HTML in the 93 by Berners-Lee, Brendan Eich got told to make a programming language for the new "internet", and to make it look like Java (bad start already).
+
+Eich was given a few weeks to finish his job, and we ended with the amalgamation of a language we have today, with its undefined vs not defined, [] + [], [1, 2, 3] + [4, 5, 6] giving [1, 2, 34, 5, 6]. *Sigh* Javascript was not made for the server.
+
+Anyway, they brought it to the server. We started having HTML go inside Javascript, like jQuery, and having HTML go inside other languages, like Ruby on Rails.
+
+Then, people really started to like the idea, hence the creation of a bunch of other things.
+
+![Timeline of web frameworks by mraible on GitHub](https://github.com/mraible/history-of-web-frameworks-timeline/blob/master/history-of-web-frameworks-timeline.png?raw=true)
+
+Credits: mraible on GitHub
+
+This timeline only goes up to 2019, but then people started fighting over React vs Angular, Vue vs Svelte, and with people coming up with new things such as Solid.js and Qwik, and then having meta-frameworks which are frameworks for frameworks, like Next.js and React, SvelteKit and Svelte, SolidStart and Solid, Nuxt and Vue, and so on.
+
+And yeah, I went through that. Sort of.
+
+I switched from React to Next.js because I was offered to work on a project that used Next.js, which turned out to not use Next.js at all but something called React Native, a tool that allows you to create mobile apps with React. I ended up folding on that because of peer pressure, so I decided to actually get into Next.js.
+
+It was actually pretty nice, you didn't have to mess around with React Router anymore (which this blog site is built with), and you have a cool filesystem routing mechanism!
+
+![VSCode file explorer on a Next.js project called junta-robotica on my GitHub](https://i.imgur.com/1pkcDM8.png)
+
+I messed around with it until it just didn't feel that good to develop websites, which is the same time I heard that OpenAI's ChatGPT page was rewritten from Next.js to Remix.js, which is the first time I had heard of Remix. I tried it out, did not understand a thing, and moved back to Next.js.
+
+I used Next.js while I looked for an alternative that was not only fun to work with but also really fast. I found Solid.js, which has a very similar syntax to React's JSX, but it's ecosystem felt too new, and a gut feeling told me it wasn't yet ready for production. For example, its most popular meta-framework, SolidStart, wasn't even in a release stage yet at that point. Now it is, but I feel like it's just not mature enough. I will, however, keep an eye on it to see how it gets better and better.
+
+After Solid came Qwik, a framework that is really fast but in a different way. It splits its Javascript in smaller files that only gets downloaded when they're needed, so it loads blazingly fast. The problem though, is that the runtime performance is absolute crap. It's among the slowest frameworks in terms of runtime performance. I tried it out, saw it had way too many dollar sign symbols, and left.
+
+~~~jsx
+// https://qwik.dev/docs/components/events/
+import { component$, useSignal } from '@builder.io/qwik';
+ 
+export default component$(() => {
+  const count = useSignal(0);
+ 
+  return (
+    <button onClick$={() => count.value++}>
+      Increment {count.value}
+    </button>
+  );
+});
+~~~
+
+That's not the actual reason though, it's mostly because it's also really new and while I like new shiny things, I want new shiny *stable* things.
+
+Like Svelte.
+
+Checkout Tooloxide, a collection of lightning speed fast tools written with Svelte using SvelteKit and back with the power of Rust with WebAssembly. It's still in extremely early stages of development, meaning it's practically unusable at the moment, but make sure to check it out and give it a star (maybe)!
+
+Thank you, and peace.
     `
 };
 export { data as data_three };

@@ -558,6 +558,7 @@ img[alt='bioimg']:hover {
 .post--content img {
     width: full;
     max-height: 50vh;
+    max-width: 60vw;
     margin-left: auto;
 }
 
