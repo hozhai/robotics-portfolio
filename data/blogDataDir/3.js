@@ -603,7 +603,7 @@ That's not the actual reason though, it's mostly because it's also really new an
 
 Like Svelte.
 
-Checkout Tooloxide, a collection of lightning speed fast tools written with Svelte using SvelteKit and back with the power of Rust with WebAssembly. It's still in extremely early stages of development, meaning it's practically unusable at the moment, but make sure to check it out and give it a star (maybe)!
+Checkout [Tooloxide](https://github.com/hozhai/tooloxide), a collection of lightning speed fast tools written with Svelte using SvelteKit and back with the power of Rust with WebAssembly. It's still in extremely early stages of development, meaning it's practically unusable at the moment, but make sure to check it out and give it a star (maybe)!
 
 Thank you, and peace.
     `
